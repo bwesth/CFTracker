@@ -1,11 +1,14 @@
-import React from 'react';
-import img from './carbon-footprint-730x410.jpg';
+import React, { useState } from 'react';
 import './App.css';
+import Frontpage from '../Greeting screen/Frontpage';
+import Dashboard from '../Dashboard/Dashboard'
 
 function App() {
+
+  const [loggedIn,setLoggedIn] = useState(false)
   return (
     <div className="App">
-        <img src={img} className="App-logo center" alt="logo" />
+        {loggedIn ? <Dashboard /> : <Frontpage login={setLoggedIn}/> }
     </div>
   );
 }

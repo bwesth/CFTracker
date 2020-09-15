@@ -1,0 +1,27 @@
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+}
+
+.username {
+    font-weight: bold;
+    font-size: large;
+    padding: 1%;
+}
+
+.menuItem {
+    width: 100%;
+}
+
+.content {
+    height: 100%;
+    align-self: center;
+}
