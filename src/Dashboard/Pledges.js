@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default () => <div>
-    Pledges dashboard menu
+    <h1>Pledges dashboard menu</h1>
 </div>

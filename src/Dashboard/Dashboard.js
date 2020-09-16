@@ -1,20 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import './dashboard.css'
 import Menu from './Menu'
 import Main from './Main'
 import Pledges from './Pledges'
 import News from './News'
 import Suggestions from './Suggestions'
+import Settings from './Settings/Settings'
+import { UserContext } from '../Main/UserContext'
 
 export default () => {
-    const menuItems = [
+    const [menuPlacement, setMenuPlacement] = useContext(UserContext).menuPlacement,
+    menuItems = [
         {name: "Main", comp: <Main />},
         {name: "Pledges", comp: <Pledges />},
         {name: "News", comp: <News />},
-        {name: "Suggestions", comp: <Suggestions />}
+        {name: "Suggestions", comp: <Suggestions />},
+        {name: "Options", comp: <Settings setMenuPlacement={setMenuPlacement} />}
     ], 
     [displayItem,setDisplayItem] = useState(menuItems[0].comp)
 
+    useEffect(() => {
+        setMenuPlacement(menuStyleBottom)
+    },[])
+
+    const menuStyleBottom = {
+            display: "flex",
+            flexDirection: "row",
+            height: "10%",
+    }
 
     return <div className="dashboard">
         <div className="headliner">
@@ -24,6 +37,6 @@ export default () => {
         <div className="content">
         {displayItem}
         </div>
-        <Menu click={setDisplayItem} items={menuItems} />
+        <Menu style={menuPlacement} click={setDisplayItem} items={menuItems} />
     </div>
 }

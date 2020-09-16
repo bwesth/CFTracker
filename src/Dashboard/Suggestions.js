@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default () => <div>
-    Suggestions dashboard menu
+    <h1>Suggestions dashboard menu</h1>
 </div>
