@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Option from './Option'
 import ToggleInput from './ToggleInput'
 import HorizontalRadio from './HorizontalRadio'

@@ -88,6 +88,18 @@ html, body, #root, .App {
   margin-bottom: 1%;
 }
 
+.signUp-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-form {
+  position: fixed;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
 .App-logo, .logo {
   pointer-events: none;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import './dashboard.css'
 import Menu from './Menu'
 import Main from './Main'
