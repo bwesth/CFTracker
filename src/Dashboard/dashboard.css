@@ -1,23 +1,39 @@
 
+.flex-row {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
 .dashboard {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+    order: 2;
 }
 
-/* .menu {
+.menu-bottom {
     display: flex;
     flex-direction: row;
     height: 10%;
-} */
+    order: 3;
+}
 
-/* .menu {
-    position: absolute;
+.menu-right {
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 20%;
-} */
+    order: 1;
+}
 
 .username {
     font-weight: bold;

@@ -10,32 +10,25 @@ import { UserContext } from '../Main/UserContext'
 
 export default () => {
     const [menuPlacement, setMenuPlacement] = useContext(UserContext).menuPlacement,
+    [wrapperClass,setWrapperClass] = useContext(UserContext).wrapperClass,
     menuItems = [
         {name: "Main", comp: <Main />},
         {name: "Pledges", comp: <Pledges />},
         {name: "News", comp: <News />},
         {name: "Suggestions", comp: <Suggestions />},
-        {name: "Options", comp: <Settings setMenuPlacement={setMenuPlacement} />}
+        {name: "Options", comp: <Settings setMenuPlacement={[setMenuPlacement, setWrapperClass]} />}
     ], 
     [displayItem,setDisplayItem] = useState(menuItems[0].comp)
 
-    useEffect(() => {
-        setMenuPlacement(menuStyleBottom)
-    },[])
-
-    const menuStyleBottom = {
-            display: "flex",
-            flexDirection: "row",
-            height: "10%",
-    }
-
-    return <div className="dashboard">
-        <div className="headliner">
-            <p className="username">Mette</p>
-            <h1>This is the Dashboard!</h1>
-        </div>
-        <div className="content">
-        {displayItem}
+    return <div className={wrapperClass}> 
+        <div className="dashboard">
+            <div className="headliner">
+                <p className="username">Mette</p>
+                <h1>This is the Dashboard!</h1>
+            </div>
+            <div className="content">
+                {displayItem}
+            </div>
         </div>
         <Menu style={menuPlacement} click={setDisplayItem} items={menuItems} />
     </div>
