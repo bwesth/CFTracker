@@ -3,13 +3,13 @@ import { UserContext } from '../Main/UserContext'
 
 export default (props) => {
 
-    const {username} = useContext(UserContext)
+    const user = useContext(UserContext).user[0]
 
-    console.log(username)
+    console.log(user)
     return (
         <div>
             <h1>Main dashboard menu</h1>
-            <p>Hello {username}!</p>
+            <p>Hello {user.name}!</p>
         </div>
     )
 } 

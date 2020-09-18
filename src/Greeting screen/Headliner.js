@@ -16,7 +16,7 @@ export default (props) => {
             trigger={LoginButton}
             // trigger={<button className="login ">LOG IN</button>}
             position="top center">
-            <LoginForm />
+            <LoginForm login={props.login}/>
         </Popup>
         
     </nav>

@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers'
 import * as yup from "yup"
 import { UserContext } from '../Main/UserContext'
 
-export default () => {
+export default (props) => {
     const [user, setUser] = useContext(UserContext).user
 
     const schema = yup.object().shape({
@@ -16,9 +16,16 @@ export default () => {
         resolver: yupResolver(schema),
     })
 
+    const submit = (data) => {
+        console.log(data)
+        console.log(data.email)
+        setUser(user => user= {name: user.name, email: data.email})
+        props.login(true)
+    }
+
 
     return <div className="popup-wrapper">
-        <form className="login-form" onSubmit={handleSubmit(d => console.log(d))}>
+        <form className="login-form" onSubmit={handleSubmit(data => submit(data))}>
             <input name="email" type="email" ref={register} />
             <input name="password" type="text" ref={register} />
             <input type="submit" />

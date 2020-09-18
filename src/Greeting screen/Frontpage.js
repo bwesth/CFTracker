@@ -23,7 +23,7 @@ export default (props) => {
     }
     
     const popup = <Popup 
-        trigger={<button className="testButton">SUBMIT</button>} 
+        trigger={<button className="testButton">SIGN UP</button>} 
         position="center center">
         <SignUpForm />
     </Popup>
