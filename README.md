@@ -66,3 +66,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+## Dependencies
+
+### Bjørn's testing grounds
+npm install reactjs-popup <br/>
+npm install yup <br/>
+npm install react-hook-form <br/>
+npm install @hookform/resolvers <br/>
