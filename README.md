@@ -71,7 +71,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ## Dependencies
 
 ### Bjørn's testing grounds
-npm install reactjs-popup 
-npm install yup
-npm install react-hook-form
-npm install @hookform/resolvers
+npm install reactjs-popup <br/>
+npm install yup <br/>
+npm install react-hook-form <br/>
+npm install @hookform/resolvers <br/>
