@@ -3,12 +3,12 @@ import React, {useState} from "react"
 const UserContext = React.createContext()
 
 function UserProvider(props) {
-    const [username, setUsername] = useState('Mette'),
+    const user = useState({name: '', email: ''}),
     wrapperClass = useState('flex-column'),
     menuPlacement = useState('menu-bottom')
 
     return (
-        <UserContext.Provider value={{username, wrapperClass, menuPlacement}}>
+        <UserContext.Provider value={{user, wrapperClass, menuPlacement}}>
             {props.children}
         </UserContext.Provider>
     )

@@ -88,7 +88,7 @@ html, body, #root, .App {
   margin-bottom: 1%;
 }
 
-.signUp-wrapper {
+.popup-wrapper {
   display: flex;
   justify-content: center;
 }
@@ -98,6 +98,19 @@ html, body, #root, .App {
   top: 40%;
   display: flex;
   flex-direction: column;
+}
+
+.login-form {
+  position: fixed;
+  /* top: 20%;
+  right: 20%; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.4%;
+}
+
+.login-form input {
+  margin: 2%;
 }
 
 .App-logo, .logo {

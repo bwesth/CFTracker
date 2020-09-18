@@ -32,7 +32,6 @@ export default (props) => {
         <div id="welcoming">
             <Headliner login={props.login}/>
             <h1 className="mission">The mission statement goes here</h1>
-            {/* <SignUpButton click={signUp}/> */}
             {popup}
             <p className="centered">Or</p>
             <button className="testButton" onClick={() => surveyClick()}>Test your CO₂ footprint!</button>

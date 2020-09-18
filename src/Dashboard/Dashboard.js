@@ -18,12 +18,13 @@ export default () => {
         {name: "Suggestions", comp: <Suggestions />},
         {name: "Options", comp: <Settings setMenuPlacement={[setMenuPlacement, setWrapperClass]} />}
     ], 
-    [displayItem,setDisplayItem] = useState(menuItems[0].comp)
+    [displayItem,setDisplayItem] = useState(menuItems[0].comp),
+    username = useContext(UserContext).user[0]
 
     return <div className={wrapperClass}> 
         <div className="dashboard">
             <div className="headliner">
-                <p className="username">Mette</p>
+                <p className="username">{username}</p>
                 <h1>This is the Dashboard!</h1>
             </div>
             <div className="content">
