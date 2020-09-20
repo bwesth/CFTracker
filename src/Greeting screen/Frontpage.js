@@ -5,6 +5,7 @@ import surveyData from '../Data/survey'
 import SignUpButton from './SignUpButton'
 import SignUpForm from './SignUpForm'
 import Popup from 'reactjs-popup'
+import PopupWrapper from './PopupWrapper'
 
 export default (props) => {
     
@@ -22,21 +23,20 @@ export default (props) => {
         element.scrollIntoView({behavior: "smooth"})
     }
     
-    const popup = <Popup 
-        trigger={<button className="testButton">SIGN UP</button>} 
-        position="center center">
-        <SignUpForm />
-    </Popup>
-    
+    const popup = <PopupWrapper 
+        trigger={<button className="testButton">SIGN UP</button>}>
+            <SignUpForm />
+        </PopupWrapper>
+
     return <>
         <div id="welcoming">
-            <Headliner login={props.login}/>
+            <Headliner login={props.setDisplay}/>
             <h1 className="mission">The mission statement goes here</h1>
             {popup}
             <p className="centered">Or</p>
             <button className="testButton" onClick={() => surveyClick()}>Test your CO₂ footprint!</button>
         </div>
-        <Survey popup={popup} themes={surveyData.themes}/>
+        <Survey setDisplay={props.setDisplay} popup={popup} themes={surveyData.themes}/>
 
 
     </>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Frontpage from '../Greeting screen/Frontpage';
 import Dashboard from '../Dashboard/Dashboard'
@@ -18,10 +18,16 @@ import { UserProvider } from './UserContext';
 
 function App() {
 
-  const [loggedIn,setLoggedIn] = useState(false)
+  const [loggedIn,setLoggedIn] = useState(false),
+  [display, setDisplay] = useState()
+
+  useEffect (() => {
+    setDisplay(<Frontpage setDisplay={setDisplay} />)
+  },[])
+
   return (
     <UserProvider className="App" >
-        {loggedIn ? <Dashboard /> : <Frontpage login={setLoggedIn}/> }
+        { display }
     </UserProvider>
   );
 }

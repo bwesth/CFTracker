@@ -3,33 +3,33 @@ export default {
         {
             name: "Car",
             questions: [
-                "Question 1",
-                "Question 2",
-                "Question 3"
+                "Question car1",
+                "Question car2",
+                "Question car3"
             ]
         },
         {
             name: "House",
             questions: [
-                "Question 1",
-                "Question 2",
-                "Question 3"
+                "Question house1",
+                "Question house2",
+                "Question house3"
             ]
         },
         {
             name: "Travel",
             questions: [
-                "Question 1",
-                "Question 2",
-                "Question 3"
+                "Question travel1",
+                "Question travel2",
+                "Question travel3"
             ]
         },
         {
             name: "Food",
             questions: [
-                "Question 1",
-                "Question 2",
-                "Question 3"
+                "Question Food1",
+                "Question Food2",
+                "Question Food3"
             ]
         }
 

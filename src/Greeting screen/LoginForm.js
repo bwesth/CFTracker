@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers'
 import * as yup from "yup"
 import { UserContext } from '../Main/UserContext'
+import Dashboard from '../Dashboard/Dashboard'
 
 export default (props) => {
     const [user, setUser] = useContext(UserContext).user
@@ -20,7 +21,7 @@ export default (props) => {
         console.log(data)
         console.log(data.email)
         setUser(user => user= {name: user.name, email: data.email})
-        props.login(true)
+        props.login(<Dashboard />)
     }
 
 
