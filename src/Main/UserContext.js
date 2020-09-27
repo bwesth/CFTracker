@@ -3,7 +3,7 @@ import React, {useState} from "react"
 const UserContext = React.createContext()
 
 function UserProvider(props) {
-    const user = useState({name: 'Mette', email: ''}),
+    const user = useState({name: 'nouser', email: ''}),
     wrapperClass = useState('flex-column'),
     menuPlacement = useState('menu-bottom')
 

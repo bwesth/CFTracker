@@ -18,7 +18,7 @@ import { UserProvider } from './UserContext';
 
 function App() {
 
-  const [loggedIn,setLoggedIn] = useState(false),
+  const [loggedIn,setLoggedIn] = useState(""),
   [display, setDisplay] = useState()
 
   useEffect (() => {

@@ -5,7 +5,7 @@ export default (props) => {
 
     const user = useContext(UserContext).user[0]
 
-    console.log(user)
+    // console.log(user)
     return (
         <div>
             <h1>Main dashboard menu</h1>

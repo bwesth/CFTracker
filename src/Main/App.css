@@ -1,8 +1,22 @@
+:root {
+  --main-colour: #c2c2c2;
+  --secondary-colour: #30749e;
+  --secondary-colour-shade: #2a3744;
+  --action-colour: #91a21f;
+  --action-colour-shade: #565d37;
+}
+
+
 * {
   box-sizing: border-box;
 }
 html, body, #root, .App {
   height: 100%;
+  background-color: var(--main-colour);
+}
+
+button {
+  background-color: var(--secondary-colour);
 }
 
 .center {
@@ -49,6 +63,7 @@ html, body, #root, .App {
   width: 100%;
   text-align: center;
   padding: 7% 10%;
+  /* background-color: var(--secondary-colour); */
 }
 
 .survey {

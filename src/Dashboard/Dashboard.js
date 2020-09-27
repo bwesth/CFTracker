@@ -21,7 +21,7 @@ export default () => {
     [displayItem,setDisplayItem] = useState(menuItems[0].comp),
     [user,setUsername] = useContext(UserContext).user
 
-    console.log(user)
+    // console.log(user)
 
     return <div className={wrapperClass}> 
         <div className="dashboard">

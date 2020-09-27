@@ -17,10 +17,23 @@ export default (props) => {
         resolver: yupResolver(schema),
     })
 
+    // LOGIN API call and logic here
     const submit = (data) => {
         console.log(data)
-        console.log(data.email)
-        setUser(user => user= {name: user.name, email: data.email})
+        // let username = ""
+        // let url = new URL('http://localhost:3001/login')
+        let url = 'http://localhost:3001/login?login="'+data.email+'"&password='+data.password
+        // url.search = new URLSearchParams(data).toString()
+        console.log(url)
+        fetch(url)
+        .then(response => response.json())
+        .then(fetchdata => {
+            console.log(fetchdata)
+            setUser({name: fetchdata.name, email: data.email})
+        
+            
+        })
+        
         props.login(<Dashboard />)
     }
 
