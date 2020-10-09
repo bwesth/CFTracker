@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
-import { UserContext } from "../Main/UserContext";
+import { UserContext } from "../../Main/UserContext";
 import Dashboard from "../Dashboard/Dashboard";
 
 export default (props) => {
