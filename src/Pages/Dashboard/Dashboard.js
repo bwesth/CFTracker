@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./dashboard.css";
-import Menu from "./Menu";
+import Menu from "./SideMenu";
 import Survey from "./Survey/SurveyMenu";
 import Home from "./Home/Home";
 import Footprint from "./Footprint/Footprint";
