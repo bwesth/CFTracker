@@ -1,0 +1,185 @@
+:root {
+  --main-colour: #ffffff;
+  --secondary-colour: #02C39A;
+  --secondary-colour-shade: #2a3744;
+  --action-colour: #FF934F;
+  --action-colour-shade: #565d37;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+html, body, #root, .App {
+  height: 100%;
+  background-color: var(--main-colour);
+}
+
+button {
+  background-color: var(--action-colour);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.App {
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  margin: 0.6%;
+}
+
+#welcoming {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1%;
+}
+
+.testButton {
+  align-self: center;
+  width: 20%;
+  height: 10%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  border-radius: 8px;
+  filter:drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))
+}
+
+.headliner {
+  display: flex;
+  flex-direction: row;
+}
+
+.mission {
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 7% 10%;
+  /* background-color: var(--secondary-colour); */
+}
+
+.survey {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+.survey-button {
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+}
+
+.login, .signUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login {
+  margin-right: 2%;
+}
+
+.headliner h1 {
+  width: 100%;
+}
+
+.login button {
+  width: 100%;
+  height: 100%;
+}
+
+.login p {
+  margin: 0;
+}
+
+.signUp {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1%;
+}
+
+.popup-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-form {
+  position: fixed;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form {
+  position: fixed;
+  /* top: 20%;
+  right: 20%; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.4%;
+}
+
+.login-form input {
+  margin: 2%;
+}
+
+.App-logo, .logo {
+  pointer-events: none;
+}
+
+.centered {
+  align-self: center;
+  margin: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo, .logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d9daeb;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(55, 63, 167);
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(45, 35, 92);
+}
