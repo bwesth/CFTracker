@@ -5,7 +5,7 @@ import { UserContext } from '../../../Main/UserContext'
 export default (props) => {
   const footprint = useContext(UserContext).footprint[0]
   const status = footprint[props.option.text]
-  console.log(status)
+  // console.log(status)
   return (
     <>
       <p>{props.option.text}</p>

@@ -19,6 +19,7 @@ export default (props) => {
   return (
     <div className="survey">
       <form onSubmit={handleSubmit((d) => submit(d))}>
+        
         {props.themes.map((item) => (
           <Theme reg={register} theme={item} />
         ))}
