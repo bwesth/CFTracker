@@ -1,19 +1,44 @@
-import React from "react";
+import React, { useContext } from "react";
 import PopupWrapper from "./PopupWrapper";
 import SignUpForm from "./SignUpForm";
-import surveyData from "../../Data/survey";
 import SignUpButton from "./SignUpButton";
+import { UserContext } from "../../Main/UserContext";
+import Frontpage from "./Frontpage";
+import {
+  car,
+  train,
+  walking_biking,
+  meateater,
+  vegetarian,
+  vegan,
+} from "../../Data/intensityKilo";
+import ResultBar from "./ResultBar";
 
 export default (props) => {
-  const th = surveyData.themes;
-  const data = th.map((i) => [...i.questions]);
+  const footprint = useContext(UserContext).footprint[0];
+  console.log(footprint);
 
-  console.log(data);
+  const userValue =
+    (footprint.Car === "on" ? car() : 0) +
+    (footprint.Train === "on" ? train() : 0) +
+    (footprint.Walking_biking === "on" ? walking_biking() : 0) +
+    (footprint.Omnivore === "on" ? meateater() : 0) +
+    (footprint.Vegetarian === "on" ? vegetarian() : 0) +
+    (footprint.Vegan === "on" ? vegan() : 0);
 
   return (
     <>
       <h1>These are your test results:</h1>
-      {props.data}
+      <ResultBar name={"Average Citizen"} value={14800} />
+      <ResultBar name={"Your Footprint"} value={userValue} />
+      <ResultBar name={"Save the world"} value={17000 * 0.3} />
+      <button
+        onClick={() => {
+          props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);
+        }}
+      >
+        Back
+      </button>
       <PopupWrapper trigger={<SignUpButton />}>
         <SignUpForm />
       </PopupWrapper>

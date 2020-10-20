@@ -1,22 +1,26 @@
-import { meateater, vegetarian, vegan } from "./Data/intensityKilo";
-console.log(meateater());
-console.log(vegetarian());
-console.log(vegan());
+//Deprecated!!!
+
+import { car, meateater } from "../Data/intensityKilo";
 
 import React, { useState } from "react";
 
-const UserContext = React.createContext();
+const FootprintContext = React.createContext();
 
-function UserProvider(props) {
-  const user = useState({ name: "nouser", email: "" }),
-    wrapperClass = useState("flex-column"),
-    menuPlacement = useState("menu-bottom");
+function FootprintProvider(props) {
+  const footprint = useState({
+    Car: "on",
+    Omnivore: "on",
+    Train: "",
+    Vegan: "",
+    Vegetarian: "",
+    Walking_biking: "",
+  });
 
   return (
-    <UserContext.Provider value={{ user, wrapperClass, menuPlacement }}>
+    <FootprintContext.Provider value={{ footprint }}>
       {props.children}
-    </UserContext.Provider>
+    </FootprintContext.Provider>
   );
 }
 
-export { UserProvider, UserContext };
+export { FootprintProvider, FootprintContext };
