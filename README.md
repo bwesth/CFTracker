@@ -10,7 +10,7 @@ react-hook-form <br/>
 @hookform/resolvers <br/
 
 ### `npm i reactjs-popup yup react-hook-form @hookform/resolvers`
-(run nom audit fix al well)
+(run nom audit fix as well)
 
 use to run: 
 ### `npm start`
