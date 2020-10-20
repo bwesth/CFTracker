@@ -1,10 +1,10 @@
-const privateTransport = () => {
+const car = () => {
     return 0.9246976791670614 * 16000;
   },
-  publicTransport = () => {
+  train = () => {
     return 0.5430763054644973 * 16000;
   },
-  biking_walking = () => {
+  walking_biking = () => {
     return 0;
   },
   meateater = () => {
@@ -260,11 +260,4 @@ const privateTransport = () => {
     return (aftensmad() + frokost() + morgenmad()) * 365;
   };
 
-export {
-  meateater,
-  vegetarian,
-  vegan,
-  privateTransport,
-  publicTransport,
-  biking_walking,
-};
+export { meateater, vegetarian, vegan, car, train, walking_biking };

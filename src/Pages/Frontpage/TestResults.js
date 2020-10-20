@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import PopupWrapper from "./PopupWrapper";
 import SignUpForm from "./SignUpForm";
-import surveyData from "../../Data/survey";
 import SignUpButton from "./SignUpButton";
+import { UserContext } from "../../Main/UserContext";
+import Frontpage from "./Frontpage";
 
 export default (props) => {
-  const th = surveyData.themes;
-  const data = th.map((i) => [...i.questions]);
-
-  console.log(data);
+  const footprint = useContext(UserContext).footprint[0];
+  console.log(footprint);
 
   return (
     <>
       <h1>These are your test results:</h1>
-      {props.data}
+      <button
+        onClick={() => {
+          props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);
+        }}
+      >
+        Back
+      </button>
       <PopupWrapper trigger={<SignUpButton />}>
         <SignUpForm />
       </PopupWrapper>
