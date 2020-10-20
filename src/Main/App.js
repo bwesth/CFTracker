@@ -15,6 +15,8 @@ import { UserProvider } from "./UserContext";
 // npm install @hookform/resolvers
 // https://react-hook-form.com/api/
 
+// npm install js-yaml
+// npm install fs
 function App() {
   const [loggedIn, setLoggedIn] = useState(""),
     [display, setDisplay] = useState();
