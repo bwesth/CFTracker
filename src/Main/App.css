@@ -1,22 +1,269 @@
-:root {
-  --main-colour: #ffffff;
-  --secondary-colour: #02C39A;
-  --secondary-colour-shade: #2a3744;
-  --action-colour: #FF934F;
-  --action-colour-shade: #565d37;
+#welcoming {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 1%;
 }
 
-
-* {
-  box-sizing: border-box;
+.mission {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 7% 10%;
 }
+
+.mission .testButton {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 20%;
+  height: 10%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  border-radius: 8px;
+  -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.mission .centered {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: auto;
+}
+
+.popup-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-form {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0.4%;
+}
+
+.login-form input {
+  margin: 2%;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.menu-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 10%;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.menu-right {
+  /* position: absolute; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 20%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.username {
+  font-weight: bold;
+  font-size: large;
+  padding: 1%;
+}
+
+.menuItem {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #d9fbbe;
+          box-shadow: inset 0px 1px 0px 0px #d9fbbe;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #b8e356), to(#a5cc52));
+  background: linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+  background-color: #8fbb27;
+  border-radius: 6px;
+  border: 1px solid #62970c;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #86ae47;
+}
+
+.menuItem:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #a5cc52), to(#b8e356));
+  background: linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
+  background-color: #a5cc52;
+}
+
+.menuItem:active {
+  position: relative;
+  top: 1px;
+}
+
+.content {
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header {
+  background: secondary-colour;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header .header h1 {
+  width: 100%;
+}
+
+.login {
+  margin-right: 2%;
+}
+
+.login login button {
+  width: 100%;
+  height: 100%;
+}
+
+.login login p {
+  margin: 0;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  margin: 0.6%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.App-logo, .logo {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo, .logo {
+    -webkit-animation: App-logo-spin infinite 20s linear;
+            animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 html, body, #root, .App {
   height: 100%;
-  background-color: var(--main-colour);
+  background-color: #ffffff;
 }
 
 button {
-  background-color: var(--action-colour);
+  background-color: #FF934F;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .center {
@@ -27,53 +274,15 @@ button {
 }
 
 .App {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo {
   height: 50px;
   width: auto;
   margin: 0.6%;
-}
-
-#welcoming {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding-top: 1%;
-}
-
-.testButton {
-  align-self: center;
-  width: 20%;
-  height: 10%;
-  margin-bottom: 1%;
-  margin-top: 1%;
-  border-radius: 8px;
-  filter:drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))
-}
-
-.headliner {
-  display: flex;
-  flex-direction: row;
-}
-
-.mission {
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  padding: 7% 10%;
-  /* background-color: var(--secondary-colour); */
-}
-
-.survey {
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  display: none;
 }
 
 .survey-button {
@@ -83,9 +292,16 @@ button {
 }
 
 .login, .signUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .login {
@@ -96,69 +312,19 @@ button {
   width: 100%;
 }
 
-.login button {
-  width: 100%;
-  height: 100%;
-}
-
-.login p {
-  margin: 0;
-}
-
 .signUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-bottom: 1%;
-}
-
-.popup-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.sign-up-form {
-  position: fixed;
-  top: 40%;
-  display: flex;
-  flex-direction: column;
-}
-
-.login-form {
-  position: fixed;
-  /* top: 20%;
-  right: 20%; */
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.4%;
 }
 
 .login-form input {
   margin: 2%;
-}
-
-.App-logo, .logo {
-  pointer-events: none;
-}
-
-.centered {
-  align-self: center;
-  margin: auto;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo, .logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 ::-webkit-scrollbar {
@@ -168,18 +334,21 @@ button {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #d9daeb;
-  box-shadow: inset 0 0 5px grey;
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(55, 63, 167);
-  box-shadow: inset 0 0 5px grey;
+  background: #373fa7;
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(45, 35, 92);
+  background: #2d235c;
 }
+/*# sourceMappingURL=App.css.map */

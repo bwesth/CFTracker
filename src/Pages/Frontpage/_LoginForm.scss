@@ -1,0 +1,15 @@
+.popup-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-form {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4%;
+  
+      input {
+      margin: 2%;
+      }
+  }

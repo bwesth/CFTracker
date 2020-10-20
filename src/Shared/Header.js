@@ -16,7 +16,7 @@ const LoginButton = (props) => {
 
 export default (props) => {
   return (
-    <nav className="headliner">
+    <nav className="header">
       <img src={img} className="logo center" alt="logo" />
       <h1>Project name</h1>
       <Popup
