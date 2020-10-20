@@ -12,14 +12,11 @@ import {
   vegetarian,
   vegan,
 } from "../../Data/intensityKilo";
+import ResultBar from "./ResultBar";
 
 export default (props) => {
   const footprint = useContext(UserContext).footprint[0];
   console.log(footprint);
-
-  function validate(val) {
-    return val === "on";
-  }
 
   const userValue =
     (footprint.Car === "on" ? car() : 0) +
@@ -32,7 +29,9 @@ export default (props) => {
   return (
     <>
       <h1>These are your test results:</h1>
-      <p>{userValue}</p>
+      <ResultBar name={"Average Citizen"} value={14800} />
+      <ResultBar name={"Your Footprint"} value={userValue} />
+      <ResultBar name={"Save the world"} value={17000 * 0.3} />
       <button
         onClick={() => {
           props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);
