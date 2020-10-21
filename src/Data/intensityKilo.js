@@ -7,7 +7,7 @@ const car = () => {
   walking_biking = () => {
     return 0;
   },
-  meateater = () => {
+  omnivore = () => {
     const aftensmad = () => {
       // https://www.fooddata.dk/keyhole/userfiles/mvfodevarer.pdf
       // https://www.valdemarsro.dk/lasagne/
@@ -260,4 +260,11 @@ const car = () => {
     return (aftensmad() + frokost() + morgenmad()) * 365;
   };
 
-export { meateater, vegetarian, vegan, car, train, walking_biking };
+export default {
+  omnivore: omnivore(),
+  vegetarian: vegetarian(),
+  vegan: vegan(),
+  car: car(),
+  train: train(),
+  walking_biking: walking_biking(),
+};

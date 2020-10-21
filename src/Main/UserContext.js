@@ -14,9 +14,10 @@ function UserProvider(props) {
     Vegetarian: "",
     Walking_biking: "",
   });
+  const surveyChoices = useState({Transport: "Car", Food: "Omnivore"})
 
   return (
-    <UserContext.Provider value={{ user, wrapperClass, menuPlacement, footprint }}>
+    <UserContext.Provider value={{ user, wrapperClass, menuPlacement, footprint, surveyChoices }}>
       {props.children}
     </UserContext.Provider>
   );
