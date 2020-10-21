@@ -13,6 +13,7 @@ import {
   vegan,
 } from "../../Data/intensityKilo";
 import ResultBar from "./ResultBar";
+import Dashboard from "../Dashboard/Dashboard";
 
 export default (props) => {
   const footprint = useContext(UserContext).footprint[0];
@@ -27,21 +28,21 @@ export default (props) => {
     (footprint.Vegan === "on" ? vegan() : 0);
 
   return (
-    <>
+    <div className="center ">
       <h1>These are your test results:</h1>
       <ResultBar name={"Average Citizen"} value={14800} />
       <ResultBar name={"Your Footprint"} value={userValue} />
       <ResultBar name={"Save the world"} value={17000 * 0.3} />
-      <button
-        onClick={() => {
-          props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);
-        }}
-      >
-        Back
-      </button>
-      <PopupWrapper trigger={<SignUpButton />}>
-        <SignUpForm />
-      </PopupWrapper>
-    </>
+      <div>
+        {props.popup}
+        <button
+          onClick={() => {
+            props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);
+          }}
+        >
+          Back
+        </button>
+      </div>
+    </div>
   );
 };
