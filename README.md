@@ -12,27 +12,27 @@ react-hook-form <br/>
 `npm i reactjs-popup yup react-hook-form @hookform/resolvers`
 (run nom audit fix as well)
 
-###use to run: 
+### use to run: 
 `npm start`
 
 ## Project Description: A personal CO2 emission tracker tracker featuring:
 
-> User login and persistent data 
+### User login and persistent data 
 Home-made backend functional but abandoned, waiting on Firebase server
 
-Pledges where users can commit to making changes in life-style for visually lowered footprint
+### Pledges where users can commit to making changes in life-style for visually lowered footprint
 Waiting on dependencies
 
 
-Team is currently working on:
+## Team is currently working on:
 
-Firebase server setup
-Research ongoing
+### Firebase server setup
+- [ ] Research ongoing
 
-> CO2 data research, import, and logic
-Yaml file (tmorow) import waiting on Firebase server
-Arbitrary numbers manually generated (need to talk to Mads). 
-Pre-login survey prototype complete, but radial input options locked to context state - priority bug.
+### CO2 data research, import, and logic
+- [ ] Yaml file (tmorow) import waiting on Firebase server
+- [ ] Arbitrary numbers manually generated (need to talk to Mads). 
+- [ ] Pre-login survey prototype complete, but radial input options locked to context state - priority bug.
 
-Sass styling setup
-Initial research and setup complete, fixes pending before merging to master
+### Sass styling setup
+- [ ] Initial research and setup complete, fixes pending before merging to master
