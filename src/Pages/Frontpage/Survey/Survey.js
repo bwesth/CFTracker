@@ -1,16 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import Theme from "./Theme";
 import { useForm } from "react-hook-form";
 import TestResults from "../TestResults";
-import { UserContext } from "../../../Main/UserContext";
 
 export default (props) => {
-  const [survey, setSurvey] = useContext(UserContext).footprint;
 
-  const { register, handleSubmit } = useForm({});
+  const { handleSubmit } = useForm({});
 
   const submit = (data) => {
-    // setSurvey(data);
     props.setDisplay(
       <TestResults results={data} setDisplay={props.setDisplay} popup={props.popup}/>
     );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Frontpage from "../Pages/Frontpage/Frontpage";
-import Dashboard from "../Pages/Dashboard/Dashboard";
+// import Dashboard from "../Pages/Dashboard/Dashboard";
 import { UserProvider } from "./UserContext";
 
 // Dependencies
@@ -18,8 +18,8 @@ import { UserProvider } from "./UserContext";
 // npm install js-yaml
 // npm install fs
 function App() {
-  const [loggedIn, setLoggedIn] = useState(""),
-    [display, setDisplay] = useState();
+  // const [loggedIn, setLoggedIn] = useState("");
+  const [display, setDisplay] = useState();
 
   useEffect(() => {
     setDisplay(<Frontpage setDisplay={setDisplay} />);

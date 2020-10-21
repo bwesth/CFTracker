@@ -6,13 +6,13 @@ import SignUpForm from "./SignUpForm";
 import PopupWrapper from "./PopupWrapper";
 
 export default (props) => {
-  const signUp = () => {
-    alert("Sign up function needed");
-  };
+  // const signUp = () => {
+  //   alert("Sign up function needed");
+  // };
 
-  const login = () => {
-    alert("Login function needed");
-  };
+  // const login = () => {
+  //   alert("Login function needed");
+  // };
 
   const surveyClick = () => {
     const element = document.getElementsByClassName("survey")[0];
