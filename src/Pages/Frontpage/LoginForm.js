@@ -6,7 +6,7 @@ import { UserContext } from "../../Main/UserContext";
 import Dashboard from "../Dashboard/Dashboard";
 
 export default (props) => {
-  const [user, setUser] = useContext(UserContext).user;
+  const setUser = useContext(UserContext).user[1];
 
   const schema = yup.object().shape({
     email: yup.string().required(),

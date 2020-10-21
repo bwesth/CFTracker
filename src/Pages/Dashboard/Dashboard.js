@@ -6,7 +6,7 @@ import Home from "./Home/Home";
 import Footprint from "./Footprint/Footprint";
 import Pledges from "./Pledges/Pledges";
 import News from "./News/News";
-import Suggestions from "./Pledges/Suggestions";
+// import Suggestions from "./Pledges/Suggestions";
 import Settings from "./Settings/Settings";
 import { UserContext } from "../../Main/UserContext";
 

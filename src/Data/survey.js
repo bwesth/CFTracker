@@ -1,29 +1,29 @@
-import {
-  car,
-  train,
-  walking_biking,
-  meateater,
-  vegetarian,
-  vegan,
-} from "./intensityKilo";
+// import {
+//   car,
+//   train,
+//   walking_biking,
+//   meateater,
+//   vegetarian,
+//   vegan,
+// } from "./intensityKilo";
 
 export default {
   themes: [
     {
-      name: "Travel",
+      name: "Transport",
       question: "What is your main method for transport?",
       options: [
-        { text: "Car", Value: car() },
-        { text: "Train", Value: train() },
-        { text: "Walking_biking", Value: walking_biking() },
+        { text: "Car"},
+        { text: "Train"},
+        { text: "Walking_biking"},
       ],
     },
     {
       name: "Food",
       options: [
-        { text: "Omnivore", Value: meateater() },
-        { text: "Vegetarian", Value: vegetarian() },
-        { text: "Vegan", Value: vegan() },
+        { text: "Omnivore"},
+        { text: "Vegetarian"},
+        { text: "Vegan"},
       ],
     },
   ],
