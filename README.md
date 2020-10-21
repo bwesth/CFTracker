@@ -27,12 +27,12 @@ Waiting on dependencies
 ## Team is currently working on:
 
 ### Firebase server setup
-- Research ongoing
+- [ ] Research ongoing
 
 ### CO2 data research, import, and logic
-- Yaml file (tmorow) import waiting on Firebase server
-- Arbitrary numbers manually generated (need to talk to Mads). 
-- Pre-login survey prototype complete, but radial input options locked to context state - priority bug.
+- [ ] Yaml file (tmorow) import waiting on Firebase server
+- [x] Arbitrary numbers manually generated (need to talk to Mads about the yaml file data). 
+- [x] Pre-login survey prototype complete, but radial input options locked to context state - priority bug. (UPDATE: Fixed by syncing to context directly instead of using form hook registration)
 
 ### Sass styling setup
-- Initial research and setup complete, fixes pending before merging to master
+- [ ] Initial research and setup complete, fixes pending before merging to master
