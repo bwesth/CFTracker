@@ -4,17 +4,17 @@ export default {
         {
             name: "Going Vegan", 
             text: "I guess bunnies aren't that tasty.",
-            img: "./BunnyBan.png"
+            img: "../../../Images/Bunnies/BadBunny.png"
         },
         {
             name: "Mega Vegan", 
             text: "Nary a hare shall visit my tender buds.",
-            img: "./BunnyBan.png"
+            img: "../../../Images/Bunnies/BunnyBan.png"
         },
         {
             name: "TOTAL Vegan", 
             text: "Truly sire, I know not this 'meat' you speak of!",
-            img: "./BunnyBan.png"
+            img: "../../../Images/Bunnies/HappyBunny.png"
         }
     ],
     transport: [
