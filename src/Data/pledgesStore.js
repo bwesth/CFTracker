@@ -21,12 +21,12 @@ export default {
         {
             name: "Bikeman Rising", 
             text: "I am so glad for my cykel",
-            img: ""
+            img: "./Images/BikePledge.png"
         },
         {
             name: "No nonsens nelly", 
             text: "This is a placeholder pledge, deal with it",
-            img: ""
+            img: "./Images/PledgeImage.jpg"
         }
     ]
 }
