@@ -9,7 +9,7 @@ export default (props) => {
       <h2>{props.pledgename} Pledge</h2>
       <p>{props.pledgetext}</p>
       {props.img !== "" && 
-          <img src={require(`${props.img}`)} alt="pledge image" />
+          <img src={process.env.PUBLIC_URL + `${props.img}`} alt="pledge image" />
       }
     </div>
   );
