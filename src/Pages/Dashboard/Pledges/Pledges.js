@@ -1,6 +1,7 @@
 import React from "react";
 import Pledge from "./Pledge";
 import pledges from "../../../Data/pledgesStore";
+import badbunny from "../../../Images/Bunnies/BadBunny.png";
 
 export default () => {
   let pledgeList = [];
@@ -18,6 +19,7 @@ export default () => {
   return (
     <div>
       <h1>Pledges dashboard menu</h1>
+      <img src = {badbunny} />
       {pledgeList}
       {/* <Pledge
         pledgename="Going Vegan"
