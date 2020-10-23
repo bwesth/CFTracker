@@ -7,7 +7,9 @@ export default (props) => {
     <div>
       <h2>{props.pledgename} Pledge</h2>
       <p>{props.pledgetext}</p>
-      {props.img !== "" && <img src={require(`${props.img}`)} alt="pledge image" />}
+      {props.img !== "" && 
+          <img src={require(`${props.img}`)} alt="pledge image" />
+      }
     </div>
   );
 };
