@@ -15,6 +15,12 @@ react-hook-form <br/>
 ### use to run: 
 `npm start`
 
+## Sass Guide
+Installing sass: npm install node-sass
+Updating our sass files: node-sass App.scss App.css
+Updating our sass files with a watcher: node-sass App.scss App.css -w
+
+
 ## Project Description: A personal CO2 emission tracker tracker featuring:
 
 ### User login and persistent data 
@@ -36,3 +42,5 @@ Waiting on dependencies
 
 ### Sass styling setup
 - [ ] Initial research and setup complete, fixes pending before merging to master
+
+
