@@ -9,7 +9,6 @@ const LoginButton = (props) => {
     <div className="login">
       {/* <button onClick={() => props.login(true)}>LOGIN</button> */}
       <button>LOGIN</button>
-      <p>Already signed up?</p>
     </div>
   );
 };
@@ -18,7 +17,7 @@ export default (props) => {
   return (
     <nav className="header">
       <img src={img} className="logo center" alt="logo" />
-      <h1>Project name</h1>
+      <h1>MY CLIMATE ACTION</h1>
       <Popup
         trigger={LoginButton}
         // trigger={<button className="login ">LOG IN</button>}

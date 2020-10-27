@@ -1,354 +1,144 @@
-#welcoming {
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-top: 1%;
-}
-
-.mission {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  padding: 7% 10%;
-}
-
-.mission .testButton {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 20%;
-  height: 10%;
-  margin-bottom: 1%;
-  margin-top: 1%;
-  border-radius: 8px;
-  -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-}
-
-.mission .centered {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: auto;
-}
-
 .popup-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+  justify-content: center; }
 
 .login-form {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 0.4%;
-}
+  flex-direction: column;
+  margin-top: 0.4%; }
+  .login-form input {
+    margin: 2%; }
 
-.login-form input {
-  margin: 2%;
-}
+/*
+This scss document is for all the componments variables that used between our pages.  
+*/
+p {
+  color: #484848; }
 
-.flex-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.flex-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.dashboard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  width: 100%;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-.menu-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 10%;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-}
-
-.menu-right {
-  /* position: absolute; */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  width: 20%;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
-.username {
+h3 {
+  font-family: Roboto;
+  font-style: normal;
   font-weight: bold;
-  font-size: large;
-  padding: 1%;
-}
-
-.menuItem {
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #d9fbbe;
-          box-shadow: inset 0px 1px 0px 0px #d9fbbe;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #b8e356), to(#a5cc52));
-  background: linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
-  background-color: #8fbb27;
-  border-radius: 6px;
-  border: 1px solid #62970c;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 2em;
-  font-weight: bold;
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #86ae47;
-}
-
-.menuItem:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #a5cc52), to(#b8e356));
-  background: linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
-  background-color: #a5cc52;
-}
-
-.menuItem:active {
-  position: relative;
-  top: 1px;
-}
-
-.content {
-  height: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff; }
 
 .header {
-  background: secondary-colour;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #02C39A;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.header .header h1 {
   width: 100%;
-}
+  height: 50px; }
+  .header h1 {
+    justify-content: flex-start;
+    padding-right: 75%;
+    font-family: Montserrat;
+    font-weight: normal;
+    color: #ffffff;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 30px; }
+  .header .login {
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center; }
+    .header .login button {
+      justify-content: center;
+      font-family: Roboto;
+      font-weight: bold;
+      border-radius: 8px;
+      width: 55px;
+      height: 20px;
+      font-size: 12px;
+      color: #ffffff; }
+  .header .logo {
+    justify-content: flex-start;
+    height: 40px;
+    width: 40px; }
+  .header .App-logo, .header .logo {
+    pointer-events: none; }
 
-.login {
-  margin-right: 2%;
-}
+/*
+This scss document is for all the componments variables that used between our pages.  
+*/
+p {
+  color: #484848; }
 
-.login login button {
-  width: 100%;
-  height: 100%;
-}
-
-.login login p {
-  margin: 0;
-}
-
-.logo {
-  height: 50px;
-  width: auto;
-  margin: 0.6%;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.App-logo, .logo {
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo, .logo {
-    -webkit-animation: App-logo-spin infinite 20s linear;
-            animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
+h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff; }
 
 html, body, #root, .App {
   height: 100%;
-  background-color: #ffffff;
-}
+  background-color: #ffffff; }
 
 button {
-  background-color: #FF934F;
-}
+  background-color: #FF934F; }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-}
+  width: 50%; }
 
 .App {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+  align-items: center; }
 
 .logo {
   height: 50px;
   width: auto;
-  margin: 0.6%;
-}
+  margin: 0.6%; }
 
 .survey-button {
   width: 100%;
   height: 100%;
-  /* position: absolute; */
-}
+  /* position: absolute; */ }
 
 .login, .signUp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+  flex-direction: column;
+  justify-content: center; }
 
 .login {
-  margin-right: 2%;
-}
+  margin-right: 2%; }
 
 .headliner h1 {
-  width: 100%;
-}
+  width: 100%; }
 
 .signUp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-bottom: 1%;
-}
+  flex-direction: row;
+  margin-bottom: 1%; }
 
 .login-form input {
-  margin: 2%;
-}
+  margin: 2%; }
 
 ::-webkit-scrollbar {
-  width: 10px;
-}
+  width: 10px; }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #d9daeb;
-  -webkit-box-shadow: inset 0 0 5px grey;
-          box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px; }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #373fa7;
-  -webkit-box-shadow: inset 0 0 5px grey;
-          box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px; }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #2d235c;
-}
-/*# sourceMappingURL=App.css.map */
+  background: #2d235c; }

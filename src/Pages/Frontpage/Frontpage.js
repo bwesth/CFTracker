@@ -21,7 +21,7 @@ export default (props) => {
   };
 
   const popup = (
-    <PopupWrapper trigger={<button className="testButton">SIGN UP</button>}>
+    <PopupWrapper trigger={<button className="testButton"><h3>SIGN UP</h3></button>}>
       <SignUpForm />
     </PopupWrapper>
   );
@@ -34,7 +34,7 @@ export default (props) => {
         {popup}
         <p className="centered">Or</p>
         <button className="testButton" onClick={() => surveyClick()}>
-          Test your CO₂ footprint!
+          <h3>Test your CO₂ footprint!</h3>
         </button>
       </div>
       <Survey

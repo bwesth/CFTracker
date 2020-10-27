@@ -1,27 +1,39 @@
-#welcoming {
+@import "/src/Shared/Variables";
+@import "./Survey/Survey";
+
+#welcoming { 
+  background-color: $main-colour;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 1%;
-  }
-
-  .mission {
-    align-self: center;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    padding: 7% 10%;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    
    
+.mission {
+  width: 750px;
+  height: 120px;
+  text-align: center;
+  align-self: center;
+  padding: 7% 10%;
 
+  h1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    color: $font-button-colour;
+    }  
+  }
   .testButton {
-      align-self: center;
-      width: 20%;
-      height: 10%;
+      
+      width: $button-width;
+      height: $button-height;
       margin-bottom: 1%;
       margin-top: 1%;
-      border-radius: 8px;
-      filter:drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))
+      border-radius: $button-radius;
+      filter: $button-shadow;
     }
 
   .centered {

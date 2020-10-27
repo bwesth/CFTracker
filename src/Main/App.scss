@@ -1,4 +1,3 @@
-@import "../Pages/Frontpage/FrontPage";
 @import "../Pages/Frontpage/LoginForm";
 @import "../Pages/Frontpage/TestResults";
 @import "../Pages/Dashboard/Home/Home";
@@ -7,9 +6,9 @@
 @import "../Pages/Dashboard/Pledges/Pledges";
 @import "../Pages/Dashboard/Pledges/Suggestions";
 @import "../Pages/Dashboard/SideMenu";
-@import "../Pages/Dashboard/Dashboard";
 @import "../Shared/Header";
 @import "../Shared/Footer";
+@import "../Shared/Variables";
 
 // Styling fields
 $main-colour: #ffffff;
