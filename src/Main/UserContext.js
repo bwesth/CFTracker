@@ -4,8 +4,8 @@ const UserContext = React.createContext();
 
 function UserProvider(props) {
   const user = useState({ name: "nouser", email: "" }),
-    wrapperClass = useState("flex-column"),
-    menuPlacement = useState("menu-bottom");
+    wrapperClass = useState("flex-row"),
+    menuPlacement = useState("menu-right");
   const surveyChoices = useState({Transport: "Car", Food: "Omnivore"})
 
   return (

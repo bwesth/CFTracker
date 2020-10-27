@@ -1,3 +1,4 @@
 import React from "react";
+import FootprintBars from "../../../Shared/FootprintBars";
 
-export default () => <p>Coming soon</p>;
+export default () => <div><p>Coming soon</p><FootprintBars /></div>;

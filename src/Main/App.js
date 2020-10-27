@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Frontpage from "../Pages/Frontpage/Frontpage";
-// import Dashboard from "../Pages/Dashboard/Dashboard";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 import { UserProvider } from "./UserContext";
 
 // Dependencies
@@ -22,7 +22,8 @@ function App() {
   const [display, setDisplay] = useState();
 
   useEffect(() => {
-    setDisplay(<Frontpage setDisplay={setDisplay} />);
+    //setDisplay(<Frontpage setDisplay={setDisplay} />);
+    setDisplay(<Dashboard />);
   }, []);
 
   return <UserProvider className="App">{display}</UserProvider>;
