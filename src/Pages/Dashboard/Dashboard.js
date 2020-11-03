@@ -11,8 +11,9 @@ import Settings from "./Settings/Settings";
 import { UserContext } from "../../Main/UserContext";
 
 export default () => {
-  const [menuPlacement, setMenuPlacement] = useContext(UserContext)
-  .menuPlacement,
+  const [menuPlacement, setMenuPlacement] = useContext(
+      UserContext
+    ).menuPlacement,
     [wrapperClass, setWrapperClass] = useContext(UserContext).wrapperClass,
     menuItems = [
       { name: "Home", comp: <Home /> },
