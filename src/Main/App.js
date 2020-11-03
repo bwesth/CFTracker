@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 import Frontpage from "../Pages/Frontpage/Frontpage";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import { UserProvider } from "./UserContext";

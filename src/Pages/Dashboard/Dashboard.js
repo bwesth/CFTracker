@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "./dashboard.css";
+// import "./_Dashboard.scss";
 import Menu from "./SideMenu";
 import Survey from "./Survey/SurveyMenu";
 import Home from "./Home/Home";

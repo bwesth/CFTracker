@@ -1,3 +1,4 @@
+@import "../Pages/Dashboard/Dashboard";
 @import "../Pages/Frontpage/LoginForm";
 @import "../Pages/Frontpage/TestResults";
 @import "../Pages/Dashboard/Home/Home";
@@ -12,92 +13,94 @@
 
 // Styling fields
 $main-colour: #ffffff;
-$secondary-colour: #02C39A;
+$secondary-colour: #02c39a;
 $secondary-colour-shade: #2a3744;
-$action-colour: #FF934F;
+$action-colour: #ff934f;
 $action-colour-shade: #565d37;
-  
-html, body, #root, .App {
-    height: 100%;
-    background-color: $main-colour;
-  }
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  background-color: $main-colour;
+}
 
 button {
-    background-color: $action-colour;
-  }
+  background-color: $action-colour;
+}
 
-  * {
-    box-sizing: border-box;
-  }
- 
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  
-  .App {
-    align-items: center;
-  }
-  
-  .logo {
-    height: 50px;
-    width: auto;
-    margin: 0.6%;
-  }
-  
-  .survey-button {
-    width: 100%;
-    height: 100%;
-    /* position: absolute; */
-  }
-  
-  .login, .signUp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .login {
-    margin-right: 2%;
-  }
-  
-  .headliner h1 {
-    width: 100%;
-  }
-  
+* {
+  box-sizing: border-box;
+}
 
-  .signUp {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 1%;
-  }
-  
-  .login-form input {
-    margin: 2%;
-  }
-  
-  
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #d9daeb;
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(55, 63, 167);
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(45, 35, 92);
-  }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.App {
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  margin: 0.6%;
+}
+
+.survey-button {
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+}
+
+.login,
+.signUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login {
+  margin-right: 2%;
+}
+
+.headliner h1 {
+  width: 100%;
+}
+
+.signUp {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1%;
+}
+
+.login-form input {
+  margin: 2%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d9daeb;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(55, 63, 167);
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(45, 35, 92);
+}
