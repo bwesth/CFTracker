@@ -1,5 +1,5 @@
 # Group ID: 2 <br>
-## Group Members: Rasmus de Neerdaard, Nicolai Mollerup, John Muller, Bjørn Westh
+## Group Members: Rasmus de Neergaard, Nicolai Mollerup, John Muller, Bjørn Westh
 
 # Project: Front end project for Carbon Footprint Tracker
 
@@ -14,6 +14,12 @@ react-hook-form <br/>
 
 ### use to run: 
 `npm start`
+
+## Sass Guide
+Installing sass: npm install node-sass
+Updating our sass files: node-sass App.scss App.css
+Updating our sass files with a watcher: node-sass App.scss App.css -w
+
 
 ## Project Description: A personal CO2 emission tracker tracker featuring:
 
