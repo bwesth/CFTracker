@@ -21,7 +21,7 @@ export default (props) => {
   };
 
   const popup = (
-    <PopupWrapper trigger={<button className="testButton">SIGN UP</button>}>
+    <PopupWrapper trigger={<button className="testButton"><h3>SIGN UP</h3></button>}>
       <SignUpForm />
     </PopupWrapper>
   );
@@ -30,12 +30,22 @@ export default (props) => {
     <>
       <div id="welcoming">
         <Header login={props.setDisplay} />
-        <h1 className="mission">The mission statement goes here</h1>
-        {popup}
-        <p className="centered">Or</p>
-        <button className="testButton" onClick={() => surveyClick()}>
-          Test your CO₂ footprint!
-        </button>
+        <h1 className="mission">Change the future.</h1>
+        <p>There is now no doubt that climate change will have a profound effect on our future.</p>
+          <p>Help us save the planet, one person at a time</p>
+        <div className="middelBox">
+          <h1>Become The Solution</h1>
+          <p>We believe every individual can help in the fight against climate change.<br></br>
+            Any contribution counts!<br></br>
+            Take the test below to discover your carbon footprint.</p>
+          <div id="buttonBox">
+            <button className="testButton" onClick={() => surveyClick()}>
+            <h3>Test your CO₂ footprint!</h3>
+            </button>
+            <p >Or</p>
+            {popup}
+          </div>
+        </div>
       </div>
       <Survey
         setDisplay={props.setDisplay}

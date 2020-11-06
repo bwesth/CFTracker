@@ -1,0 +1,41 @@
+/*
+This scss document is for all the componments variables that used between our pages.  
+*/
+
+//Our webside colours 
+$main-colour: #ffffff;
+$secondary-colour: #02C39A;
+$secondary-colour-shade: #2a3744;
+$action-colour: #FF934F;
+$action-colour-shade: #565d37;
+$button-font-colour: #ffffff;
+$font-colour: #484848;;
+
+//Our button variables
+$button-width:  132px; 
+$button-height:  32px;
+$button-radius:  8px; 
+$button-shadow: drop-shadow(1px 1px 3px #333333); 
+
+p{
+    color: $font-colour;
+    font-family: Montserrat;
+    font-size: 12px;
+}
+
+// button 
+button{
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $button-font-colour;
+    background-color: $action-colour; 
+    border-radius:$button-radius;
+    filter:$button-shadow;
+    align-items: center;
+    justify-content: center;
+    
+    }

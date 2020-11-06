@@ -7,7 +7,7 @@
 reactjs-popup <br/>
 yup <br/>
 react-hook-form <br/>
-@hookform/resolvers <br/
+@hookform/resolvers <br/>
 
 `npm i reactjs-popup yup react-hook-form @hookform/resolvers` <br/>
 (run nom audit fix as well)
