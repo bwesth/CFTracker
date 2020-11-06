@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../Shared/Header";
 import Survey from "./Survey/Survey";
 import surveyData from "../../Data/survey";
@@ -6,6 +6,8 @@ import SignUpForm from "./SignUpForm";
 import PopupWrapper from "./PopupWrapper";
 
 export default (props) => {
+
+  const [surveyVisible, setSurveyVisible] = useState(false)
   // const signUp = () => {
   //   alert("Sign up function needed");
   // };
@@ -15,9 +17,8 @@ export default (props) => {
   // };
 
   const surveyClick = () => {
-    const element = document.getElementsByClassName("survey")[0];
-    element.style.display = "flex";
-    element.scrollIntoView({ behavior: "smooth" });
+    setSurveyVisible(prevState => !prevState)
+    // element.scrollIntoView({ behavior: "smooth" });
   };
 
   const popup = (
@@ -32,7 +33,7 @@ export default (props) => {
         <Header login={props.setDisplay} />
         <h1 className="mission">Change the future.</h1>
         <p>There is now no doubt that climate change will have a profound effect on our future.</p>
-          <p>Help us save the planet, one person at a time</p>
+        <p>Help us save the planet, one person at a time</p>
         <div className="middelBox">
           <h1>Become The Solution</h1>
           <p>We believe every individual can help in the fight against climate change.<br></br>
@@ -47,11 +48,12 @@ export default (props) => {
           </div>
         </div>
       </div>
-      <Survey
+      {surveyVisible && <Survey
         setDisplay={props.setDisplay}
         popup={popup}
         themes={surveyData.themes}
-      />
+      />}
+      
     </>
   );
 };
