@@ -1,11 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
 import { UserContext } from "../../Main/UserContext";
 import Dashboard from "../Dashboard/Dashboard";
-
-import firebase from "../../components/Firebase/firebase";
 
 export default (props) => {
   const setUser = useContext(UserContext).user[1];
@@ -45,39 +43,16 @@ export default (props) => {
     props.login(<Dashboard />);
   };
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
   return (
     <div className="popup-wrapper">
       <form
         className="login-form"
-        onSubmit={(e) => e.preventDefault() && false}
+        onSubmit={handleSubmit((data) => submit(data))}
       >
-        <input
-          name="email"
-          type="email"
-          onChange={(e) => setEmail(e.target.value)}
-          ref={register}
-        />
-        <input
-          name="password"
-          type="text"
-          onChange={(e) => setPassword(e.target.value)}
-          ref={register}
-        />
-        <input type="submit" onClick={login} />
+        <input name="email" type="email" ref={register} />
+        <input name="password" type="text" ref={register} />
+        <input type="submit" />
       </form>
     </div>
   );
-
-  async function login() {
-		try {
-			await firebase.login(email, password)
-      //props.history.replace('/dashboard')
-      console.log("Success");
-		} catch(error) {
-			alert(error.message)
-		}
-	}
 };
