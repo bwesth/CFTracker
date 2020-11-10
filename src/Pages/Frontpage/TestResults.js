@@ -10,6 +10,20 @@ export default (props) => {
       <h1>These are your test results:</h1>
       <FootprintBars />
       <div>
+        <ResultsSection>
+          <Chart1 />
+          <Description1 />
+        </ResultsSection>
+        <ResultsSection>
+          <Chart2 />
+          <Description2 />
+        </ResultsSection>
+        <ResultsSection>
+          <Chart3 />
+          <Description3 />
+        </ResultsSection>
+      </div>
+      <div>
         {props.popup}
         <button
           onClick={() => {
