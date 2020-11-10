@@ -1,6 +1,8 @@
   @import "../Shared/Variables";
   
   .header {
+    position: fixed;
+    top: 0;
     flex-direction: row;
     justify-content: space-between;
     background: $secondary-colour;

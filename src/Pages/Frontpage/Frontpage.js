@@ -4,10 +4,12 @@ import Survey from "./Survey/Survey";
 import surveyData from "../../Data/survey";
 import SignUpForm from "./SignUpForm";
 import PopupWrapper from "./PopupWrapper";
+import FrontpageBackgroundPhoto from './../../EarthBG_006.jpg';
 
 export default (props) => {
 
   const [surveyVisible, setSurveyVisible] = useState(false)
+  //const FrontpageBackgroundPhoto = require ("./../../EarthBG_006.png");
   // const signUp = () => {
   //   alert("Sign up function needed");
   // };
@@ -27,13 +29,18 @@ export default (props) => {
     </PopupWrapper>
   );
 
+  //<img src={FrontpageBackgroundPhoto} alt="" ></img>
+  
   return (
     <>
       <div id="welcoming">
         <Header login={props.setDisplay} />
-        <h1 className="mission">Change the future.</h1>
+        <div className="mission"> 
+        
+        <h1>Change the future.</h1>
         <p>There is now no doubt that climate change will have a profound effect on our future.</p>
         <p>Help us save the planet, one person at a time</p>
+        </div>
         <div className="middelBox">
           <h1>Become The Solution</h1>
           <p>We believe every individual can help in the fight against climate change.<br></br>
