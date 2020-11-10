@@ -1,66 +1,27 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers";
-import * as yup from "yup";
-
-import firebase from "../../components/Firebase/firebase";
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers'
+import * as yup from "yup"
 
 export default () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const schema = yup.object().shape({
-    name: yup.string().required(),
-    email: yup.string().required(),
-    password: yup.string().required(),
-  });
+    const schema = yup.object().shape({
+        name: yup.string().required(),
+        email: yup.string().required(),
+        password: yup.string().required()
+    })
 
-  const { register, handleSubmit } = useForm({
-    resolver: yupResolver(schema),
-  });
+    const { register, handleSubmit } = useForm({
+        resolver: yupResolver(schema),
+    })
 
-  return (
-    <div className="popup-wrapper">
-      <form
-        className="sign-up-form"
-        onSubmit={(e) => e.preventDefault() && false}
-      >
-        <input
-          id="name"
-          name="name"
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          ref={register}
-        />
-        <input
-          id="email"
-          name="email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          ref={register}
-        />
-        <input
-          id="password"
-          name="password"
-          type="text"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          ref={register}
-        />
-        <input type="submit" onClick={onRegister} />
-      </form>
+
+    return <div className="popup-wrapper">
+        <form className="sign-up-form" onSubmit={handleSubmit(d => console.log(d))}>
+            <input name="name" type="text" ref={register} />
+            <input name="email" type="email" ref={register} />
+            <input name="password" type="text" ref={register} />
+            <input type="submit" />
+        </form>
     </div>
-  );
-
-  async function onRegister() {
-    try {
-      await firebase.register(name, email, password);
-      //props.history.replace('/dashboard')
-    } catch (error) {
-      alert(error.message);
-    }
-  }
-};
+}
