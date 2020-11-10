@@ -22,8 +22,8 @@ function App() {
   const [display, setDisplay] = useState();
 
   useEffect(() => {
-    //setDisplay(<Frontpage setDisplay={setDisplay} />);
-    setDisplay(<Dashboard />);
+    setDisplay(<Frontpage setDisplay={setDisplay} />);
+    //setDisplay(<Dashboard />);
   }, []);
 
   return <UserProvider className="App">{display}</UserProvider>;
