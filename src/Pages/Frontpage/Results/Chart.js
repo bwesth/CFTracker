@@ -4,7 +4,6 @@ export default ({img}) => {
   const style = {
     height: "100%",
     width: "auto",
-    // backgroundColor: "orange",
   };
 
   return (

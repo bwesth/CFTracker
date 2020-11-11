@@ -24,13 +24,15 @@ function App() {
   const [display, setDisplay] = useState();
 
   useEffect(() => {
-    setDisplay(<TestResults setDisplay={setDisplay} />);
+    // setDisplay(<TestResults setDisplay={setDisplay} />);
     // setDisplay(<Dashboard />);
+    setDisplay(<Frontpage setDisplay={setDisplay} />);
   }, []);
 
   return <UserProvider className="App">
-<Header login={setDisplay} />
-    {display}</UserProvider>;
+    <Header login={setDisplay} />
+    {display}
+  </UserProvider>;
 }
 
 export default App;
