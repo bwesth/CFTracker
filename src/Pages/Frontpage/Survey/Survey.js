@@ -1,7 +1,7 @@
 import React from "react";
 import Theme from "./Theme";
 import { useForm } from "react-hook-form";
-import TestResults from "../TestResults";
+import TestResults from "../Results/TestResults";
 
 export default (props) => {
 

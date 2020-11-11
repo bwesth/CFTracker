@@ -45,14 +45,12 @@ export default (props) => {
         "url(" + getRandImg(right) + "), url(" + getRandImg(left) + ")",
       backgroundPosition: "right bottom, left bottom",
       backgroundRepeat: "no-repeat, no-repeat",
-      backgroundSize: "150px, 150px",
+      backgroundSize: "250px, 250px",
     };
 
   return (
     <div style={wrapper}>
       {props.children}
-      {/* <img style={left} src={getRandImg()} />
-      <img style={right} src={getRandImg()} /> */}
     </div>
   );
 };
