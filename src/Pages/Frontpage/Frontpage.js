@@ -3,12 +3,11 @@ import Survey from "./Survey/Survey";
 import surveyData from "../../Data/survey";
 import SignUpForm from "./SignUpForm";
 import PopupWrapper from "./PopupWrapper";
-import FrontpageBackgroundPhoto from './../../EarthBG_006.jpg';
+import Footer from "../../Shared/Footer";
 
 export default (props) => {
 
   const [surveyVisible, setSurveyVisible] = useState(false)
-  //const FrontpageBackgroundPhoto = require ("./../../EarthBG_006.png");
   // const signUp = () => {
   //   alert("Sign up function needed");
   // };
@@ -27,8 +26,6 @@ export default (props) => {
       <SignUpForm />
     </PopupWrapper>
   );
-
-  //<img src={FrontpageBackgroundPhoto} alt="" ></img>
   
   return (
     <>
@@ -53,13 +50,14 @@ export default (props) => {
             {popup}
           </div>
         </div>
-      </div>
+        <Footer/>
+       </div>
       {surveyVisible && <Survey
         setDisplay={props.setDisplay}
         popup={popup}
         themes={surveyData.themes}
       />}
-      
     </>
+
   );
 };
