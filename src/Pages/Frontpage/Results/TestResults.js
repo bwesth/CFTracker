@@ -23,7 +23,7 @@ const style = {
 
 export default (props) => {
   return (
-    <div style={style}>
+    <div className="results-main" style={style}>
       <h1>Let’s see how you did!</h1>
       <div style={style}>
         <ResultsSection>

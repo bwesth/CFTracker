@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../../Shared/Header";
 import Survey from "./Survey/Survey";
 import surveyData from "../../Data/survey";
 import SignUpForm from "./SignUpForm";
@@ -34,7 +33,7 @@ export default (props) => {
   return (
     <>
       <div id="welcoming">
-        <Header login={props.setDisplay} />
+
         <div className="mission"> 
         
         <h1>Change the future.</h1>
