@@ -3,6 +3,8 @@ import "./App.scss";
 import Frontpage from "../Pages/Frontpage/Frontpage";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import { UserProvider } from "./UserContext";
+import TestResults from "../Pages/Frontpage/Results/TestResults";
+import Header from "../Shared/Header";
 
 // Dependencies
 // npm install reactjs-popup
@@ -22,11 +24,15 @@ function App() {
   const [display, setDisplay] = useState();
 
   useEffect(() => {
-    setDisplay(<Frontpage setDisplay={setDisplay} />);
+    // setDisplay(<TestResults setDisplay={setDisplay} />);
     // setDisplay(<Dashboard />);
+    setDisplay(<Frontpage setDisplay={setDisplay} />);
   }, []);
 
-  return <UserProvider className="App">{display}</UserProvider>;
+  return <UserProvider className="App">
+    <Header login={setDisplay} />
+    {display}
+  </UserProvider>;
 }
 
 export default App;
