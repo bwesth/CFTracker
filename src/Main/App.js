@@ -5,6 +5,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import { UserProvider } from "./UserContext";
 import TestResults from "../Pages/Frontpage/Results/TestResults";
 import Header from "../Shared/Header";
+import Footer from "../Shared/Footer";
 
 // Dependencies
 // npm install reactjs-popup
@@ -32,6 +33,7 @@ function App() {
   return <UserProvider className="App">
     <Header login={setDisplay} />
     {display}
+    <Footer/>
   </UserProvider>;
 }
 

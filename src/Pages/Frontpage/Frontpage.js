@@ -3,7 +3,6 @@ import Survey from "./Survey/Survey";
 import surveyData from "../../Data/survey";
 import SignUpForm from "./SignUpForm";
 import PopupWrapper from "./PopupWrapper";
-import Footer from "../../Shared/Footer";
 
 export default (props) => {
 
@@ -50,7 +49,7 @@ export default (props) => {
             {popup}
           </div>
         </div>
-        <Footer/>
+        
        </div>
       {surveyVisible && <Survey
         setDisplay={props.setDisplay}
