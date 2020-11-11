@@ -20,6 +20,12 @@ export default (props) => {
     // element.scrollIntoView({ behavior: "smooth" });
   };
 
+  const centered = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }
+
   const popup = (
     <PopupWrapper trigger={<button className="testButton"><h3>SIGN UP</h3></button>}>
       <SignUpForm />
@@ -49,13 +55,12 @@ export default (props) => {
             {popup}
           </div>
         </div>
-        
-       </div>
-      {surveyVisible && <Survey
+      {surveyVisible && <div style={centered}><Survey
         setDisplay={props.setDisplay}
         popup={popup}
         themes={surveyData.themes}
-      />}
+        /></div>}
+       </div>
     </>
 
   );
