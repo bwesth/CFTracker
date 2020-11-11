@@ -3,9 +3,9 @@ import "./App.scss";
 import Frontpage from "../Pages/Frontpage/Frontpage";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import { UserProvider } from "./UserContext";
-import TestResults from "../Pages/Frontpage/Results/TestResults";
 import Header from "../Shared/Header";
 import Footer from "../Shared/Footer";
+import Trees from "../Pages/Frontpage/Results/Graphs/Trees";
 
 // Dependencies
 // npm install reactjs-popup
@@ -27,7 +27,8 @@ function App() {
   useEffect(() => {
     // setDisplay(<TestResults setDisplay={setDisplay} />);
     // setDisplay(<Dashboard />);
-    setDisplay(<Frontpage setDisplay={setDisplay} />);
+    // setDisplay(<Frontpage setDisplay={setDisplay} />);
+    setDisplay(<Trees amount={12}/>);
   }, []);
 
   return <UserProvider className="App">

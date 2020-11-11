@@ -1,0 +1,32 @@
+.trees {
+  margin-top: 5%;
+
+  // First tree, normal+lower
+  img:nth-child(4n-3) {
+    transform: translate(-10px, 40px);
+  }
+
+  // Second tree, small+upper
+  img:nth-child(4n-2) {
+    transform: translate(-70px, -150px);
+    width: auto;
+    height: 130px;
+  }
+
+  // Third tree, normal+upper
+  img:nth-child(4n-1) {
+    transform: translate(-100px, -30px);
+  }
+
+  // Fourth tree, small+bottom
+  img:nth-child(4n-0) {
+    transform: translate(-150px, 45px);
+    width: auto;
+    height: 110px;
+  }
+
+  // img:nth-child(4n-2) {
+  // width: auto;
+  // height: 50px;
+  // }
+}
