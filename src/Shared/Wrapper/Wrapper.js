@@ -14,12 +14,12 @@ export default (props) => {
 
   function getRandImg(imgs) {
       let rand = Math.floor(Math.random() * imgs.length)
-      console.log(rand)
     return imgs[rand];
   }
 
     const wrapper = {
       display: "flex",
+      flexDirection: props.direction || "row",
       alignItems: "center",
       justifyContent: "center",
       width: "100%",

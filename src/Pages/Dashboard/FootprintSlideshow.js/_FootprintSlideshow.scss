@@ -1,0 +1,15 @@
+.slides {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 2s ease-in;
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  
