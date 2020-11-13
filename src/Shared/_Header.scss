@@ -12,7 +12,6 @@
     filter: $button-shadow;
     z-index: 7;
 
-
     h1 {
       justify-content: flex-start;
       padding-right: 80%;
@@ -24,33 +23,33 @@
       line-height: 30px;
     }
   
-  .login{
-    margin-right: 2%;
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    
-    button{
-      justify-items: center;
-      font-family: Roboto;
-      font-weight: bold;
-      border-radius: 8px;
-      width: 55px;
-      height: 25px;
-      font-size: 12px;
-      color: $button-font-colour;
+    .login{
+      margin-right: 2%;
+      display: flex;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      
+      button{
+        justify-items: center;
+        font-family: Roboto;
+        font-weight: bold;
+        border-radius: 8px;
+        width: 55px;
+        height: 25px;
+        font-size: 12px;
+        color: $button-font-colour;
+      }
     }
-  }
 
-  .logo {
-    justify-content: flex-start;
-    height: 40px;
-    width: 40px;
-  }  
-  
-  .App-logo, .logo {
-    pointer-events: none;
-  }
+    .logo {
+      justify-content: flex-start;
+      height: 40px;
+      width: 40px;
+    }  
+    
+    .App-logo, .logo {
+      pointer-events: none;
+    }
 
   }

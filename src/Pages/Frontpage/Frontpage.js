@@ -55,12 +55,13 @@ export default (props) => {
             {popup}
           </div>
         </div>
-      {surveyVisible && <div style={centered}><Survey
+       </div>
+      {surveyVisible && <Survey
         setDisplay={props.setDisplay}
         popup={popup}
         themes={surveyData.themes}
-        /></div>}
-       </div>
+      />}
+      <Footer/>
     </>
 
   );
