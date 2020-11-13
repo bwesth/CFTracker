@@ -51,13 +51,13 @@ export default (props) => {
             {popup}
           </div>
         </div>
-        <Footer/>
        </div>
       {surveyVisible && <Survey
         setDisplay={props.setDisplay}
         popup={popup}
         themes={surveyData.themes}
       />}
+      <Footer/>
     </>
 
   );

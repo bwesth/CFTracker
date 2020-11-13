@@ -10,12 +10,13 @@ $action-colour: #FF934F;
 $action-colour-shade: #565d37;
 $button-font-colour: #ffffff;
 $font-colour: #484848;;
+$font-shadow: 5px 5px 8px $font-colour;
 
 //Our button variables
 $button-width:  132px; 
 $button-height:  32px;
 $button-radius:  8px; 
-$button-shadow: drop-shadow(1px 1px 3px #333333); 
+$button-shadow: drop-shadow(px 1px 1px $font-colour); 
 
 p{
     color: $font-colour;
@@ -34,7 +35,7 @@ button{
     color: $button-font-colour;
     background-color: $action-colour; 
     border-radius:$button-radius;
-    filter:$button-shadow;
+
     align-items: center;
     justify-content: center;
     

@@ -15,26 +15,26 @@ return(
             href="https://www.facebook.com/"
             className="facebook_social"
         >
-            <FontAwesomeIcon icon={faFacebook} size="2x"></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faFacebook} ></FontAwesomeIcon>
         </a>
         <a
             href="https://www.Instagram.com/"
             className="instagram_social"
         >
-            <FontAwesomeIcon icon={faInstagram} size="2x"></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faInstagram} size="1x"></FontAwesomeIcon>
         </a>
         <a
             href="https://www.Twitter.com/"
             className="twitter_social"
         >
-            <FontAwesomeIcon icon={faTwitter} size="2x"></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faTwitter} ></FontAwesomeIcon>
         </a>
         <a
             href="https://www.Youtube.com/"
             className="youtube_social"
             
         >
-            <FontAwesomeIcon icon={faYoutube} size="2x"></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faYoutube} ></FontAwesomeIcon>
         </a>
         </div>      
         <div className="contactInfo">
