@@ -18,24 +18,24 @@ export default (props) => {
     return imgs[rand];
   }
 
-  let leftStyle = {
-      position: "fixed",
-      left: "0",
-      bottom: "0",
-      webkitTransform: "scaleX(-1)",
-      transform: "scaleX(-1), translateX(-50%)",
-      margin: "0",
-      padding: "0",
-    },
-    rightStyle = {
-      position: "fixed",
-      right: "0",
-      bottom: "0",
-      margin: "0",
-      padding: "0",
-      transform: "translateX(-50%)",
-    },
-    wrapper = {
+  // let leftStyle = {
+  //     position: "fixed",
+  //     left: "0",
+  //     bottom: "0",
+  //     webkitTransform: "scaleX(-1)",
+  //     transform: "scaleX(-1), translateX(-50%)",
+  //     margin: "0",
+  //     padding: "0",
+  //   },
+  //   rightStyle = {
+  //     position: "fixed",
+  //     right: "0",
+  //     bottom: "0",
+  //     margin: "0",
+  //     padding: "0",
+  //     transform: "translateX(-50%)",
+  //   },
+    const wrapper = {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",

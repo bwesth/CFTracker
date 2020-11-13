@@ -15,7 +15,9 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  position: relative;
+  height: -webkit-calc(100% - 100px);  
+  top: 50px;
   width: 100%;
   order: 2;
 }
@@ -28,10 +30,11 @@
 }
 
 .menu-right {
-  /* position: absolute; */
+  position: relative;
+  height: -webkit-calc(100% - 100px);  
+  top: 50px;
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 20%;
   order: 1;
 }
