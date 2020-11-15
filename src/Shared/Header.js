@@ -37,7 +37,7 @@ export default (props) => {
   return (
     <nav className="header">
       <img src={img} className="logo center" alt="logo" />
-      <h1>MY CLIMATE ACTION</h1>
+      <h1>GREEN FEET</h1>
       {user.name ? LogoutButton() : LoginButton()}
     </nav>
   );

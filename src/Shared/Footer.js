@@ -9,7 +9,7 @@ import{
 export default (props) => {
 return(
     <nav className="footer">
-        <h1>MY CLIMATE ACTION</h1>
+        <h1>GREEN FEET</h1>
         <div className="socialMediaLinks"> 
         <a
             href="https://www.facebook.com/"

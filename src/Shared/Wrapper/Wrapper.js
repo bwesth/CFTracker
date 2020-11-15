@@ -18,21 +18,19 @@ export default (props) => {
   }
 
     const wrapper = {
-      display: "flex",
+      
       flexDirection: props.direction || "row",
-      alignItems: "center",
-      justifyContent: "center",
-      width: "100%",
-      height: "300px",
       backgroundImage:
         "url(" + getRandImg(right) + "), url(" + getRandImg(left) + ")",
       backgroundPosition: "right bottom, left bottom",
       backgroundRepeat: "no-repeat, no-repeat",
       backgroundSize: "250px, 250px",
+      
+    
     };
 
   return (
-    <div style={wrapper}>
+    <div className="wrapper" style={wrapper}>
       {props.children}
     </div>
   );

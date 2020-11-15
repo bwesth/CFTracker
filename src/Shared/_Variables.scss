@@ -16,7 +16,7 @@ $font-shadow: 5px 5px 8px $font-colour;
 $button-width:  132px; 
 $button-height:  32px;
 $button-radius:  8px; 
-$button-shadow: drop-shadow(px 1px 1px $font-colour); 
+$button-shadow: drop-shadow(1px 3px 2px  $font-colour); 
 
 p{
     color: $font-colour;
@@ -38,5 +38,31 @@ button{
 
     align-items: center;
     justify-content: center;
-    
     }
+    @mixin button{
+        display: flex;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: $button-font-colour;
+        background-color: $action-colour; 
+        border-radius:$button-radius;
+        align-items: center;
+        justify-content: center;
+        }
+
+@mixin pageHeaderText {
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    color: $button-font-colour;
+}
+
+@mixin pageText($weight, $size){
+    color: $button-font-colour;
+    font-size: $size;
+    font-weight: $weight;
+}
