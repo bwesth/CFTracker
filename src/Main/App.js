@@ -24,15 +24,15 @@ function App() {
   const user = useContext(UserContext).user[0]
   const [display, setDisplay] = useState();
 
-  // useEffect(() => {
-  //   // setDisplay(<TestResults setDisplay={setDisplay} />);
-  //   // setDisplay(<Dashboard />);
-  //   setDisplay();
-  // }, []);
+  useEffect(() => {
+    // setDisplay(<TestResults setDisplay={setDisplay} />);
+    // setDisplay(<Dashboard />);
+    setDisplay(<Frontpage setDisplay={setDisplay} />);
+  }, []);
 
   return <div className="App">
     <Header />
-    {user.name ? <Dashboard /> : <Frontpage setDisplay={setDisplay} />}
+    {user.name ? <Dashboard /> : display}
     <Footer/>
   </div>;
 }
