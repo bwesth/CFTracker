@@ -1,16 +1,23 @@
 import React from "react";
-//import badbunny from "../../../Images/Bunnies/BadBunny.png"
 
-export default (props) => {
-  //Can't get my adorable bunny working bjorn!
-  //const bunnyimage = require ('src/Pages/Dashboard/Pledges/BunnyBan.png');
+export default ({ symbol, head, body, tonnes, color }) => {
+  const Tonnes = () => 
+    <div className="pledgeBox" style={{backgroundColor: color}}>
+      <h1>{tonnes}</h1>
+      <p>tonnes of C02 saved</p>
+    </div>;
+  ;
+  /* ToDo:  
+
+    */
   return (
-    <div>
-      <h2>{props.pledgename} Pledge</h2>
-      <p>{props.pledgetext}</p>
-      {props.img !== "" && 
-          <img src={process.env.PUBLIC_URL + `${props.img}`} alt="pledge image" />
-      }
+    <div className="pledge">
+      <h1 className="pledgeBox"  style={{backgroundColor: color}}>{symbol}</h1>
+      <div>
+      <h2>{head}</h2>
+      <p>{body}</p>
+      </div>
+      {Tonnes()}
     </div>
   );
 };

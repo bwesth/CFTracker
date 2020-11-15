@@ -1,6 +1,8 @@
   @import "../Shared/Variables";
   
   .header {
+    margin: 0;
+    padding: 0;
     position: fixed;
     top: 0;
     flex-direction: row;

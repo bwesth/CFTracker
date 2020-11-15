@@ -14,29 +14,12 @@ export default (props) => {
 
   function getRandImg(imgs) {
       let rand = Math.floor(Math.random() * imgs.length)
-      console.log(rand)
     return imgs[rand];
   }
 
-  // let leftStyle = {
-  //     position: "fixed",
-  //     left: "0",
-  //     bottom: "0",
-  //     webkitTransform: "scaleX(-1)",
-  //     transform: "scaleX(-1), translateX(-50%)",
-  //     margin: "0",
-  //     padding: "0",
-  //   },
-  //   rightStyle = {
-  //     position: "fixed",
-  //     right: "0",
-  //     bottom: "0",
-  //     margin: "0",
-  //     padding: "0",
-  //     transform: "translateX(-50%)",
-  //   },
     const wrapper = {
       display: "flex",
+      flexDirection: props.direction || "row",
       alignItems: "center",
       justifyContent: "center",
       width: "100%",

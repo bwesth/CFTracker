@@ -1,36 +1,25 @@
 import React from "react";
-import Pledge from "./Pledge";
-import pledges from "../../../Data/pledgesStore";
+import Wrapper from "../../../Shared/Wrapper/Wrapper";
+import cycle from './cycle.bmp'
+import Pledge from './Pledge'
 
 export default () => {
-  let pledgeList = [];
+    let data = [
+        {symbol: "🚲", head: "Cyclical Commute", body: "I will ride my bicycle to work every day.", tonnes: 1.1, color: "green"},
+        {symbol: "✈️", head: "Infrequent Flier", body: "I will abstain from long distance flights for a year.", tonnes: 0.5, color: "blue"},
+        {symbol: "🥬", head: "Going Vegan", body: "I will stick to a vegan diet 5 days of the week.", tonnes: 2.3, color: "red"}
 
-  {
-    for (let key in pledges) {
-      pledges[key].map((item) =>
-        pledgeList.push(
-          <Pledge pledgename={item.name} pledgetext={item.text} img={item.img} />
-        )
-      );
-    }
-  }
+    ]
+    let pledges = data.map((pledge => <Pledge symbol={pledge.symbol} head={pledge.head} body={pledge.body} tonnes={pledge.tonnes} color={pledge.color} />))
+  /* ToDo:  
 
+    */
   return (
-    <div>
-      <h1>Pledges dashboard menu</h1>
-      {pledgeList}
-      {/* <Pledge
-        pledgename="Going Vegan"
-        pledgetext="I guess bunnies aren't that tasty."
-      />
-      <Pledge
-        pledgename="Mega Vegan"
-        pledgetext="Nary a hare shall visit my tender buds."
-      />
-      <Pledge
-        pledgename="TOTAL Vegan"
-        pledgetext="Truly sire, I know not this 'meat' you speak of!"
-      /> */}
-    </div>
+    <Wrapper direction="column">
+      <h1>Your Pledges</h1>
+      <div className="pledges">
+      {pledges}
+      </div>
+    </Wrapper>
   );
 };

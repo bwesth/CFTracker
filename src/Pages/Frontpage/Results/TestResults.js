@@ -4,7 +4,7 @@ import SignUpButton from "../SignUpButton";
 
 import FootprintBars from "../../../Shared/FootprintBars";
 
-import ResultsSection from "./ResultsSection";
+import Wrapper from "../../../Shared/Wrapper/Wrapper";
 import Description from "./Description";
 import Chart from "./Chart";
 
@@ -26,31 +26,31 @@ export default (props) => {
     <div className="results-main" style={style}>
       <h1>Let’s see how you did!</h1>
       <div style={style}>
-        <ResultsSection>
+        <Wrapper>
           <FootprintBars />
           <Description>
             <h1>{first.headline}</h1>
             <p>{first.text1}</p>
             <p>{first.text2}</p>
           </Description>
-        </ResultsSection>
-        <ResultsSection>
+        </Wrapper>
+        <Wrapper>
           <Chart img={chart2} />
           <Description>
             <h1>{second.headline}</h1>
             <p>{second.text1}</p>
             <p>{second.text2}</p>
           </Description>
-        </ResultsSection>
-        <ResultsSection>
+        </Wrapper>
+        <Wrapper>
           <Chart img={chart3} />
           <Description>
             <h1>{third.headline}</h1>
             <p>{third.text1}</p>
             <p>{third.text2}</p>
           </Description>
-        </ResultsSection>
-        <ResultsSection>
+        </Wrapper>
+        <Wrapper>
           <Description>
             <p>{fourth.text1}</p>
             <div>
@@ -62,7 +62,7 @@ export default (props) => {
             </div>
             <p>{fourth.text2}</p>
           </Description>
-        </ResultsSection>
+        </Wrapper>
       </div>
     </div>
   );

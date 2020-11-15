@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./App.scss";
 import Frontpage from "../Pages/Frontpage/Frontpage";
 import Dashboard from "../Pages/Dashboard/Dashboard";
-import { UserProvider } from "./UserContext";
+import { UserContext, UserProvider } from "./UserContext";
 import TestResults from "../Pages/Frontpage/Results/TestResults";
 import Header from "../Shared/Header";
 import Footer from "../Shared/Footer";
@@ -21,7 +21,7 @@ import Footer from "../Shared/Footer";
 // npm install js-yaml
 // npm install fs
 function App() {
-  // const [loggedIn, setLoggedIn] = useState("");
+  const user = useContext(UserContext).user[0]
   const [display, setDisplay] = useState();
 
   useEffect(() => {
@@ -30,11 +30,11 @@ function App() {
     setDisplay(<Frontpage setDisplay={setDisplay} />);
   }, []);
 
-  return <UserProvider className="App">
-    <Header login={setDisplay} />
-    {display}
+  return <div className="App">
+    <Header />
+    {user.name ? <Dashboard /> : display}
     <Footer/>
-  </UserProvider>;
+  </div>;
 }
 
 export default App;

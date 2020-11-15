@@ -16,10 +16,13 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: -webkit-calc(100% - 100px);  
+  // height: -webkit-calc(100% - 100px);  
+  // height: 100%;
   top: 50px;
   width: 100%;
   order: 2;
+  overflow: auto;
+
 }
 
 .menu-bottom {
