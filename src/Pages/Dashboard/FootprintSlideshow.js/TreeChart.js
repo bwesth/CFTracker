@@ -2,12 +2,8 @@ import { VictoryScatter } from 'victory';
 import React from 'react'
 
 export default () => {
-
-    /* ToDo:  
-
-    */
-
-    
+    // Not sure this is the best method to make the tree graph. 
+    //Maybe a picture would be better? That we slide to reveal? I dunno.
     return <div className="slide">
         <div className="treeGraph">
         <VictoryScatter
@@ -31,9 +27,9 @@ export default () => {
 
         <div className="chartInfo">
             <h2>Trees</h2>
-            <p>Y'all save this many trees</p>
-            <p>Y'all save this many trees</p>
-            <p>Y'all save this many trees</p>
+            <p>X many trees saved</p>
+            <p>By your actions so far</p>
+            <p>That's x square kilometers of forest!</p>
         </div>
 
     </div>
