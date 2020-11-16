@@ -24,7 +24,7 @@
     text-shadow: $font-shadow;
   
     h1{
-      @include pageHeaderText;
+      @include pageHeaderText($button-font-colour);
       } 
 
       p{
@@ -44,7 +44,7 @@
     border-radius: $button-radius;
     filter: $button-shadow;
     h1{
-      @include pageHeaderText;
+      @include pageHeaderText($button-font-colour);
     }
 
     p{
