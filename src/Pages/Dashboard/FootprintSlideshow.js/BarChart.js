@@ -1,5 +1,6 @@
 import graph from '../../../placeholderimage.png'
 import React from 'react'
+import FootprintBars from '../../../Shared/FootprintBars'
 
 export default () => {
 
@@ -9,7 +10,7 @@ export default () => {
 
     
     return <div className="slide">
-        <img style={{height: "200px", width: "auto"}} src={graph} />
+        <FootprintBars />
         <p>Bar chart</p>
     </div>
 }
