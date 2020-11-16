@@ -8,7 +8,7 @@ export default ({ symbol, head, body, tonnes, color }) => {
     </div>;
   ;
   /* ToDo:  
-
+ <h1 className="pledgeBox"  style={{backgroundColor: color}}>{symbol}</h1>
     */
   return (
     <div className="pledge">

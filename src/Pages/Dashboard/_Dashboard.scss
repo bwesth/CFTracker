@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
   // height: -webkit-calc(100% - 100px);  
   // height: 100%;
   top: 50px;
@@ -23,7 +24,50 @@
   order: 2;
   overflow: auto;
 
-}
+  h1{
+    @include pageHeaderText;
+  }
+
+  h3{
+      @include pageHeaderText;
+      color: $font-colour;
+      width: 100%;
+      font-size: 20px;
+      border-bottom: $secondary-colour;
+      padding-bottom: 20px;
+      padding-top: 10px;
+      border-bottom-style: dashed;
+      border-width: 3px;
+  }
+  .wrapper{
+    display: flex;
+    border-bottom: $secondary-colour;
+    border-bottom-style: dashed;
+    border-width: 3px;
+    align-Items: center;
+    justify-Content: center;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 400px;
+    
+  }
+  p{
+    @include pageText(bold,14px);
+    color: $font-colour;
+  }
+
+  .banner{
+  background-image: url(./../../EarthBG_006.jpg);
+  background-repeat: no-repeat;
+  //background-size: 100% 100%;
+  background-position: -0 -0em;
+  width: 100%;
+  //height: -webkit-calc(100% - 100px);  
+  padding: 100px;
+  margin: 0%;
+  }
+
 
 .menu-bottom {
   display: flex;
@@ -79,4 +123,6 @@
 .content {
   height: 100%;
   align-self: center;
+}
+
 }

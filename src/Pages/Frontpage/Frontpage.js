@@ -50,7 +50,7 @@ export default (props) => {
             {popup}
           </div>
         </div>
-       </div>
+      </div>
       {surveyVisible && <Survey
         setDisplay={props.setDisplay}
         popup={popup}

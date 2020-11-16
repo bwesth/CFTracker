@@ -11,9 +11,16 @@ export default () => {
 
   return (
     <div className="dashboard">
+      <div className="banner">
+        <h1>Your Climate Actions</h1>
+      </div>
+      <h3>Your Carbon Expenditure</h3> 
       <Stats />
       <FootprintSlideshow />
+      <h3>Your Plages</h3>
       <Pledges /> 
+      <div style={{height:"100px"}}>
+      </div>
     </div>
   );
 };

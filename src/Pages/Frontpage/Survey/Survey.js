@@ -19,8 +19,11 @@ export default (props) => {
         {props.themes.map((item) => (
           <Theme name={item.name}  question={item.question} options={item.options} />
         ))}
-        <p>All done! Click send to see your carbon footprint</p>
+        <div className="done">
+        <h1>All done! </h1>
+        <h2>Click send to see your carbon footprint</h2>
         <input type="submit" />
+        </div>
       </form>
     </div>
   );
