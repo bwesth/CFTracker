@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import firebase from "../components/Firebase/firebase";
 
 const UserContext = React.createContext();
 
@@ -8,7 +9,7 @@ function UserProvider(props) {
 
 
   return (
-    <UserContext.Provider value={{ user, surveyChoices }}>
+    <UserContext.Provider value={{ user, surveyChoices, firebase }}>
       {props.children}
     </UserContext.Provider>
   );

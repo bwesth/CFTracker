@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../../Main/UserContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
 
-import firebase from "../../components/Firebase/firebase";
+//import firebase from "../../components/Firebase/firebase";
 
 export default () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const fb = useContext(UserContext).firebase;
 
   const schema = yup.object().shape({
     name: yup.string().required(),
@@ -57,7 +59,7 @@ export default () => {
 
   async function onRegister() {
     try {
-      await firebase.register(name, email, password);
+      await fb.register(name, email, password);
       //props.history.replace('/dashboard')
     } catch (error) {
       alert(error.message);

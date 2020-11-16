@@ -5,16 +5,14 @@ import App from "./Main/App";
 import * as serviceWorker from "./Main/serviceWorker";
 import { UserContext, UserProvider } from "./Main/UserContext";
 
-
 ReactDOM.render(
   <React.StrictMode>
-    <UserProvider >
-    <App />
+    <UserProvider>
+      <App />
     </UserProvider>
   </React.StrictMode>,
   document.getElementById("root")
-  );
-  
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
