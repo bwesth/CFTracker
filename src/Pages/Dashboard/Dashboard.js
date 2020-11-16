@@ -1,26 +1,32 @@
-import Stats from './Stats/Stats'
-import React, { useContext } from "react";
+import Stats from "./Stats/Stats";
+import React, { useContext, useState } from "react";
 import { UserContext } from "../../Main/UserContext";
-import FootprintSlideshow from './FootprintSlideshow.js/FootprintSlideshow';
-import Pledges from './Pledges/Pledges';
+import FootprintSlideshow from "./FootprintSlideshow.js/FootprintSlideshow";
+import Pledges from "./Pledges/Pledges";
+import PledgesPage from './PledgesPage/PledgesPage'
 
 export default () => {
-    const [user, setUsername] = useContext(UserContext).user;
+  const [user, setUsername] = useContext(UserContext).user;
+  const [pledgesRender, setpledgesRender] = useState(false);
 
-  // console.log(user)
-
+  console.log(pledgesRender)
   return (
     <div className="dashboard">
-      <div className="banner">
-        <h1>Your Climate Actions</h1>
-      </div>
-      <h3>Your Carbon Expenditure</h3> 
-      <Stats />
-      <FootprintSlideshow />
-      <h3>Your Plages</h3>
-      <Pledges /> 
-      <div style={{height:"100px"}}>
-      </div>
+      {pledgesRender ? (
+        <PledgesPage setpledgesRender={setpledgesRender}/>
+      ) : (
+        <>
+          <div className="banner">
+            <h1>Your Climate Actions</h1>
+          </div>
+          <h3>Your Carbon Expenditure</h3>
+          <Stats />
+          <FootprintSlideshow />
+          <h3>Your Plages</h3>
+          <Pledges pledgesRender={setpledgesRender}/>
+          <div style={{ height: "100px" }}></div>
+        </>
+      )}
     </div>
   );
 };
