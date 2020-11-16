@@ -15,7 +15,7 @@
     h1{
     text-align: center;
     font-family: Roboto; 
-    font-weight: medium;
+    font-weight: normal;
     font-size: 24px;
     line-height: 21px;
     color: $font-colour;
@@ -30,21 +30,39 @@
       color: $font-colour;
     }
 
-      form{
-        padding-left: 2%;
-        padding-bottom: 2%;
-        width: 35%;
-        border: 1px solid #02C39A;
+    .theme{
+      border: 1px solid $secondary-colour;
         background: rgba(2, 195, 154, 0.3);
         box-sizing: border-box;
         border-radius: 15px;
-
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+      form{
+        width: 35%;
+        padding-left: 2%;
+        padding-bottom: 2%;
+      
         h2{
           font-family: Roboto;
           font-weight: normal;
           font-size: 18px;
           color: $font-colour;
         }
+        
+        .done{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border: 1px solid $secondary-colour;
+          background: rgba(2, 195, 154, 0.3);
+          box-sizing: border-box;
+          border-radius: 15px;
+          width: 100%;
+          margin-top: 2%;
+          margin-bottom: 1%;
+          }
 
         p{
           font-family: Roboto;
@@ -58,7 +76,7 @@
         @include button;
         width: 10%;
         #formID{
-        background: #02C39A;
+        background:$secondary-colour;
         color: font-colour;
         }
       }
