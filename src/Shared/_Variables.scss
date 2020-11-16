@@ -53,13 +53,15 @@ button{
         justify-content: center;
         }
 
-@mixin pageHeaderText {
+@mixin pageHeaderText($fontcoler) {
     text-align: center;
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    color: $button-font-colour;
+    color: $fontcoler;
 }
+
+
 
 @mixin pageText($weight, $size){
     color: $button-font-colour;

@@ -23,7 +23,8 @@ export default () => {
     }
 
   return (
-    <Wrapper>
+    <Wrapper direction="column">
+      <h1>Some views of your footprint</h1>
       <div className="slides">
         <button onClick={() => click(-1)}> &lt; </button>
         {slides[index]}
