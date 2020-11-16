@@ -1,0 +1,17 @@
+.stats{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h4{
+        @include pageHeaderText($secondary-colour);
+        font-size: 30px;
+    }
+
+    #AMOandSIM{
+        display: flex;
+        flex-direction: row;
+    }
+}

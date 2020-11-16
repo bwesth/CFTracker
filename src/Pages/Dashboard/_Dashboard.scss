@@ -33,10 +33,11 @@
       color: $font-colour;
       width: 100%;
       font-size: 20px;
-      border-bottom: $secondary-colour;
+      border: $secondary-colour;
       padding-bottom: 20px;
       padding-top: 10px;
       border-bottom-style: dashed;
+      border-top-style: dashed;
       border-width: 3px;
   }
 
@@ -65,10 +66,10 @@
   }
 
   .banner{
-  background-image: url(./../../EarthBG_006.jpg);
+  background-image: url(./../../Shared/Images/Banner_Illustrations/Banner_008.jpg);
   background-repeat: no-repeat;
-  //background-size: 100% 100%;
-  background-position: -0 -0em;
+  background-size: 90% 130%;
+  background-position: -10em -3em;
   width: 100%;
   //height: -webkit-calc(100% - 100px);  
   padding: 100px;
