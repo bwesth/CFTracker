@@ -30,9 +30,9 @@ export default [
     color: "#02C39A",
     list: [
       {
-        symbol: "🚲",
-        head: "Cyclical Commute",
-        body: "I will ride my bicycle to work every day.",
+        symbol: "😎",
+        head: "Switch to Solar",
+        body: "I will install solar panels on my roof.",
         tonnes: 1.1,
         color: "#02C39A",
         img: placeholder,
