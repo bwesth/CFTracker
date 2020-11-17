@@ -41,27 +41,6 @@
       border-top-style: dashed;
       border-width: 3px;
   }
-
-  .wrapper{
-    display: flex;
-    //flex-direction: ;
-    border-bottom: $secondary-colour;
-    border-bottom-style: dashed;
-    border-width: 3px;
-    align-Items: center;
-    justify-Content: center;
-    margin: 0%;
-    padding: 0%;
-    width: 100%;
-    min-height: 400px;
-
-    h1{
-      // padding-top: 2%;
-      @include pageHeaderText($font-colour);
-      filter: none;
-      }
-
-  }
   p{
     @include pageText(bold,14px);
     color: $font-colour;
@@ -140,5 +119,26 @@
   height: 100%;
   align-self: center;
 }
+
+}
+
+.wrapper{
+  display: flex;
+  //flex-direction: ;
+  border-bottom: $secondary-colour;
+  border-bottom-style: dashed;
+  border-width: 3px;
+  align-Items: center;
+  justify-Content: center;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  min-height: 400px;
+
+  h1{
+    // padding-top: 2%;
+    @include pageHeaderText($font-colour);
+    filter: none;
+    }
 
 }
