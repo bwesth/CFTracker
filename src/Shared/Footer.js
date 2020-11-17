@@ -40,10 +40,10 @@ return(
         <div className="contactInfo">
         <div id="contact">
         <p>+45 2994 5834 123</p>
-        <p>mca@somemail.com</p>
+        <p>greenfeet@greenmail.com</p>
         </div>
         <div id="address">
-        <p>Whatevertstreet 21 </p>
+        <p>Rued Langgaards Vej 7</p>
         <p>Copenhagen, Denmark</p>
         </div>
         </div>
