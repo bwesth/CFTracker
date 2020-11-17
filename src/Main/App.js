@@ -22,6 +22,7 @@ import Footer from "../Shared/Footer";
 // npm install fs
 function App() {
   const user = useContext(UserContext).user[0]
+  const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
   const [display, setDisplay] = useState();
 
   useEffect(() => {
@@ -32,7 +33,7 @@ function App() {
 
   return <div className="App">
     <Header />
-    {user.name ? <Dashboard /> : display}
+    {loggedIn ? <Dashboard /> : display}
     <Footer/>
   </div>;
 }
