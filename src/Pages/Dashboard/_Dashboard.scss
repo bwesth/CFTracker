@@ -68,14 +68,20 @@
   }
 
   .banner{
-  background-image: url(./../../Shared/Images/Banner_Illustrations/Banner_008.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 200%;
-  background-position: -0em -5em;
- 
-  //height: -webkit-calc(100% - 100px);  
-  padding: 100px;
-  margin: 0%;
+    background-image: url(./../../Shared/Images/Banner_Illustrations/Banner_008.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
+    background-position: -0em -5em;
+  
+    //height: -webkit-calc(100% - 100px);  
+    padding: 100px;
+    margin: 0%;
+
+    h2{
+      @include pageHeaderText($button-font-colour);
+      filter: $button-shadow;
+      //text-align: left;
+    }
   }
 
 

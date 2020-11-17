@@ -30,9 +30,7 @@ export default (props) => {
   return (
     <>
       <div id="welcoming">
-
         <div className="mission"> 
-        
         <h1>Change the future.</h1>
         <p>There is now no doubt that climate change will have a profound effect on our future.</p>
         <p>Help us save the planet, one person at a time</p>

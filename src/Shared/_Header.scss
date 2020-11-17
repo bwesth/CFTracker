@@ -46,8 +46,10 @@
 
     .logo {
       justify-content: flex-start;
-      height: 40px;
-      width: 40px;
+      height: 30px;
+      width: 30px;
+      align-self: center;
+      margin-left: 2%;;
     }  
     
     .App-logo, .logo {
