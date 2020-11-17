@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import img from "../Main/carbon-footprint-730x410.jpg";
+import img from "../Main/GreenFootLogo.png";
 // import LoginForm from "../Pages/Frontpage/LoginForm";
 // import Popup from "reactjs-popup";
 import { UserContext } from "../Main/UserContext";

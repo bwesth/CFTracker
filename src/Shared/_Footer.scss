@@ -12,7 +12,7 @@
 
     h1 {
       width: 20%;
-      margin-left: 5%;
+      //margin-left: 5%;
         justify-content: flex-start;
         align-self: center;
         font-family: Montserrat;
@@ -75,6 +75,15 @@
         font-size: 14px;
         line-height: 5px;
         margin-bottom: 1px;
+      }
+
+      .logo{
+        padding-right: 2%;
+        justify-content: flex-start;
+        height: 30px;
+        width: 30px;
+        align-self: center;
+        margin-left: 1.5%;;
       }
   }
 

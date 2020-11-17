@@ -26,7 +26,7 @@ export default ({pledge, addPledge}) => {
         <div>
           <h2>{head}</h2>
           <p>{body}</p>
-          <h1 style={{fontSize: "1.5em", margin: 0, padding: 0}}>▼</h1>
+          <h4>▼</h4>
         </div>
         {Tonnes()}
       </div>

@@ -20,8 +20,8 @@ export default () => {
       ) : (
         <>
           <div className="banner">
-            <h1>Your Climate Actions</h1>
             <h2>Hello { fb.getCurrentUsername() }</h2>
+            <h1>Your Climate Actions</h1>
           </div>
           <h3>Your Carbon Expenditure</h3>
           <Stats />

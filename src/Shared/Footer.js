@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import img from "../Main/GreenFootLogo.png";
 import{
     faYoutube,
     faFacebook,
@@ -9,6 +10,7 @@ import{
 export default (props) => {
 return(
     <nav className="footer">
+        <img src={img} className="logo center" alt="logo" />
         <h1>GREEN FEET</h1>
         <div className="socialMediaLinks"> 
         <a
