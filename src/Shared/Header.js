@@ -45,7 +45,7 @@ export default (props) => {
   const LogoutButton = () => {
     return (
       <div className="login">
-        <button onClick={() => logout}>LOGOUT</button>
+        <button onClick={() => logout()}>LOGOUT</button>
       </div>
     );
   };
