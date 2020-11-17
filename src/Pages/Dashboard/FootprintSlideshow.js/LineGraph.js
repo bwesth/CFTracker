@@ -7,9 +7,9 @@ export default () => {
     return <div className="slide">
         {/* Need to hook up some arithmetic to the numbers being crunched here. */}
         <div className="lineGraph">
-        <VictoryChart theme={VictoryTheme.material} maxDomain={7}>
+        <VictoryChart theme={VictoryTheme.material} domain={{ x: [0, 8], y: [0, 8]}}>
         <VictoryScatter
-          style={{ data: { fill: "white"}}}
+          style={{ data: { fill: "#ffffff" } }}
             data={[
               { x: 1, y: 3, symbol: "circle", size: 8 },
               { x: 2, y: 4, symbol: "circle", size: 8 },
