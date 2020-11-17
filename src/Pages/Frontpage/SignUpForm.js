@@ -11,6 +11,7 @@ export default () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const fb = useContext(UserContext).firebase;
+  const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
 
   const schema = yup.object().shape({
     name: yup.string().required(),
@@ -60,7 +61,8 @@ export default () => {
   async function onRegister() {
     try {
       await fb.register(name, email, password);
-      //props.history.replace('/dashboard')
+      await fb.login(email, password)
+      setLoggedIn(true);
     } catch (error) {
       alert(error.message);
     }
