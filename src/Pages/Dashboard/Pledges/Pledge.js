@@ -34,7 +34,7 @@ export default ({pledge, addPledge}) => {
         <div className="pledge-description">
           <img src={img} />
           <p>{description}</p>
-          {addPledge && <button onClick={() => addPledge(list => [...list, pledge])}>Accept Pledge</button> }
+          {addPledge && <button onClick={() => addPledge(pledge)}>Accept Pledge</button> }
         </div>
       )}
     </>
