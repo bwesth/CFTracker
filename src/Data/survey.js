@@ -26,5 +26,17 @@ export default {
         { text: "Vegan"},
       ],
     },
+    {
+      name: "Stuff",
+      options: [
+        
+      ],
+    },
+    {
+      name: "Household",
+      options: [
+       
+      ],
+    },
   ],
 };

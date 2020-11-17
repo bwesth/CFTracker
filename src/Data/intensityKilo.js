@@ -1,4 +1,4 @@
-const car = () => {
+const car = () => { // 16000km / year
     return 0.9246976791670614 * 16000;
   },
   train = () => {
@@ -258,7 +258,14 @@ const car = () => {
     };
 
     return (aftensmad() + frokost() + morgenmad()) * 365;
-  };
+  }
+
+  function household (kwh) {
+    return 0.00062*kwh
+  }
+  function stuff (kg) {
+    return 0.015*kg
+  }
 
 export default {
   omnivore: omnivore(),
@@ -267,4 +274,6 @@ export default {
   car: car(),
   train: train(),
   walking_biking: walking_biking(),
+  household: household,
+  stuff: stuff
 };
