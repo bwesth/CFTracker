@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
@@ -6,7 +6,15 @@ import { UserContext } from "../../Main/UserContext";
 import Dashboard from "../Dashboard/Dashboard";
 
 export default (props) => {
-  const setUser = useContext(UserContext).user[1];
+  //const setUser = useContext(UserContext).user[1];
+  //const [user, setUser] = useContext(UserContext).user;
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
+  const fb = useContext(UserContext).firebase;
 
   const schema = yup.object().shape({
     email: yup.string().required(),
@@ -17,8 +25,7 @@ export default (props) => {
     resolver: yupResolver(schema),
   });
 
-  // LOGIN API call and logic here
-  const submit = (data) => {
+  /* const submit = (data) => {
     // console.log(data)
     // let username = ""
     let url = new URL("http://localhost:3001/login");
@@ -41,9 +48,53 @@ export default (props) => {
       });
 
     props.login(<Dashboard />);
-  };
-
+  }; */
   return (
+    <div className="popup-wrapper">
+      <form
+        className="login-form"
+        onSubmit={(e) => e.preventDefault() && false}
+      >
+        <input
+          id="name"
+          name="name"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          ref={register}
+        />
+        <input
+          id="email"
+          name="email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          ref={register}
+        />
+        <input
+          id="password"
+          name="password"
+          type="text"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          ref={register}
+        />
+        <input type="submit" onClick={login} />
+      </form>
+    </div>
+  );
+
+  async function login() {
+		try {
+      await fb.login(email, password)
+      setLoggedIn(true);
+      console.log(fb.getCurrentUsername())
+		} catch(error) {
+			alert(error.message)
+		}
+	}
+
+/*   return (
     <div className="popup-wrapper">
       <form
         className="login-form"
@@ -54,5 +105,5 @@ export default (props) => {
         <input type="submit" />
       </form>
     </div>
-  );
+  ); */
 };

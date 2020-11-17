@@ -60,7 +60,6 @@ export default () => {
   async function onRegister() {
     try {
       await fb.register(name, email, password);
-      //props.history.replace('/dashboard')
     } catch (error) {
       alert(error.message);
     }
