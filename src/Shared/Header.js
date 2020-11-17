@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import img from "../Main/carbon-footprint-730x410.jpg";
 // import LoginForm from "../Pages/Frontpage/LoginForm";
 // import Popup from "reactjs-popup";
@@ -14,11 +14,14 @@ import { UserContext } from "../Main/UserContext";
 
 export default (props) => {
   const [user, setUser] = useContext(UserContext).user;
+  const fb = useContext(UserContext).firebase;
+  const [email, setEmail] = useState('john@mail.com')
+	const [password, setPassword] = useState('123456')
 
   const LoginButton = () => {
     return (
       <div className="login">
-        <button onClick={() => setUser({ name: "Mette", email: "hestepigen@climate.dk" })}>LOGIN</button>
+        <button onClick={login}>LOGIN</button>
       </div>
     );
   }; 
@@ -33,6 +36,15 @@ export default (props) => {
   };
 
   console.log(user);
+  async function login() {
+		try {
+      await fb.login(email, password)
+      setUser({ name: "Mette", email: "hestepigen@climate.dk" })
+			//props.history.replace('/dashboard')
+		} catch(error) {
+			alert(error.message)
+		}
+  }
 
   return (
     <nav className="header">

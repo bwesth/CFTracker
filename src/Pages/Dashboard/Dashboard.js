@@ -8,6 +8,9 @@ import PledgesPage from './PledgesPage/PledgesPage'
 export default () => {
   const [user, setUsername] = useContext(UserContext).user;
   const [pledgesRender, setpledgesRender] = useState(false);
+  const fb = useContext(UserContext).firebase;
+
+  // console.log(user)
 
   console.log(pledgesRender)
   return (
@@ -18,6 +21,7 @@ export default () => {
         <>
           <div className="banner">
             <h1>Your Climate Actions</h1>
+            <h2>Hello { fb.getCurrentUsername() }</h2>
           </div>
           <h3>Your Carbon Expenditure</h3>
           <Stats />
