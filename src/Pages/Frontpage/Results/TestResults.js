@@ -54,7 +54,7 @@ export default (props) => {
           <Description>
             <p>{fourth.text1}</p>
             <div>
-              <SignUpButton />
+              {props.popup}
               <button
                 onClick={() => {props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);}}>
                 Back
