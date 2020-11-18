@@ -1,83 +1,89 @@
 .survey {
-    // height: -webkit-calc(100% - 50px);
-    // transform: translateY(-20%);
-    display: flex;
-    height: auto;
-    width: 100%;
-    top: 100%;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3.5%;
-    margin-bottom: 3.5%;
-   
-    h1{
+  // height: -webkit-calc(100% - 50px);
+  // transform: translateY(-20%);
+  display: flex;
+  height: auto;
+  width: 100%;
+  top: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.5%;
+  margin-bottom: 3.5%;
+
+  h1 {
     text-align: center;
-    font-family: Roboto; 
+    font-family: Roboto;
     font-weight: normal;
     font-size: 24px;
     line-height: 21px;
     color: $font-colour;
+  }
+
+  p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: $font-colour;
+  }
+
+  .theme {
+    border: 1px solid $secondary-colour;
+    background: $Text-background;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 1%;
+    padding: 1% 6%;
+  }
+  form {
+    width: 35%;
+    margin: 3.5%;
+
+    h2 {
+      font-family: Roboto;
+      font-weight: normal;
+      font-size: 18px;
+      color: $font-colour;
     }
 
-    p{
+    .done {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid $secondary-colour;
+      background: rgba(2, 195, 154, 0.3);
+      box-sizing: border-box;
+      border-radius: 15px;
+      width: 100%;
+
+      margin-bottom: 1%;
+    }
+
+    p {
       font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
+      font-weight: medium;
+      font-size: 16px;
       line-height: 16px;
       color: $font-colour;
     }
 
-    .theme{
-      border: 1px solid $secondary-colour;
-        background: $Text-background;
-        box-sizing: border-box;
-        border-radius: 15px;
-        width: 100%;
-        margin-bottom: 1%;
-    }
-      form{
-        width: 35%;
-        padding-left: 2%;
-        padding-bottom: 2%;
-      
-        h2{
-          font-family: Roboto;
-          font-weight: normal;
-          font-size: 18px;
-          color: $font-colour;
-        }
-        
-        .done{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          border: 1px solid $secondary-colour;
-          background: rgba(2, 195, 154, 0.3);
-          box-sizing: border-box;
-          border-radius: 15px;
-          width: 100%;
-          
-          margin-bottom: 1%;
-          }
-
-        p{
-          font-family: Roboto;
-          font-weight: medium;
-          font-size: 16px;
-          line-height: 16px;
-          color: $font-colour;
-        }
-
-      input{
-        @include button;
-        width: 10%;
-        #formID{
-        background:$secondary-colour;
+    input {
+      @include button;
+      width: 10%;
+      #formID {
+        background: $secondary-colour;
         color: font-colour;
-        }
       }
     }
   }
+
+  .option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import firebase from "../components/Firebase/firebase";
-import data from "../Data/intensityKilo";
-
+import data from "../Data/survey";
+console.log(data.themes[0].options[4].value);
 const UserContext = React.createContext();
 
 function UserProvider(props) {
@@ -11,30 +11,17 @@ function UserProvider(props) {
     password: undefined,
   });
   const loggedIn = useState(false);
-  const [userName, setUserName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [userPassword, setUserPassword] = useState("");
-  const surveyChoices = useState({
-    Transport: "Car",
-    Food: "Omnivore",
-    Household: 16000,
-    Stuff: 15,
-  });
+  const surveyChoices = useState([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]);
   const pledges = useState([]);
   const footprint = useState();
 
   function calcFootprint() {
-    return {
-      transport: data[surveyChoices[0].Transport.toLowerCase()],
-      food: data[surveyChoices[0].Food.toLowerCase()],
-      stuff: data.stuff([surveyChoices[0].Stuff]),
-      household: data.household([surveyChoices[0].Household]),
-      total:
-        data[surveyChoices[0].Transport.toLowerCase()] +
-        data[surveyChoices[0].Food.toLowerCase()] +
-        data.stuff([surveyChoices[0].Stuff]) +
-        data.household([surveyChoices[0].Household]),
-    };
+    let result = 0;
+    for (let i = 0; i < data.themes.length; i++) {
+      result += data.themes[i].options[surveyChoices[0][i]].value;
+    }
+    console.log(result);
+    return result;
   }
 
   useEffect(() => {
@@ -49,9 +36,6 @@ function UserProvider(props) {
         pledges,
         footprint,
         firebase,
-        userEmail,
-        userName,
-        userPassword,
         loggedIn,
       }}
     >

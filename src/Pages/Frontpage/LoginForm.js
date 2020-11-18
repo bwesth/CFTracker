@@ -8,7 +8,7 @@ export default (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const setLoggedIn = useContext(UserContext).loggedIn[0];
+  const setLoggedIn = useContext(UserContext).loggedIn[1];
   const fb = useContext(UserContext).firebase;
 
   const schema = yup.object().shape({
