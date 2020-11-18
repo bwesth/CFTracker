@@ -8,6 +8,7 @@ import TestResults from "../Results/TestResults";
 export default (props) => {
   const { handleSubmit } = useForm({});
   const [data, setData] = useContext(UserContext).surveyChoices;
+  const updateFootprint = useContext(UserContext).updateFootprint;
   // console.log(data)
   const submit = (data) => {
     props.setDisplay(
@@ -24,7 +25,7 @@ export default (props) => {
       <div className="theme">
         <h1>{name}</h1>
         <h2>{question}</h2>
-        {options.map(({text}, optionsIndex) => (
+        {options.map(({ text }, optionsIndex) => (
           <Option
             text={text}
             formID={name}
@@ -45,14 +46,17 @@ export default (props) => {
           // id={props.themeIndex}
           formID={formID}
           onChange={() => {
-            console.log("Changing theme number: "+themeIndex+"\n to option number: "+optionIndex)
-            let list = [...data];
-            list[themeIndex] = optionIndex;
-            setData(list);
+            console.log(
+              "Changing theme number: " +
+                themeIndex +
+                "\n to option number: " +
+                optionIndex
+            );
+            setData(themeIndex, optionIndex);
           }}
           checked={optionIndex === data[themeIndex]}
-          />
-          <p>{text}</p>
+        />
+        <p>{text}</p>
       </div>
     );
   };

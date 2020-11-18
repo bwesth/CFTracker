@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { VictoryPie } from "victory";
+import { UserContext } from "../../../Main/UserContext";
 
 export default () => {
+  const footprint = useContext(UserContext).footprint[0]
   return (
     <div className="slide">
       <div className="pieSlide">
         <VictoryPie
           colorScale={["#53AED5", "#02C39A", "#F46A67", "#FFE15B"]}
           data={[
-            { x: "Travel", y: 2.99 },
-            { x: "HouseHold", y: 1.6 },
-            { x: "Stuff", y: 1.3 },
-            { x: "Food", y: 0.5 },
+            { x: "Transport", y: footprint.transport },
+            { x: "HouseHold", y: footprint.household },
+            { x: "Goods", y: footprint.goods },
+            { x: "Food", y: footprint.food },
           ]}
           style={{
             data: {
@@ -23,24 +25,23 @@ export default () => {
           }}
         />
       </div>
-      <p>Pie chart</p>
       <div className="values">
         <h2>Spending by Category:</h2>
         <div className="valueText">
           <div className="box1">
             <div id="travelValue">
-              <h4>2.99</h4> <p>tonnes on travel</p>
+              <h4>{footprint.transport}</h4> <p>tonnes on transport</p>
             </div>
             <div id="householdValue">
-              <h4>1.6</h4> <p>tonnes on household</p>
+              <h4>{footprint.household}</h4> <p>tonnes on household</p>
             </div>
           </div>
           <div className="box2">
             <div id="goodsValue">
-              <h4>1.3</h4> <p>tonnes on stuff</p>
+              <h4>{footprint.goods}</h4> <p>tonnes on stuff</p>
             </div>
             <div id="foodValue">
-              <h4>0.5</h4> <p>tonnes on food</p>
+              <h4>{footprint.food}</h4> <p>tonnes on food</p>
             </div>
           </div>
         </div>

@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { VictoryChart, VictoryAxis, VictoryBar, VictoryTheme } from "victory";
+import { UserContext } from "../../../Main/UserContext";
 
 export default () => {
+  const footprint = useContext(UserContext).footprint[0].total
   // This holds the data for each user type
   const data = [
-    { user: 1, expenditure: 13000 }, //This value is the user's value, so it needs to be called somehow from their account details.
-    { user: 2, expenditure: 14500 },
-    { user: 3, expenditure: 17250 },
-    { user: 4, expenditure: 0 },
+    { user: 1, expenditure: footprint }, //This value is the user's value, so it needs to be called somehow from their account details.
+    { user: 2, expenditure: 40 },
+    { user: 3, expenditure: 50 },
+    { user: 4, expenditure: 15 },
   ];
 
   return (
@@ -17,7 +19,7 @@ export default () => {
         <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
           <VictoryAxis
             tickValues={[1, 2, 3, 4]}
-            tickFormat={["You", "EU Citizen", "US Citizen", "Carbon Neutral"]}
+            tickFormat={["You", "EU Citizen", "US Citizen", "World Goal"]}
           />
 
           <VictoryAxis
@@ -32,9 +34,9 @@ export default () => {
       {/* Have a lot of work to do here to align everything etc. */}
       <div className="chartInfo">
         <h2>Your Carbon Footprint</h2>
-        <p>6.5 Tonnes Per Month</p>
+        <p>{footprint} Tonnes Per Month</p>
         <p>
-          Want to prevent the climate crisis? Your footprint is X times too big.
+          Want to prevent the climate crisis? Your footprint is {footprint/data[3].expenditure} times too big.
         </p>
       </div>
     </div>
