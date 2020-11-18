@@ -1,33 +1,30 @@
 import Stats from "./Stats/Stats";
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../Main/UserContext";
-import FootprintSlideshow from "./FootprintSlideshow.js/FootprintSlideshow";
+import FootprintSlideshow from "./FootprintSlideshow/FootprintSlideshow";
 import Pledges from "./Pledges/Pledges";
-import PledgesPage from './PledgesPage/PledgesPage'
+import PledgesPage from "./PledgesPage/PledgesPage";
 
 export default () => {
-  const [user, setUsername] = useContext(UserContext).user;
   const [pledgesRender, setpledgesRender] = useState(false);
   const fb = useContext(UserContext).firebase;
 
-  // console.log(user)
-
-  console.log(pledgesRender)
+  console.log(pledgesRender);
   return (
     <div className="dashboard">
       {pledgesRender ? (
-        <PledgesPage setpledgesRender={setpledgesRender}/>
+        <PledgesPage setpledgesRender={setpledgesRender} />
       ) : (
         <>
           <div className="banner">
-            <h2>Hello { fb.getCurrentUsername() }</h2>
+            <h2>Hello {fb.getCurrentUsername()}</h2>
             <h1>Your Climate Actions</h1>
           </div>
           <h3>Your Carbon Expenditure</h3>
           <Stats />
           <FootprintSlideshow />
           <h3>Your Pledges</h3>
-          <Pledges pledgesRender={setpledgesRender}/>
+          <Pledges pledgesRender={setpledgesRender} />
           <div style={{ height: "100px" }}></div>
         </>
       )}

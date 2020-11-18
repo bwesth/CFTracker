@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({img}) => {
+export default ({ img }) => {
   const style = {
     height: "100%",
     width: "auto",

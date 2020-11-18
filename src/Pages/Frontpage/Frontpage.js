@@ -8,14 +8,6 @@ import Footer from "../../Shared/Footer";
 export default (props) => {
 
   const [surveyVisible, setSurveyVisible] = useState(false)
-  // const signUp = () => {
-  //   alert("Sign up function needed");
-  // };
-
-  // const login = () => {
-  //   alert("Login function needed");
-  // };
-
   const surveyClick = () => {
     setSurveyVisible(prevState => !prevState)
     // element.scrollIntoView({ behavior: "smooth" });

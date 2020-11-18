@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
 
-//import firebase from "../../components/Firebase/firebase";
 
 export default () => {
   const [name, setName] = useState("");
@@ -61,7 +60,7 @@ export default () => {
   async function onRegister() {
     try {
       await fb.register(name, email, password);
-      await fb.login(email, password)
+      await fb.login(email, password);
       setLoggedIn(true);
     } catch (error) {
       alert(error.message);

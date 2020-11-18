@@ -10,17 +10,17 @@ export default () => {
 
   const slides = [<LineGraph />, <PieChart />, <TreeChart />, <BarChart />];
 
-    function click(val) {
-        let newIndex = index+val
-        if (newIndex < 0) {
-            newIndex = slides.length-1
-        } else if (newIndex > slides.length-1) {
-            newIndex = 0
-        }
-        setIndex(newIndex)
-        console.log(newIndex)
-        console.log(index)
+  function click(val) {
+    let newIndex = index + val;
+    if (newIndex < 0) {
+      newIndex = slides.length - 1;
+    } else if (newIndex > slides.length - 1) {
+      newIndex = 0;
     }
+    setIndex(newIndex);
+    console.log(newIndex);
+    console.log(index);
+  }
 
   return (
     <Wrapper direction="column">

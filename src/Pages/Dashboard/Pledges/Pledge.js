@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-export default ({pledge, addPledge}) => {
+export default ({ pledge, addPledge }) => {
   const [descriptionVisible, setDescriptionVisible] = useState(false);
-  const { symbol, head, body, tonnes, color, img, description } = pledge
+  const { symbol, head, body, tonnes, color, img, description } = pledge;
 
   const Tonnes = () => (
     <div className="pledgeBox" style={{ backgroundColor: color }}>
@@ -32,9 +32,11 @@ export default ({pledge, addPledge}) => {
       </div>
       {descriptionVisible && (
         <div className="pledge-description">
-          <img src={img} />
+          <img src={img} alt="Pledge icon" />
           <p>{description}</p>
-          {addPledge && <button onClick={() => addPledge(pledge)}>Accept Pledge</button> }
+          {addPledge && (
+            <button onClick={() => addPledge(pledge)}>Accept Pledge</button>
+          )}
         </div>
       )}
     </>
