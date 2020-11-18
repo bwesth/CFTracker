@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import Wrapper from "../../../Shared/Wrapper/Wrapper";
 import BarChart from "./BarChart";
-import LineGraph from "./LineGraph";
+
 import PieChart from "./PieChart";
 import TreeChart from "./TreeChart";
+//import LineGraph from "./LineGraph";
 
 export default () => {
   const [index, setIndex] = useState(0);
 
-  const slides = [<LineGraph />, <PieChart />, <TreeChart />, <BarChart />];
+  //Might add the linegraph back again later but it looks like shit atm!!!
+  const slides = [ <PieChart pieStats = {true}/>, <TreeChart />, <BarChart />];
 
   function click(val) {
     let newIndex = index + val;

@@ -47,7 +47,6 @@ export default (props) => {
         popup={popup}
         themes={surveyData.themes}
       />}
-      <Footer/>
     </>
 
   );

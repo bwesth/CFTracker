@@ -37,7 +37,7 @@ export default (props) => {
         </Wrapper>
         <Wrapper>
         {/* Pie chart breakdown of C02 here, currently not hooked up to the correct numbers. */}
-          <PieChart/>
+          <PieChart pieStats = {false} />
           <Description>
             <h1>{second.headline}</h1>
             <p>{second.text1}</p>

@@ -4,9 +4,9 @@ import { UserContext } from "../../../Main/UserContext";
 
 
 
-export default () => {
+export default (props) => {
   const footprint = useContext(UserContext).footprint[0]
-  
+
   //Would be nice to destruct this properly so we don't have to use ridiculously long names to summon these variables later.
   //let {{sumTotal: transportTotal}, food, household, goods} = footprint;
 
@@ -31,6 +31,9 @@ export default () => {
           }}
         />
       </div>
+      
+      {/* Using a bit of a hack to separate this part of the graph. Should it be another component? Debatable. */}
+      {props.pieStats && 
       <div className="values">
         <h2>Spending by Category:</h2>
         <div className="valueText">
@@ -52,6 +55,8 @@ export default () => {
           </div>
         </div>
       </div>
+      }
+
     </div>
   );
 };
