@@ -3,7 +3,7 @@ import { VictoryChart, VictoryAxis, VictoryBar, VictoryTheme } from "victory";
 import { UserContext } from "../../../Main/UserContext";
 
 export default () => {
-  const footprint = useContext(UserContext).footprint[0].total
+  const footprint = useContext(UserContext).footprint[0].total.sumTotal;
   // This holds the data for each user type
   const data = [
     { user: 1, expenditure: footprint }, //This value is the user's value, so it needs to be called somehow from their account details.
@@ -36,7 +36,7 @@ export default () => {
         <h2>Your Carbon Footprint</h2>
         <p>{footprint} Tonnes Per Month</p>
         <p>
-          Want to prevent the climate crisis? Your footprint is {footprint/data[3].expenditure} times too big.
+          Want to prevent the climate crisis? Your footprint is {Math.floor(footprint/data[3].expenditure)} times too big.
         </p>
       </div>
     </div>

@@ -2,18 +2,24 @@ import React, { useContext } from "react";
 import { VictoryPie } from "victory";
 import { UserContext } from "../../../Main/UserContext";
 
+
+
 export default () => {
   const footprint = useContext(UserContext).footprint[0]
+  
+  //Would be nice to destruct this properly so we don't have to use ridiculously long names to summon these variables later.
+  //let {{sumTotal: transportTotal}, food, household, goods} = footprint;
+
   return (
     <div className="slide">
       <div className="pieSlide">
         <VictoryPie
           colorScale={["#53AED5", "#02C39A", "#F46A67", "#FFE15B"]}
           data={[
-            { x: "Transport", y: footprint.transport },
-            { x: "HouseHold", y: footprint.household },
-            { x: "Goods", y: footprint.goods },
-            { x: "Food", y: footprint.food },
+            { x: "Transport", y: footprint.transport.sumTotal },
+            { x: "HouseHold", y: footprint.household.sumTotal },
+            { x: "Goods", y: footprint.goods.sumTotal },
+            { x: "Food", y: footprint.food.sumTotal },
           ]}
           style={{
             data: {
@@ -30,18 +36,18 @@ export default () => {
         <div className="valueText">
           <div className="box1">
             <div id="travelValue">
-              <h4>{footprint.transport}</h4> <p>tonnes on transport</p>
+              <h4>{footprint.transport.sumTotal}</h4> <p>tonnes on transport</p>
             </div>
             <div id="householdValue">
-              <h4>{footprint.household}</h4> <p>tonnes on household</p>
+              <h4>{footprint.household.sumTotal}</h4> <p>tonnes on household</p>
             </div>
           </div>
           <div className="box2">
             <div id="goodsValue">
-              <h4>{footprint.goods}</h4> <p>tonnes on stuff</p>
+              <h4>{footprint.goods.sumTotal}</h4> <p>tonnes on stuff</p>
             </div>
             <div id="foodValue">
-              <h4>{footprint.food}</h4> <p>tonnes on food</p>
+              <h4>{footprint.food.sumTotal}</h4> <p>tonnes on food</p>
             </div>
           </div>
         </div>

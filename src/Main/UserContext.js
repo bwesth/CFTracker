@@ -33,14 +33,14 @@ function UserProvider(props) {
 
   const footprint = useState();
 
-  /* This is a massivly shitty way of doing it, but it was the best way 
+  /* This is a massively shitty way of doing it, but it was the best way 
   I could think of that was also sort of readable, without having to 
   redo the survey format due to changes in Data/survey.js.
   After having fought with syncing survey values and checked status to surveyChoices,
   I don't wanna go down that dark hall again just yet */
 
   function calcFootprint(theme) {
-    console.log(theme)
+    //console.log(theme)
     let surveyResult = 0;
     let index = 0;
     switch (theme) {
@@ -60,15 +60,19 @@ function UserProvider(props) {
     for (let i = index; i < index + 3; i++) {
       surveyResult += data.themes[i].options[surveyChoices[0][i]].value;
     }
-    console.log("from survey: " + surveyResult);
+    //console.log("from survey: " + surveyResult);
     let pledgesResult = 0;
     let list = [...pledges[0][theme]];
     for (let i = 0; i < list.length; i++) {
-      console.log(i)
+      //console.log(i)
       pledgesResult = pledgesResult+list[i].tonnes;
     }
-    console.log("from pledges: " + pledgesResult);
-    return surveyResult - pledgesResult;
+    //console.log("from pledges: " + pledgesResult);
+    return {
+      surveyTotal: surveyResult, 
+      pledgeTotal: pledgesResult, 
+      sumTotal: surveyResult + pledgesResult
+    };
   }
 
   function updateFootprint() {
@@ -76,7 +80,12 @@ function UserProvider(props) {
       food = calcFootprint("food"),
       goods = calcFootprint("goods"),
       household = calcFootprint("household"),
-      total = transport + food + goods + household;
+      //This is godawful code, just trying to get it working to begin with. 
+      total = {
+        surveyTotal: transport.surveyTotal + food.surveyTotal + goods.surveyTotal + household.surveyTotal, 
+        pledgeTotal: transport.pledgeTotal + food.pledgeTotal + goods.pledgeTotal + household.pledgeTotal,
+        sumTotal: transport.sumTotal + food.sumTotal + goods.sumTotal + household.sumTotal,
+      };
 
     footprint[1]({
       transport: transport,
