@@ -1,34 +1,81 @@
 
-.popup-wrapper {
-  background: $secondary-colour;
-  width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-    p{
-      color: $button-font-colour;
-    }
-
   .login-form {
+    border: groove $secondary-colour 2px;
+    background-color: $button-font-colour;
     position: fixed;
     display: flex;
+    flex-direction: column;
     top: 5%;
     right: 5%;
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+    filter: $button-shadow;
+    margin-right: 30%;
+    margin-top: 15%;
 
-    .from{
-    flex-direction: column;
-    margin-top: 0.4%;
-    align-items: center;
-    justify-content: center;
-    background-color: $action-colour;
-    width: 20%;
-    height: 20%;;
-    
-      input {
-      margin: 2%;
+    .logInH{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      width: 99.3%;
+      margin-left: -.2%;
+      border: solid  $secondary-colour;
+      border-radius: 15px;
+      background-color: $secondary-colour;
+      align-self: flex-start;
+      filter: $button-shadow;
+      margin-bottom: 3%;
+
+      h1{
+        color: $button-font-colour;
+        margin-left: 5%;
       }
     }
+
+    .Inputs{
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 1%;
+
+      p{
+        @include pageText(bold,14px);
+        color: $font-colour;
+      }
+      
+      .Email{
+        display: flex;
+        flex-direction: row;
+      }
+      .Password{
+        display: flex;
+        flex-direction: row;
+      }
+        input {
+        background: $Text-background;
+        padding: 0;
+        margin: 2%;
+        }
+        
+      .logInButton{
+        @include button;
+        font-size: 18px;
+        padding: 2%;
+        height: 100%;
+        margin-top: 2%;
+        margin-left: 5%;
+        filter: $button-shadow;
+        
+      }
+      .text{
+        padding-top: 2%;
+        padding-left: 5%;
+        align-self: flex-start;
+      }
+      
+   }
   }
-}
