@@ -3,9 +3,12 @@ import Frontpage from "../Frontpage";
 import Wrapper from "../../../Shared/Wrapper/Wrapper";
 import Description from "./Description";
 
+//Doesn't seem to be a consensus in our group between hard-coding data and putting it elsewhere.
 import { first, second, third, fourth } from "./text";
-import treeimage from "./img/TreesCount.png";
+//Geez these image imports are a nightmare! Is there a better way to do this???
+import treeimage from "../../../Shared/Images/Graphs/TreesCount.png";
 
+//Chart imports
 import BarChart from "../../Dashboard/FootprintSlideshow/BarChart";
 import PieChart from "../../Dashboard/FootprintSlideshow/PieChart";
 
@@ -58,7 +61,9 @@ export default (props) => {
             {/* Here's our signup area, currently there are two buttons here, of different sizes. :P Needs fixing! */}
             <p>{fourth.text1}</p>
             <div>
+              {/* Is this the signup button? I have no clue whats happening here. */}
               {props.popup}
+
               <button
                 onClick={() => {
                   props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);
@@ -66,6 +71,7 @@ export default (props) => {
               >
                 Back
               </button>
+
             </div>
             <p>{fourth.text2}</p>
           </Description>
