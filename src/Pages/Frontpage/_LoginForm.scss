@@ -8,17 +8,18 @@
     top: 5%;
     right: 5%;
     width: 30%;
-    height: 30%;
+    height: 35%;
     border-radius: 20px;
     filter: $button-shadow;
     margin-right: 30%;
-    margin-top: 15%;
+    margin-top: 17%;
 
     .logInH{
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      width: 99.3%;
+      width: 98.8%;
+      margin-top: -.2%;
       margin-left: -.2%;
       border: solid  $secondary-colour;
       border-radius: 15px;
