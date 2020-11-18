@@ -24,7 +24,6 @@ export default () => {
           <FootprintSlideshow />
           <h3>Your Pledges</h3>
           <Pledges pledgesRender={setpledgesRender} />
-          <div style={{ height: "100px" }}></div>
         </>
       )}
     </div>

@@ -6,19 +6,6 @@ import { UserContext } from "./UserContext";
 import Header from "../Shared/Header";
 import Footer from "../Shared/Footer";
 
-// Dependencies
-// npm install reactjs-popup
-// https://www.npmjs.com/package/reactjs-popup
-
-// npm install yup
-// https://www.npmjs.com/package/yup
-
-// npm install react-hook-form
-// npm install @hookform/resolvers
-// https://react-hook-form.com/api/
-
-// npm install js-yaml
-// npm install fs
 function App() {
   const loggedIn = useContext(UserContext).loggedIn[0]
   const [display, setDisplay] = useState();

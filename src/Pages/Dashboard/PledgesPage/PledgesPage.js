@@ -14,7 +14,6 @@ export default ({ setpledgesRender }) => {
         ))}
       </div>
       <button onClick={() => setpledgesRender((state) => !state)}>BACK</button>
-      <div style={{ height: "100px" }}></div>
     </div>
   );
 };
