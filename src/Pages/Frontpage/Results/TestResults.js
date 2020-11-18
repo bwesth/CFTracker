@@ -4,8 +4,10 @@ import Wrapper from "../../../Shared/Wrapper/Wrapper";
 import Description from "./Description";
 
 import { first, second, third, fourth } from "./text";
+import treeimage from "./img/TreesCount.png";
 
 import BarChart from "../../Dashboard/FootprintSlideshow/BarChart";
+import PieChart from "../../Dashboard/FootprintSlideshow/PieChart";
 
 const style = {
   display: "flex",
@@ -21,7 +23,8 @@ export default (props) => {
       <h1>Let’s see how you did!</h1>
       <div style={style}>
         <Wrapper>
-          <BarChart/>
+          {/* The barchart class below is a bar chart that displays the user CO2 output compared to other common citizens. */}
+          <BarChart/> 
           {/* <FootprintBars /> */}
           <Description>
             {/* <h1>{first.headline}</h1> */}
@@ -30,7 +33,8 @@ export default (props) => {
           </Description>
         </Wrapper>
         <Wrapper>
-        {/* Insert Pie Chart Here */}
+        {/* Pie chart breakdown of C02 here, currently not hooked up to the correct numbers. */}
+          <PieChart/>
           <Description>
             <h1>{second.headline}</h1>
             <p>{second.text1}</p>
@@ -38,7 +42,11 @@ export default (props) => {
           </Description>
         </Wrapper>
         <Wrapper>
-        {/* Insert trees here */}
+        {/* Image of trees here, currently way too large! */}
+          <div>
+            <img src={treeimage} alt="A forest of illustrated trees."/>
+            <p>You have saved X trees</p>
+          </div>
           <Description>
             <h1>{third.headline}</h1>
             <p>{third.text1}</p>
@@ -47,6 +55,7 @@ export default (props) => {
         </Wrapper>
         <Wrapper>
           <Description>
+            {/* Here's our signup area, currently there are two buttons here, of different sizes. :P Needs fixing! */}
             <p>{fourth.text1}</p>
             <div>
               {props.popup}

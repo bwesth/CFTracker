@@ -1,10 +1,3 @@
-// export const first = {
-//   headline: "Your Carbon Footprint:",
-//   text1: "6.5 tonnes per month",
-//   text2:
-//     "Want to prevent the climate crisis? Your carbon footprint is {x} times too big.",
-// };
-
 //Not sure if this is the right place to store all this, COULD hard-code it into the results page... 
 
 export const second = {
@@ -16,7 +9,7 @@ export const second = {
   to be more carbon friendly, recyclying, installing LED lights and many more small changes
   can all have a positive impact on your carbon footprint, and help save our planet. 
   Our goal is to help you to do that.`,
-  text2: "To the left is a chart of the average EU citizens carbon footprint.",
+  text2: "To the left is a chart of your footprint divided by category.",
   //Chart: Food: 14, Home Temp: 17, Other Energy: 15, Transport: 28, Goods: 26//
 };
 
@@ -34,9 +27,10 @@ export const third = {
 };
 
 export const fourth = {
-  text1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`,
+  text1: `If you're feeling a bit overwhelmed by the size of the fight ahead, that's OK. We're here to help.
+  We have designed a system that allows you to keep track of your monthly and yearly emissions, set new goals
+  for yourself and commit to lifestyle changes through a fun pledge system that we have designed to be as helpful and
+  easy to use as possible. If you feel strongly about helping the planet, why not try it out?`,
   text2:
-    "Join us to keep track of your emissions and get help on how to improve  your carbon footprint",
+    "Join us to keep track of your emissions and get access to our pledge service!",
 };
