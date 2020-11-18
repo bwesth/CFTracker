@@ -38,7 +38,7 @@ export default [
         body: "I will ride my bicycle to work every day.",
         tonnes: 2,
         color: "#53AED5",
-        img: {bicycle},
+        img: bicycle,
         description: `Cycling is a great healthy habit! Start cycling to work instead of driving, and you’ll save your own body as well as the planet! Keep it up for a month and you'll be healthier and happier!`,
       },
       //INFREQUENT FLIER//
@@ -48,7 +48,7 @@ export default [
         body: "I will abstain from long distance flights for a year.",
         tonnes: 6,
         color: "#53AED5",
-        img: {plane},
+        img: plane,
         description: `Globally, flights produced about 1.04 billion tonnes of C02 in 2018. They make up a large portion of any individual's footprint. Cutting down on your flights can have a huge impact on yours!`,
       },
       //Public Transport!
@@ -58,7 +58,7 @@ export default [
         body: "I commute by train every day.",
         tonnes: 1,
         color: "#53AED5",
-        img: {train},
+        img: train,
         description: `Using public transport saves an estimated 1.4 billion gallons of gas annually - about 14 million tonnes of C02. You can contribute to these savings by using public transport for your commutes.`,
       },
       //TODO: Something new!
@@ -68,7 +68,7 @@ export default [
         body: "I will commute by bus every day.",
         tonnes: 1,
         color: "#53AED5",
-        img: {bus},
+        img: bus,
         description: `Using public transport saves an estimated 1.4 billion gallons of gas annually - about 14 million tonnes of C02. You can contribute to these savings by using public transport for your commutes.`,
       },
     ],
@@ -85,7 +85,7 @@ export default [
         body: "I will install solar panels on my roof.",
         tonnes: 3,
         color: "#02C39A",
-        img: {solar},
+        img: solar,
         description: `Choosing a clean source of energy like solar panels can eliminate the same amount of carbon emissions that would result from burning over 5,000 pounds of coal each year!`,
       },
       //TODO: Something new!
@@ -95,7 +95,7 @@ export default [
         body: "I will turn down the thermostat at home. (Wear a jersey!)",
         tonnes: 0.5,
         color: "#02C39A",
-        img: {cold},
+        img: cold,
         description: `Home heating and cooling is responsible for roughly 411 million tonnes of C02 annually! You can help by using good old fashioned body heat to stay warm, and drop that thermometer a few degress.`,
       },
       //TODO: Something new!
@@ -105,7 +105,7 @@ export default [
         body: "I will install LED bulbs in my home.",
         tonnes: 1,
         color: "#02C39A",
-        img: {lightbulb},
+        img: lightbulb,
         description: `A good LED bulb consumes only a fraction of the energy that a regular bulb does, and they last much longer too! Save the planet and your pocketbook by replacing all your old bulbs with LEDs.`,
       },
       //TODO: Something new!
@@ -115,7 +115,7 @@ export default [
         body: "I will make a habit of unplugging unsused electronics.",
         tonnes: 0.3,
         color: "#02C39A",
-        img: {plug},
+        img: plug,
         description: `The average home has 20 energy vampires: devices that use electricity while plugged in but not in use. Save yourself some cash and reduce your emmission by unplugging devices that are not in use.`,
       },
     ],
@@ -133,7 +133,7 @@ export default [
         body: "I will only buy second hand clothes for a year.",
         tonnes: 3,
         color: "#F46A67",
-        img: {clothes},
+        img: clothes,
         description: `For every 600 kilos of used clothes purchased over new ones, roughly 2250 kilos of C02 emissions, 3.6 billion liters of water and 144 trees are saved! It's not only ethical to buy second hand, it's cheap!`,
       },
       //TODO: Something new!
@@ -143,7 +143,7 @@ export default [
         body: "I will not upgrade my electronics (phone, laptop, etc) this year.",
         tonnes: 1,
         color: "#F46A67",
-        img: {cellphone},
+        img: cellphone,
         description: `Due to the production and shipping costs involved in getting a new device, it has been estimated that a new phone costs as much C02 as keeping an older phone for 10 years! Stay away from upgrades for a while to help the planet.`,
       },
       //TODO: Something new!
@@ -153,7 +153,7 @@ export default [
         body: "I will start recycling my waste.",
         tonnes: 1,
         color: "#F46A67",
-        img: {recycle},
+        img: recycle,
         description: `Using recycled materials to make new products one of the cornerstones of creating a sustainable future for our planet. Start helping now by looking up the recycling schemes in your area and following them!`,
       },
       //TODO: Something new!
@@ -163,7 +163,7 @@ export default [
         body: "I will abstain from buying new beauty products for a month.",
         tonnes: 0.1,
         color: "#F46A67",
-        img: {potions},
+        img: potions,
         description: `Sourcing, manufacturing, and distribution add a secret impact to every product we buy, and beauty products are no exception! If you want to start small, try abstaining from a few products for a month. Every bit helps!`,
       },
     ],
@@ -180,7 +180,7 @@ export default [
         body: "I will stick to a vegan diet 5 days of the week.",
         tonnes: 5,
         color: "#FFE15B",
-        img: {vegan},
+        img: vegan,
         description: `A portion of the highest-impact vegetable products is still cheaper than most of the lowest-impact animal products. Going vegan is a great way to reduce your emissions.`,
       },
       //TODO: Something new!
@@ -190,7 +190,7 @@ export default [
         body: "I will stick to a vegetarian diet 5 days of the week.",
         tonnes: 3,
         color: "#FFE15B",
-        img: {vegetarian},
+        img: vegetarian,
         description: `A portion of the highest-impact vegetable products is still cheaper than most of the lowest-impact animal products. Going vegetarian is a great way to reduce your emissions.`,
       },
       //TODO: Something new!
@@ -200,7 +200,7 @@ export default [
         body: "I will stop eating beef.",
         tonnes: 2,
         color: "#FFE15B",
-        img: {cow},
+        img: cow,
         description: `Up to 24% of the worlds emissions come from food production. Meat and dairy are some of the worst producers. Cut out beef and you'll be doing yourself, and the planet, a favor.`,
       },
       //TODO: Something new!
@@ -210,7 +210,7 @@ export default [
         body: "I will get 50% of my food from local sources.",
         tonnes: 0.5,
         color: "#FFE15B",
-        img: {local},
+        img: local,
         description: `A large part of the impact of certain foods is the transport required to get them to your local supplier. Buying local saves emissions on gas and other invisible expenses such as refridgeration.`,
       },
     ],
