@@ -16,7 +16,7 @@ export default () => {
         data={[
         {x: "Travel", y: 2.99},
         {x: "HouseHold", y: 1.6},
-        {x: "Goods", y: 1.3},
+        {x: "Stuff", y: 1.3},
         {x: "Food", y: 0.5}
         ]}
 
@@ -38,7 +38,7 @@ export default () => {
                 <div id="householdValue"><h4>1.6</h4> <p>tonnes on household</p></div>
             </div>
             <div className="box2">
-                <div id="goodsValue"><h4>1.3</h4> <p>tonnes on goods</p></div>
+                <div id="goodsValue"><h4>1.3</h4> <p>tonnes on stuff</p></div>
                 <div id="foodValue"><h4>0.5</h4> <p>tonnes on food</p></div>
             </div>
             </div>

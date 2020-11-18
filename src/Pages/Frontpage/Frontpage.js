@@ -33,13 +33,14 @@ export default (props) => {
         <div className="mission"> 
         <h1>Change the future.</h1>
         <p>There is now no doubt that climate change will have a profound effect on our future.</p>
-        <p>Help us save the planet, one person at a time</p>
+        <p>Help us to save the planet, one person at a time</p>
         </div>
         <div className="middelBox">
           <h1>Become The Solution</h1>
           <p>We believe every individual can help in the fight against climate change.<br></br>
             Any contribution counts!<br></br>
-            Take the test below to discover your carbon footprint.</p>
+            Even the smallest changes you make today will add up over time.<br></br>
+            Take the survey below so we can get a ballpark figure of your emissions.</p>
           <div id="buttonBox">
             <button className="testButton" onClick={() => surveyClick()}>
             <h3>Test your CO₂ footprint!</h3>

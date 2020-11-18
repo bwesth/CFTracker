@@ -28,7 +28,7 @@ export default () => {
         <div className="chartInfo">
             <h2>Trees</h2>
             <p>X many trees saved</p>
-            <p>By your actions so far</p>
+            <p>by your actions so far</p>
             <p>That's x square kilometers of forest!</p>
         </div>
 

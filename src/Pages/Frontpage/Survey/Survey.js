@@ -20,7 +20,7 @@ export default (props) => {
           <Theme name={item.name}  question={item.question} options={item.options} />
         ))}
         <div className="done">
-        <h1>All done! </h1>
+        <h1>All done!</h1>
         <h2>Click send to see your carbon footprint</h2>
         <input type="submit" />
         </div>
