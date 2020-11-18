@@ -63,14 +63,14 @@ export default (props) => {
           onChange={(e) => setName(e.target.value)}
           ref={register}
         />
-        <input
+        {/* <input
           id="email"
           name="email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           ref={register}
-        />
+        /> */}
         <input
           id="password"
           name="password"
