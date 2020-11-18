@@ -1,26 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Pledge from "../Pledges/Pledge";
 import { UserContext } from "../../../Main/UserContext";
 
 export default ({ section }) => {
   const context = useContext(UserContext);
-
-  const [pledgesList, setPledgesList] = context.pledges,
-    setFootprint = context.footprint[1];
-
-  console.log("Footprint: " + context.footprint[0]);
+  const [pledges, setPledgesList] = context.pledges
+  let list = pledges[section.name.toLowerCase()]
+  
 
   function addPledge(pledge) {
-    setPledgesList((list) => [...list, pledge]);
-    setFootprint((value) => value - pledge.tonnes * 1000);
+    console.log({...pledges, [section.name.toLowerCase()]: [...list, pledge]})
+    setPledgesList(state => ({...state, [section.name.toLowerCase()]: [...list, pledge]}));
+    
   }
+
+  useEffect(() => {
+    context.updateFootprint()
+  },[pledges])
 
   return (
     <div className="pledgesSection">
       <h1>{section.name}</h1>
       {section.list.map(
         (pledge) =>
-          !pledgesList.includes(pledge) && (
+          !list.includes(pledge) && (
             <Pledge pledge={pledge} addPledge={addPledge} />
           )
       )}

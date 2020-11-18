@@ -10,8 +10,27 @@ function UserProvider(props) {
     password: undefined,
   });
   const loggedIn = useState(false);
-  const [surveyChoicesData, setSurveyChoices] = useState([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]);
-  const pledges = useState([]);
+  const [surveyChoicesData, setSurveyChoices] = useState([
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+  ]);
+  const pledges = useState({
+    transport: [],
+    food: [],
+    goods: [],
+    household: [],
+  });
+
   const footprint = useState();
 
   /* This is a massivly shitty way of doing it, but it was the best way 
@@ -22,9 +41,8 @@ function UserProvider(props) {
 
   function calcFootprint(theme) {
     console.log(theme)
-    let result = 0;
+    let surveyResult = 0;
     let index = 0;
-    let length = 3;
     switch (theme) {
       case "transport":
         index = 0; //redundant, for reading purposes
@@ -38,41 +56,48 @@ function UserProvider(props) {
       case "household":
         index = 9;
         break;
-      case "total":
-        index = 0; //redundant, for reading purposes
-        length = data.themes.length;
-        break;
     }
-    for (let i = index; i < index+length; i++) {
-      // console.log(i)
-      result += data.themes[i].options[surveyChoices[0][i]].value;
+    for (let i = index; i < index + 3; i++) {
+      surveyResult += data.themes[i].options[surveyChoices[0][i]].value;
     }
-    console.log(result)
-    return result;
+    console.log("from survey: " + surveyResult);
+    let pledgesResult = 0;
+    let list = [...pledges[0][theme]];
+    for (let i = 0; i < list.length; i++) {
+      console.log(i)
+      pledgesResult = pledgesResult+list[i].tonnes;
+    }
+    console.log("from pledges: " + pledgesResult);
+    return surveyResult - pledgesResult;
   }
 
-  function updateFootprint(){
+  function updateFootprint() {
+    const transport = calcFootprint("transport"),
+      food = calcFootprint("food"),
+      goods = calcFootprint("goods"),
+      household = calcFootprint("household"),
+      total = transport + food + goods + household;
+
     footprint[1]({
-      transport: calcFootprint("transport"),
-      food: calcFootprint("food"),
-      goods: calcFootprint("goods"),
-      household: calcFootprint("household"),
-      total: calcFootprint("total"),
+      transport: transport,
+      food: food,
+      goods: goods,
+      household: household,
+      total: total,
     });
-
   }
 
-  function surveyHook (index, value) {
-    let list = [...surveyChoicesData]
-    list[index] = value
-    setSurveyChoices([...list])
-    updateFootprint()
+  function surveyHook(index, value) {
+    let list = [...surveyChoicesData];
+    list[index] = value;
+    setSurveyChoices([...list]);
+    updateFootprint();
   }
 
-  const surveyChoices = [surveyChoicesData, surveyHook]
+  const surveyChoices = [surveyChoicesData, surveyHook];
 
   useEffect(() => {
-    updateFootprint()
+    updateFootprint();
   }, []);
 
   return (
@@ -82,6 +107,7 @@ function UserProvider(props) {
         surveyChoices,
         pledges,
         footprint,
+        updateFootprint,
         firebase,
         loggedIn,
       }}

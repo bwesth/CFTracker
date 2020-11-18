@@ -7,7 +7,7 @@ import placeholder from "../placeholderimage.png";
 export default [
   {
     //TRAVEL PLEDGES//-----------------------------------------------------------------------------
-    name: "Travel",
+    name: "Transport",
     color: "#53AED5",
     list: [
       //CYCLICAL COMMUTE//
@@ -102,7 +102,7 @@ export default [
 
   {
     //STUFF PLEDGES//------------------------------------------------------------------------------
-    name: "Stuff",
+    name: "Goods",
     color: "#F46A67",
     list: [
       //TODO: Something new!

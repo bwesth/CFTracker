@@ -3,7 +3,6 @@ import PledgesSection from "./PledgesSection";
 import pledgesStore from "../../../Data/pledgesStore";
 
 export default ({ setpledgesRender }) => {
-  console.log(pledgesStore);
   return (
     <div>
       <div className="banner">

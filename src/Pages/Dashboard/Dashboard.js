@@ -9,7 +9,6 @@ export default () => {
   const [pledgesRender, setpledgesRender] = useState(false);
   const fb = useContext(UserContext).firebase;
 
-  console.log(pledgesRender);
   return (
     <div className="dashboard">
       {pledgesRender ? (
