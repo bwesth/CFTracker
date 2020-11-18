@@ -22,7 +22,6 @@ Installing sass: npm install node-sass
 Updating our sass files: node-sass App.scss App.css
 Updating our sass files with a watcher: node-sass App.scss App.css -w
 
-
 ## Project Description: A personal CO2 emission tracker tracker featuring:
 
 ### User login and persistent data 
@@ -43,7 +42,10 @@ probably still to come.
 
 ## Team is currently working on:
 Expanding firebase functionality, cleaning up backend code (quite messy atm), improving styling, adding images,
-refactoring folder structure (also messy).
+refactoring folder structure (also messy). 
+
+Styling has been a concern as we chose to use scss with React and it seems they do not play nicely together. The latest
+update broke some banners and footers which we have not had time to repair.
 
 ### Firebase server setup
 Essentially finished. Currently stores username, pass and email. Might want to store user footprint data too.
