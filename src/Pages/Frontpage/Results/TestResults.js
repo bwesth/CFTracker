@@ -1,14 +1,11 @@
 import React from "react";
 import Frontpage from "../Frontpage";
-import FootprintBars from "../../../Shared/FootprintBars";
 import Wrapper from "../../../Shared/Wrapper/Wrapper";
 import Description from "./Description";
-import Chart from "./Chart";
 
 import { first, second, third, fourth } from "./text";
 
-import chart2 from "./img/1200px-English_dialects1997.svg.png";
-import chart3 from "./img/trees.png";
+import BarChart from "../../Dashboard/FootprintSlideshow/BarChart";
 
 const style = {
   display: "flex",
@@ -24,15 +21,16 @@ export default (props) => {
       <h1>Let’s see how you did!</h1>
       <div style={style}>
         <Wrapper>
-          <FootprintBars />
+          <BarChart/>
+          {/* <FootprintBars /> */}
           <Description>
-            <h1>{first.headline}</h1>
-            <p>{first.text1}</p>
-            <p>{first.text2}</p>
+            {/* <h1>{first.headline}</h1> */}
+            {/* <p>{first.text1}</p> */}
+            {/* <p>{first.text2}</p> */}
           </Description>
         </Wrapper>
         <Wrapper>
-          <Chart img={chart2} />
+        {/* Insert Pie Chart Here */}
           <Description>
             <h1>{second.headline}</h1>
             <p>{second.text1}</p>
@@ -40,7 +38,7 @@ export default (props) => {
           </Description>
         </Wrapper>
         <Wrapper>
-          <Chart img={chart3} />
+        {/* Insert trees here */}
           <Description>
             <h1>{third.headline}</h1>
             <p>{third.text1}</p>
