@@ -13,21 +13,18 @@ export default (props) => {
   let left = [left1, left2, left3, left4];
 
   function getRandImg(imgs) {
-      let rand = Math.floor(Math.random() * imgs.length)
+    let rand = Math.floor(Math.random() * imgs.length);
     return imgs[rand];
   }
 
-    const wrapper = {
-      
-      flexDirection: props.direction || "row",
-      backgroundImage:
-        "url(" + getRandImg(right) + "), url(" + getRandImg(left) + ")",
-      backgroundPosition: "right bottom, left bottom",
-      backgroundRepeat: "no-repeat, no-repeat",
-      backgroundSize: "250px, 250px",
-      
-    
-    };
+  const wrapper = {
+    flexDirection: props.direction || "row",
+    backgroundImage:
+      "url(" + getRandImg(right) + "), url(" + getRandImg(left) + ")",
+    backgroundPosition: "right bottom, left bottom",
+    backgroundRepeat: "no-repeat, no-repeat",
+    backgroundSize: "250px, 250px",
+  };
 
   return (
     <div className="wrapper" style={wrapper}>

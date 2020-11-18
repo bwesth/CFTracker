@@ -9,7 +9,7 @@ export default (props) => {
   and checking the context each time. All <Option /> loads every time a change is many in any one componant.
   TODO: Look into individual <Option /> state (context) managment for less remounting.
   */
- 
+
   return (
     <>
       <p>{props.text}</p>

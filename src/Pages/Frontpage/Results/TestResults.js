@@ -1,9 +1,6 @@
 import React from "react";
 import Frontpage from "../Frontpage";
-import SignUpButton from "../SignUpButton";
-
 import FootprintBars from "../../../Shared/FootprintBars";
-
 import Wrapper from "../../../Shared/Wrapper/Wrapper";
 import Description from "./Description";
 import Chart from "./Chart";
@@ -56,7 +53,10 @@ export default (props) => {
             <div>
               {props.popup}
               <button
-                onClick={() => {props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);}}>
+                onClick={() => {
+                  props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);
+                }}
+              >
                 Back
               </button>
             </div>

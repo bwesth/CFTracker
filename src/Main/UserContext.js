@@ -5,7 +5,11 @@ import data from "../Data/intensityKilo";
 const UserContext = React.createContext();
 
 function UserProvider(props) {
-  const user = useState({ name: undefined, email: undefined, password: undefined })
+  const user = useState({
+    name: undefined,
+    email: undefined,
+    password: undefined,
+  });
   const loggedIn = useState(false);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -25,7 +29,11 @@ function UserProvider(props) {
       food: data[surveyChoices[0].Food.toLowerCase()],
       stuff: data.stuff([surveyChoices[0].Stuff]),
       household: data.household([surveyChoices[0].Household]),
-      total: data[surveyChoices[0].Transport.toLowerCase()]+data[surveyChoices[0].Food.toLowerCase()]+data.stuff([surveyChoices[0].Stuff])+data.household([surveyChoices[0].Household])
+      total:
+        data[surveyChoices[0].Transport.toLowerCase()] +
+        data[surveyChoices[0].Food.toLowerCase()] +
+        data.stuff([surveyChoices[0].Stuff]) +
+        data.household([surveyChoices[0].Household]),
     };
   }
 
@@ -34,7 +42,19 @@ function UserProvider(props) {
   }, surveyChoices);
 
   return (
-    <UserContext.Provider value={{ user, surveyChoices, pledges, footprint, firebase, userEmail, userName, userPassword, loggedIn }}>
+    <UserContext.Provider
+      value={{
+        user,
+        surveyChoices,
+        pledges,
+        footprint,
+        firebase,
+        userEmail,
+        userName,
+        userPassword,
+        loggedIn,
+      }}
+    >
       {props.children}
     </UserContext.Provider>
   );
