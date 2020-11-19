@@ -28,12 +28,12 @@
       } 
 
       p{
-        @include pageText(bold,16px);
+        @include pageText(bold,16px, $button-font-colour);
       }
     }
   
   .middelBox{
-    margin-top: 6%;
+    margin-top: 8%;
     width: 40%;
     height: 300px;
     display: flex;
@@ -50,7 +50,7 @@
     p{
       align-self: center;
       text-align: center;
-      @include pageText(normal,16px);
+      @include pageText(normal,16px, $button-font-colour);
     }
 
     #buttonBox{
@@ -61,6 +61,7 @@
       justify-content: center;
 
       .testButton{
+        @include button;
         margin: 5%;
         width: 20%;
       }
