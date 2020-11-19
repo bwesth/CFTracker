@@ -33,14 +33,12 @@
       justify-content: center;
       
       button{
-        justify-items: center;
-        font-family: Roboto;
-        font-weight: bold;
-        border-radius: 8px;
+       @include button;
         width: 120%;
         height: 65%;
         font-size: 12px;
         color: $button-font-colour;
+      
       }
     }
 

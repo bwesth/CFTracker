@@ -23,14 +23,15 @@ export default () => {
     console.log(newIndex);
     console.log(index);
   }
-
+  // &lt;
+  // &gt; 
   return (
     <Wrapper direction="column">
       <h1>Some views of your footprint</h1>
       <div className="slides">
-        <button onClick={() => click(-1)}> &lt; </button>
+        <button id="leftArrow" onClick={() => click(-1)}>  </button>
         {slides[index]}
-        <button onClick={() => click(1)}> &gt; </button>
+        <button id="rightArrow" onClick={() => click(1)}> </button>
       </div>
     </Wrapper>
   );

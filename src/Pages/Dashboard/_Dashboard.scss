@@ -1,5 +1,5 @@
 @import "../../Shared/Variables";
-
+/*
 .flex-row {
   display: flex;
   height: 100%;
@@ -11,6 +11,7 @@
   height: 100%;
   flex-direction: column;
 }
+*/
 
 .dashboard {
   display: flex;
@@ -18,10 +19,10 @@
   position: relative;
 
   // height: -webkit-calc(100% - 100px);  
-  // height: 100%;
+  
   top: 50px;
   width: 100%;
-  order: 2;
+  //order: 2;
   overflow: auto;
 
   h1{
@@ -42,7 +43,7 @@
       border-width: 3px;
   }
   p{
-    @include pageText(bold,14px);
+    @include pageText(bold,14px, $font-colour);
     color: $font-colour;
   }
 
@@ -50,8 +51,8 @@
     background-image: url(./../../Shared/Images/Banner_Illustrations/Banner_008.jpg);
     background-repeat: no-repeat;
     background-size: 100% 200%;
-    background-position: -0em -5em;
-  
+    background-position: -5em -3em;
+    width: 100%;
     //height: -webkit-calc(100% - 100px);  
     padding: 100px;
     margin: 0%;
@@ -63,63 +64,11 @@
     }
   }
 
-
-.menu-bottom {
-  display: flex;
-  flex-direction: row;
-  height: 10%;
-  order: 3;
-}
-
-.menu-right {
-  position: relative;
-  height: -webkit-calc(100% - 100px);  
-  top: 50px;
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  order: 1;
-}
-
 .username {
   font-weight: bold;
   font-size: large;
   padding: 1%;
 }
-
-.menuItem {
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 0px 1px 0px 0px $secondary-colour;
-  background: linear-gradient(to bottom, #566be3 5%, $secondary-colour 100%);
-  background-color: #273dbb;
-  border-radius: 6px;
-  border: 1px solid #150c97;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 2em;
-  font-weight: bold;
-  padding: 6px 24px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #422a83;
-
-  &:hover {
-    background: linear-gradient(to bottom, #5e52cc 5%, #5f56e3 100%);
-    background-color: #5264cc;
-  }
-}
-.menuItem:active {
-  position: relative;
-  top: 1px;
-}
-
-.content {
-  height: 100%;
-  align-self: center;
-}
-
 }
 
 .wrapper{

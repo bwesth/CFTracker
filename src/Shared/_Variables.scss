@@ -25,21 +25,6 @@ p{
     font-size: 12px;
 }
 
-// button 
-button{
-    display: flex;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    color: $button-font-colour;
-    background-color: $action-colour; 
-    border-radius:$button-radius;
-
-    align-items: center;
-    justify-content: center;
-    }
     @mixin button{
         display: flex;
         font-family: Roboto;
@@ -62,10 +47,8 @@ button{
     color: $fontcoler;
 }
 
-
-
-@mixin pageText($weight, $size){
-    color: $button-font-colour;
+@mixin pageText($weight, $size, $colour){
+    color: $colour;
     font-size: $size;
     font-weight: $weight;
 }
