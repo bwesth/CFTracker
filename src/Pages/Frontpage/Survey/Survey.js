@@ -20,9 +20,10 @@ export default (props) => {
     );
   };
 
-  const Theme = ({ name, question, options, index }) => {
+  const Theme = ({icon, name, question, options, index }) => {
     return (
       <div className="theme">
+        <img src={icon} alt="theme icon" />
         <h1>{name}</h1>
         <h2>{question}</h2>
         {options.map(({ text }, optionsIndex) => (
