@@ -1,17 +1,4 @@
 @import "../../Shared/Variables";
-/*
-.flex-row {
-  display: flex;
-  height: 100%;
-  flex-direction: row;
-}
-
-.flex-column {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-}
-*/
 
 .dashboard {
   display: flex;
@@ -22,7 +9,6 @@
   
   top: 50px;
   width: 100%;
-  //order: 2;
   overflow: auto;
 
   h1{
@@ -31,8 +17,8 @@
   }
 
   h3{
-      @include pageHeaderText($button-font-colour);
-      color: $font-colour;
+      @include pageHeaderText($font-colour);
+
       width: 100%;
       font-size: 20px;
       border: $secondary-colour;
@@ -42,6 +28,7 @@
      
       border-width: 3px;
   }
+
   p{
     @include pageText(bold,14px, $font-colour);
     color: $font-colour;
@@ -60,7 +47,6 @@
     h2{
       @include pageHeaderText($button-font-colour);
       filter: $button-shadow;
-      //text-align: left;
     }
   }
 
@@ -73,7 +59,6 @@
 
 .wrapper{
   display: flex;
-  //flex-direction: ;
   border-bottom: $secondary-colour;
   border-bottom-style: dashed;
   border-width: 3px;
@@ -85,7 +70,6 @@
   min-height: 400px;
 
   h1{
-    // padding-top: 2%;
     @include pageHeaderText($font-colour);
     filter: none;
     }
