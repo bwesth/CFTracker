@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { UserContext } from "../../Main/UserContext";
+import { UserContext, UserProvider } from "../../Main/UserContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
@@ -11,6 +11,7 @@ export default () => {
   const [password, setPassword] = useState("");
   const fb = useContext(UserContext).firebase;
   const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
+  const footPrint = useContext(UserContext).footprint;
 
   const schema = yup.object().shape({
     name: yup.string().required(),
@@ -74,6 +75,7 @@ export default () => {
       await fb.register(name, email, password);
       await fb.login(email, password);
       setLoggedIn(true);
+      console.log(footPrint);
     } catch (error) {
       alert(error.message);
     }
