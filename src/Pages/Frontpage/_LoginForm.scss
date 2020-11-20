@@ -70,6 +70,10 @@
         margin-top: 2%;
         margin-left: 5%;
         filter: $button-shadow;
+
+        &:hover{
+          font-size: 20px;
+          }
         
       }
       .text{
