@@ -5,6 +5,11 @@
   flex-direction: row;
   justify-content: space-between;
 
+
+  h2{
+    @include pageHeaderText($font-colour)
+  }
+
     #leftArrow{
       margin: 5%;
       align-self: center;
@@ -115,29 +120,18 @@
       justify-content: space-around;
       align-items: center;
 
-      h2{
-        @include pageHeaderText($font-colour)
-      }
-      
       img{
         height: 80%;
         width: auto;
-      }
-
-      p{
-        @include pageText(normal, 18px, $font-colour)
       }
 
      }
   }
 
    .barChart{
-
-    .bars{
-      fill: #02C39A;
-      border-radius: 10px; 
-    }
-    
+    width: 50%;
+  
+  
    }
 
   
