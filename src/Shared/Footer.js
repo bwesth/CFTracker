@@ -17,7 +17,7 @@ export default (props) => {
           <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
         </a>
         <a href="https://www.Instagram.com/" className="instagram_social">
-          <FontAwesomeIcon icon={faInstagram} size="1x"></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faInstagram} ></FontAwesomeIcon>
         </a>
         <a href="https://www.Twitter.com/" className="twitter_social">
           <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>

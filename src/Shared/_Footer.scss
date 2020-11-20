@@ -1,4 +1,10 @@
 @import "../Shared/Variables";
+
+@mixin SoMe-hover {
+  &:hover{
+        color: $action-colour;
+      }
+}
 .footer {
   transform: translateY(50px);
   display: flex;
@@ -33,15 +39,26 @@
 
     .facebook_social {
       color: #1877f2;
+      transition: all .2s ;
+      @include SoMe-hover;
     }
+
     .twitter_socoal {
       color: #1da1f2;
+      transition: all .2s ;
+      @include SoMe-hover;
     }
+    
     .instagram_social {
       color: #d534ad;
+      transition: all .2s ;
+      @include SoMe-hover;
     }
+    
     .youtube_social {
       color: #ff0000;
+      transition: all .2s ;
+      @include SoMe-hover;
     }
   }
 
