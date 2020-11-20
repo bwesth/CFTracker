@@ -1,4 +1,52 @@
-.results-main {
+.results-main, .wrapper-Holder {
     position: relative;
     top: 50px;
+    display: flex;
+    justify-Content: center;
+    align-Items: center;
+    flex-Direction: column;
+    width: 100%;
+
+    .wrapper-Holder{
+        min-height: 60%;
+    }
+
+    h1{
+        width: 100%;
+        margin-top: 3%;
+        @include pageHeaderText($font-colour);
+        border-bottom-style: dashed;
+        border: $secondary-colour;
+        
+    }
+
+    p{
+        @include pageText(normal, 16px, $font-colour);
+    }
+
+    button{
+        @include button;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 5%;
+    }
 }
+
+.children{
+    height: 100%;
+    margin-right: 5%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-Items: center;
+    flex-Direction: column;
+    text-Align: center;
+    max-Width: 500px;
+}
+
+img{
+    max-height: 400px;
+    height: 100%;
+    width: auto;
+}
+

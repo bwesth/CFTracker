@@ -12,19 +12,12 @@ import treeimage from "../../../Shared/Images/Graphs/TreesCount.png";
 import BarChart from "../../Dashboard/FootprintSlideshow/BarChart";
 import PieChart from "../../Dashboard/FootprintSlideshow/PieChart";
 
-const style = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-  width: "100%",
-};
 
 export default (props) => {
   return (
-    <div className="results-main" style={style}>
+    <div className="results-main">
       <h1>Let’s see how you did!</h1>
-      <div style={style}>
+      <div className="wrapper-Holder">
         <Wrapper>
           {/* The barchart class below is a bar chart that displays the user CO2 output compared to other common citizens. */}
           <BarChart/> 

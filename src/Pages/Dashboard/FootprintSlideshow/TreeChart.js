@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <div className="slide">
-      
+      <div className="treeSlide">
       <img src={treepic} alt="A forest of illustrated trees."/>
 
       <div className="chartInfo">
@@ -18,6 +18,7 @@ export default () => {
         <p>{treesSaved} trees saved</p>
         <p>by your actions so far</p>
         <p>That's {squareTrees} square meters of forest!</p>
+        </div>
       </div>
     </div>
   );
