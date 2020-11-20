@@ -37,6 +37,14 @@ p{
         border-radius:$button-radius;
         align-items: center;
         justify-content: center;
+        transition: all .1s ease-in;
+
+         &:hover{
+        //font-size: 14px;
+        color: #00A896;
+        //-webkit-text-stroke-width: .1px;
+        //-webkit-text-stroke-color: #fff;
+        }
         }
 
 @mixin pageHeaderText($fontcoler) {

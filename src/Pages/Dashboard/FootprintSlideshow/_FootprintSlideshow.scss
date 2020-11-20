@@ -4,16 +4,24 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transition: all 2s ease-in;
 
     #leftArrow{
       margin: 5%;
       align-self: center;
       border-radius: 5%;
       border-left: 0px;
-      border-top: 55px solid #fff;
-      border-right: 100px solid $secondary-colour;
-      border-bottom: 55px solid #fff;
+      border-top: 40px solid #fff;
+      border-right: 85px solid $secondary-colour;
+      border-bottom: 40px solid #fff;
+      transition: all .1s ease-in;
+
+        &:hover{
+          border-left: 0px;
+          border-right:85px solid $action-colour;
+          border-bottom: 50px solid #fff;
+          border-top: 50px solid #fff;
+        }
+     
     }
 
     #rightArrow{
@@ -21,9 +29,17 @@
       border-radius: 10%;
       align-self: center;
       border-right: 0px;
-      border-top: 55px solid #fff;
-      border-left: 100px solid $secondary-colour;
-      border-bottom: 55px solid #fff;
+      border-top: 40px solid #fff;
+      border-left: 85px solid $secondary-colour;
+      border-bottom: 40px solid #fff;
+      transition: all .1s ease-in;
+
+        &:hover{
+          border-left: 85px solid $action-colour;
+          border-right: 0px;
+          border-bottom: 50px solid #fff;
+          border-top: 50px solid #fff;
+        }
     }
   }
 
@@ -33,6 +49,7 @@
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    transition: all 2s ease-in;
 
     .pieSlide{
       display: flex;
@@ -113,6 +130,15 @@
 
      }
   }
+
+   .barChart{
+
+    .bars{
+      fill: #02C39A;
+      border-radius: 10px; 
+    }
+    
+   }
 
   
 

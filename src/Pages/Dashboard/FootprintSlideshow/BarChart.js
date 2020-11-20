@@ -18,6 +18,7 @@ export default () => {
       <div className="barChart">
         <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
           <VictoryAxis
+          
             tickValues={[1, 2, 3, 4]}
             tickFormat={["You", "EU Citizen", "US Citizen", "World Goal"]}
           />
@@ -27,7 +28,9 @@ export default () => {
             tickFormat={(x) => `$${x / 1000} tonnes`}
           />
 
-          <VictoryBar data={data} x="user" y="expenditure" />
+          <VictoryBar  style={{parent: {
+            border: "20px solid #02C39A"}, 
+            data: { fill: "#02C39A", borderRadius: "10%"} }} data={data} x="user" y="expenditure" />
         </VictoryChart>
       </div>
 
