@@ -7,7 +7,7 @@ import knifeFork from "../Shared/Icons/knifeFork.png";
 import people from "../Shared/Icons/people.png";
 import pets from "../Shared/Icons/pets.png";
 import plane from "../Shared/Icons/plane.png";
-import waste from "../Shared/Icons/waste.png";
+import waste from "../Shared/Icons/waste.png"
 
 // This store contains all the questions and answers for the survey, including preliminary primitive values we
 // will tie to each choice. Higher values are worse. In the final product these values would obviously be tied 
