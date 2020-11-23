@@ -11,58 +11,9 @@
 @import "../Pages/Frontpage/SignUpForm";
 @import "../Pages/Dashboard/Stats/Stats";
 
+
 .App {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 100%;
 }
-
-// Styling fields
-/* .survey-button {
-  width: 100%;
-  height: 100%;
-  position: absolute; 
-}
-
-.login,
-.signUp {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.login {
-  margin-right: 2%;
-}
-
-.signUp {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1%;
-}
-
-.login-form input {
-  margin: 2%;
-}
-/*
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-// Track 
-::-webkit-scrollbar-track {
-  background: #d9daeb;
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-// Handle 
-::-webkit-scrollbar-thumb {
-  background: rgb(55, 63, 167);
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-// Handle on hover 
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(45, 35, 92);
-}
-*/
