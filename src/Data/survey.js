@@ -1,3 +1,14 @@
+import car from "../Shared/Icons/car.png";
+import clothing from "../Shared/Icons/clothing.png";
+import electronics from "../Shared/Icons/electronics.png";
+import house from "../Shared/Icons/house.png";
+
+import knifeFork from "../Shared/Icons/knifeFork.png";
+import people from "../Shared/Icons/people.png";
+import pets from "../Shared/Icons/pets.png";
+import plane from "../Shared/Icons/plane.png";
+import waste from "../Shared/Icons/waste.png"
+
 // This store contains all the questions and answers for the survey, including preliminary primitive values we
 // will tie to each choice. Higher values are worse. In the final product these values would obviously be tied 
 // to real-world statistics about carbon footprints for users in Denmark. Currently they are just used as a proof 
@@ -7,6 +18,7 @@ export default {
   themes: [
     //TRANSPORT QUESTIONS//------------------------------------------------------------------------
     {
+      icon: car,
       name: "Transport: Commute",
       question: "During your daily commute, what is your main method of transport?",
       options: [
@@ -19,6 +31,7 @@ export default {
     },
 
     {
+      icon: plane,
       name: "Transport: Flights",
       question: "In the last year, how many long distance (more than 2500km) return flights have you made?",
       options: [
@@ -31,6 +44,7 @@ export default {
     },
 
     {
+      icon: plane,
       name: "Transport: Flights",
       question: "What percentage of your flights do you offset?",
       options: [
@@ -44,6 +58,7 @@ export default {
 
     //FOOD QUESTIONS//-----------------------------------------------------------------------------
     {
+      icon: knifeFork,
       name: "Food: Diet",
       question: "What does your diet primarily consist of?",
       options: [
@@ -56,6 +71,7 @@ export default {
     },
 
     {
+      icon: waste,
       name: "Food: Waste",
       question: "Out of the food you buy, how much would you say goes to waste each month?",
       options: [
@@ -68,6 +84,7 @@ export default {
     },
 
     {
+      icon: knifeFork,
       name: "Food: Sourcing",
       question: "In a typical month, how much of your food comes from local sources?",
       options: [
@@ -81,6 +98,7 @@ export default {
 
     //GOODS QUESTIONS//----------------------------------------------------------------------------
     {
+      icon: electronics,
       name: "Goods: Electronics",
       question: "In a typical month, how much do you spend on new electronics and applicances?",
       options: [
@@ -93,6 +111,7 @@ export default {
     },
 
     {
+      icon: clothing,
       name: "Goods: Clothing",
       question: "In a typical month, how much do you spend on new clothing?",
       options: [
@@ -105,6 +124,7 @@ export default {
     },
 
     {
+      icon: pets,
       name: "Goods: Pets",
       question: "In a typical month, how much do you spend on pets and pet goods?",
       options: [
@@ -118,6 +138,7 @@ export default {
 
     //HOUSEHOLD QUESTIONS//------------------------------------------------------------------------
     {
+      icon: house,
       name: "Household: Size",
       question: "How many bedrooms does your house have?",
       options: [
@@ -130,6 +151,7 @@ export default {
     },
 
     {
+      icon: house,
       name: "Household: Heating",
       question: "How do you usually heat your home?",
       options: [
@@ -142,6 +164,7 @@ export default {
     },
 
     {
+      icon: people,
       name: "Household: People",
       question: "How many people (aged 17 and above) live in your home?",
       options: [
