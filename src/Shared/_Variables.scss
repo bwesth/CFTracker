@@ -57,6 +57,7 @@ p{
 
 @mixin pageText($weight, $size, $colour){
     color: $colour;
+    font-family: Montserrat;
     font-size: $size;
     font-weight: $weight;
 }
