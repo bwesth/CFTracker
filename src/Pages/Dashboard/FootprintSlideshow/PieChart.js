@@ -9,7 +9,7 @@ export default (props) => {
 
   //Would be nice to destruct this properly so we don't have to use ridiculously long names to summon these variables later.
   //let {{sumTotal: transportTotal}, food, household, goods} = footprint;
-
+// const { transport: { sumTotal: transportTotal }, food, household, goods } = footprint;
   return (
     <div className="slide">
       <div className="pieSlide">

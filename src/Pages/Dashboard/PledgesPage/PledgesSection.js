@@ -5,7 +5,7 @@ import { UserContext } from "../../../Main/UserContext";
 export default ({ section }) => {
   const context = useContext(UserContext);
   const [pledges, setPledgesList] = context.pledges
-  let list = pledges[section.name.toLowerCase()]
+  const list = pledges[section.name.toLowerCase()]
   
 
   function addPledge(pledge) {

@@ -7,10 +7,10 @@ export default ({ pledgesRender }) => {
   const pledges = useContext(UserContext).pledges[0];
 
 
-  let transportPledges = pledges.transport.map((pledge) => <Pledge pledge={pledge} />),
-  foodPledges = pledges.food.map((pledge) => <Pledge pledge={pledge} />),
-  goodsPledges = pledges.goods.map((pledge) => <Pledge pledge={pledge} />),
-  householdPledges = pledges.household.map((pledge) => <Pledge pledge={pledge} />)
+  let transportPledges = pledges.transport.map((pledge) => <Pledge pledge={pledge} />)
+  let foodPledges = pledges.food.map((pledge) => <Pledge pledge={pledge} />)
+  let goodsPledges = pledges.goods.map((pledge) => <Pledge pledge={pledge} />)
+  let householdPledges = pledges.household.map((pledge) => <Pledge pledge={pledge} />)
 
   return (
     <Wrapper direction="column">
