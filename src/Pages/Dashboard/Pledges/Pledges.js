@@ -14,16 +14,28 @@ export default ({ pledgesRender }) => {
 
   return (
     <Wrapper direction="column">
-      <h1>Transportation</h1>
-      <div className="pledges">{transportPledges}</div>
-      <h1>Food</h1>
-      <div className="pledges">{foodPledges}</div>
-      <h1>Goods</h1>
-      <div className="pledges">{goodsPledges}</div>
-      <h1>Household</h1>
-      <div className="pledges">{householdPledges}</div>
+      { (transportPledges.length <1 && foodPledges.length <1 && goodsPledges.length <1 && householdPledges.length <1) ? 
+      <><h1>You have no pledges yet!</h1>
+      <p>Click the button to see the pledges you can make</p></> : <>  
+        {transportPledges.length > 0 && <>
+          <h1>Transportation</h1>
+          <div className="pledges">{transportPledges}</div>
+          </>}
+      {foodPledges.length > 0 && <>
+        <h1>Food</h1>
+        <div className="pledges">{foodPledges}</div>
+        </>}
+      {goodsPledges.length > 0 && <>
+        <h1>Goods</h1>
+        <div className="pledges">{goodsPledges}</div>
+        </>}
+      {householdPledges.length > 0 && <>
+        <h1>Household</h1>
+        <div className="pledges">{householdPledges}</div>
+        </>}
+      </>}
       <div
-        className="pledge-button"
+      className="pledge-button"
         onClick={() => pledgesRender((state) => !state)}
       >
         <p> + Add More Pledges </p>
