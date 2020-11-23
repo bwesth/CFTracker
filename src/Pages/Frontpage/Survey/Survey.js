@@ -20,10 +20,13 @@ export default (props) => {
     );
   };
 
-  const Theme = ({ name, question, options, index }) => {
+  const Theme = ({icon, name, question, options, index }) => {
     return (
       <div className="theme">
-        <h1>{name}</h1>
+        <div className="surveyHeader">
+          <img src={icon} alt="theme icon" />
+          <h1>{name}</h1>
+        </div>
         <h2>{question}</h2>
         {options.map(({ text }, optionsIndex) => (
           <Option
@@ -64,8 +67,9 @@ export default (props) => {
   return (
     <div className="survey">
       <form onSubmit={handleSubmit((d) => submit(d))}>
-        {props.themes.map(({ name, question, options }, index) => (
+        {props.themes.map(({ icon,name, question, options }, index) => (
           <Theme
+            icon={icon}
             index={index}
             name={name}
             question={question}

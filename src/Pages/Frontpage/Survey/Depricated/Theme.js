@@ -7,6 +7,7 @@ export default (props) => {
 return (
   
   <div className="theme">
+    <img src={props.icon} alt="theme icon" />
     <h1>{props.name}</h1>
     <h2>{props.question}</h2>
     {props.options.map((item, index) => (
