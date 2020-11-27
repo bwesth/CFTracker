@@ -12,8 +12,7 @@ $button-font-colour: #ffffff;
 $font-colour: #484848;;
 $font-shadow: 5px 5px 8px $font-colour;
 $Text-background: rgba(2, 195, 154, 0.3);
-
-//Our button variables
+$button-Hover: #e4722c;
 $button-width:  132px; 
 $button-height:  32px;
 $button-radius:  8px; 
@@ -38,9 +37,10 @@ p{
         align-items: center;
         justify-content: center;
         transition: all .1s ease-in;
+        filter: $button-shadow;
 
          &:hover{
-        background-color: #e4722c;
+        background-color: $button-Hover;
       
         //-webkit-text-stroke-width: .1px;
         //-webkit-text-stroke-color: #fff;

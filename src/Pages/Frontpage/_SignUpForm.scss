@@ -47,34 +47,38 @@
         @include pageText(bold,14px, $font-colour);
         color: $font-colour;
       }
-      .Name{
+
+      .userInputs{
         display: flex;
-        flex-direction: row;
-      }
-      
-      .Email{
-        display: flex;
-        flex-direction: row;
-      }
-      .Password{
-        display: flex;
-        flex-direction: row;
-      }
-        input {
-        background: $Text-background;
-        padding: 0;
-        margin: 2%;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 35%;
+
+        .Name{
+          display: flex;
+          flex-direction: row;
         }
         
+        .Email{
+          display: flex;
+          flex-direction: row;
+        }
+        .Password{
+          display: flex;
+          flex-direction: row;
+        }
+          input {
+          background: $Text-background;
+          padding: 0;
+          margin: 2%;
+          }
+      }  
       .signUpButton{
         @include button;
-        font-size: 18px;
+        font-size: 16px;
         padding: 2%;
-        height: 100%;
         margin-top: 2%;
         margin-left: 5%;
-        filter: $button-shadow;
-
       }
    }
   }

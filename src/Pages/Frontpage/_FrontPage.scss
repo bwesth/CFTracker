@@ -1,21 +1,17 @@
-//@import  './../../EarthBG_006.jpg';
 
 #welcoming { 
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: $main-colour;
   background-image: url(./../../Shared/Images/Banner_Illustrations/Banner_002.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 70%;
+  background-size: 100% 60%;
   background-position: -0em -2em;
-  min-height: 680px;
   width: 100%;
   height: -webkit-calc(100% - 100px);  
   top: 50px;
 
   .mission { 
-    //display: flex;
     width: 40%;
     height: 20%;
     align-self: center;
@@ -35,7 +31,6 @@
   .middelBox{
     margin-top: 8%;
     width: 40%;
-    height: 300px;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -43,6 +38,7 @@
     background: $secondary-colour;
     border-radius: $button-radius;
     filter: $button-shadow;
+
     h1{
       @include pageHeaderText($button-font-colour);
     }
@@ -65,7 +61,6 @@
         margin: 5%;
         width: 20%;
       }
-
     }
   } 
 }

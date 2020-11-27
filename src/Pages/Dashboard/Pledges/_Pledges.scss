@@ -2,7 +2,7 @@
   width: 60%;
   border-style: dashed;
   border-width: 5px;
-  border-color: #02c39a;
+  border-color: $secondary-colour;
   display: flex;
   width: 80%;
   align-items: center;
@@ -13,7 +13,7 @@
   p {
     transition: all .1s ease-in;
     font-size: 150%;
-    color: #02c39a;
+    color:$secondary-colour;
     margin-left: 10%;
   }
 
@@ -64,12 +64,7 @@
   z-index: 2;
   justify-content: space-between;
 
-  /*
-  :hover {
-    background-color: $Text-background;
-    //cursor: zoom-in;
-  }
-  */
+
   h4 {
     margin: 0;
     text-align: center;
@@ -138,10 +133,6 @@
     @include button;
    width: 10%;
    font-size: 14px;
-
-   &:hover{
-    font-size: 16px;
-    }
  }
 
 }
@@ -153,7 +144,6 @@
   background-position: -0em -4.5em;
  
   width: 100%;
-  //height: -webkit-calc(100% - 100px);  
   padding: 100px;
   margin: 0%;
   }

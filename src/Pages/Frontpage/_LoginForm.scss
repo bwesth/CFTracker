@@ -40,7 +40,6 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      justify-content: space-around;
       margin-top: 1%;
 
       p{
@@ -48,13 +47,21 @@
         color: $font-colour;
       }
       
-      .Email{
+      .userInputs{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        
+        align-items: flex-end;
+        width: 35%;
+
+        .Email{
+          display: flex;
+          flex-direction: row;
+        }
+        .Password{
+          display: flex;
+          flex-direction: row;
       }
-      .Password{
-        display: flex;
-        flex-direction: row;
       }
         input {
         background: $Text-background;
