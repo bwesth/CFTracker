@@ -31,38 +31,40 @@ export default () => {
         <h1>Sign up</h1>
       </div>
       <div className="Inputs">
-        <div className="Name">
-          <p>Name</p>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            ref={register}
-        />
-        </div>
-         <div className="Email">
-          <p>Email</p>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            ref={register}
+        <div className="userInputs">
+          <div className="Name">
+            <p>Name</p>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              ref={register}
           />
-        </div>
-        <div className="Password">
-        <p>Password</p>
-          <input
-            id="password"
-            name="password"
-            type="text"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            ref={register}
-          />
+          </div>
+          <div className="Email">
+            <p>Email</p>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              ref={register}
+            />
+          </div>
+          <div className="Password">
+          <p>Password</p>
+            <input
+              id="password"
+              name="password"
+              type="text"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              ref={register}
+            />
+          </div>
         </div>
         <input className="signUpButton" type="submit" onClick={onRegister} />
       </div>

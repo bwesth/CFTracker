@@ -29,9 +29,15 @@ export default () => {
     <Wrapper direction="column">
       <h1>Some views of your footprint</h1>
       <div className="slides">
-        <button id="leftArrow" onClick={() => click(-1)}>  </button>
+        <div className="previousButton">
+          <button className="leftArrow" onClick={() => click(-1)}>  </button>
+          <p>Previous</p>
+        </div>
         {slides[index]}
-        <button id="rightArrow" onClick={() => click(1)}> </button>
+        <div className="nextButton">
+          <button className="rightArrow" onClick={() => click(1)}> </button>
+          <p className="next">Next</p>
+        </div>
       </div>
     </Wrapper>
   );
