@@ -66,6 +66,7 @@ export default (props) => {
           setDisplay={props.setDisplay}
           popup={popup}
           themes={surveyData.themes}
+          scrollToTop={props.scrollToTop}
           />
           </div>
       )}

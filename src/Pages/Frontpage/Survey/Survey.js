@@ -16,6 +16,7 @@ export default (props) => {
         results={data}
         setDisplay={props.setDisplay}
         popup={props.popup}
+        scrollToTop={props.scrollToTop}
       />
     );
   };
