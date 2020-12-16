@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 import { VictoryPie } from "victory";
 import { UserContext } from "../../../Main/UserContext";
 
-
-
 export default (props) => {
-  const footprint = useContext(UserContext).footprint[0]
+  const footprint = useContext(UserContext).footprint[0];
 
   //Would be nice to destruct this properly so we don't have to use ridiculously long names to summon these variables later.
   //let {{sumTotal: transportTotal}, food, household, goods} = footprint;
-// const { transport: { sumTotal: transportTotal }, food, household, goods } = footprint;
+  // const { transport: { sumTotal: transportTotal }, food, household, goods } = footprint;
   return (
     <div className="slide">
       <div className="pieSlide">
@@ -31,32 +29,33 @@ export default (props) => {
           }}
         />
       </div>
-      
+
       {/* Using a bit of a hack to separate this part of the graph. Should it be another component? Debatable. */}
-      {props.pieStats && 
-      <div className="values">
-        <h2>Spending by Category:</h2>
-        <div className="valueText">
-          <div className="box1">
-            <div id="travelValue">
-              <h4>{footprint.transport.sumTotal}</h4> <p>tonnes on transport</p>
+      {props.pieStats && (
+        <div className="values">
+          <h2>Spending by Category:</h2>
+          <div className="valueText">
+            <div className="box1">
+              <div id="travelValue">
+                <h4>{footprint.transport.sumTotal}</h4>{" "}
+                <p>tonnes on transport</p>
+              </div>
+              <div id="householdValue">
+                <h4>{footprint.household.sumTotal}</h4>{" "}
+                <p>tonnes on household</p>
+              </div>
             </div>
-            <div id="householdValue">
-              <h4>{footprint.household.sumTotal}</h4> <p>tonnes on household</p>
-            </div>
-          </div>
-          <div className="box2">
-            <div id="goodsValue">
-              <h4>{footprint.goods.sumTotal}</h4> <p>tonnes on stuff</p>
-            </div>
-            <div id="foodValue">
-              <h4>{footprint.food.sumTotal}</h4> <p>tonnes on food</p>
+            <div className="box2">
+              <div id="goodsValue">
+                <h4>{footprint.goods.sumTotal}</h4> <p>tonnes on stuff</p>
+              </div>
+              <div id="foodValue">
+                <h4>{footprint.food.sumTotal}</h4> <p>tonnes on food</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      }
-
+      )}
     </div>
   );
 };
