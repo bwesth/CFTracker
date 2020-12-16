@@ -1,13 +1,17 @@
 import Stats from "./Stats/Stats";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../Main/UserContext";
 import FootprintSlideshow from "./FootprintSlideshow/FootprintSlideshow";
 import Pledges from "./Pledges/Pledges";
 import PledgesPage from "./PledgesPage/PledgesPage";
 
-export default () => {
+export default (props) => {
   const [pledgesRender, setpledgesRender] = useState(false);
   const fb = useContext(UserContext).firebase;
+
+  useEffect(() => {
+    props.scrollToTop()
+  }, [pledgesRender])
 
   return (
     <div className="dashboard">

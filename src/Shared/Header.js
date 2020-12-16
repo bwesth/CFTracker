@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import img from "../Main/GreenFootLogo.png";
 import { UserContext } from "../Main/UserContext";
 
@@ -8,6 +8,10 @@ import LoginForm from "../Pages/Frontpage/LoginForm";
 export default (props) => {
   const fb = useContext(UserContext).firebase;
   const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
+
+  useEffect(() => {
+    console.log(props.ref);
+  }, [props.ref])
 
   async function logout() {
     await fb.logout();
@@ -38,7 +42,7 @@ export default (props) => {
   };
 
   return (
-    <nav className="header">
+    <nav ref={props.ref} className="header">
       <img src={img} className="logo center" alt="logo" />
       <h1>GREEN FEET</h1>
 

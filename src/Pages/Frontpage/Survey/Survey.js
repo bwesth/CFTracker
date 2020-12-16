@@ -65,7 +65,7 @@ export default (props) => {
   };
 
   return (
-    <div className="survey">
+    <div ref={props.ref} className="survey">
       <form onSubmit={handleSubmit((d) => submit(d))}>
         {props.themes.map(({ icon,name, question, options }, index) => (
           <Theme
