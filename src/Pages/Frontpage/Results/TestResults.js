@@ -12,9 +12,9 @@ import treeimage from "../../../Shared/Images/Graphs/TreesCount.png";
 import BarChart from "../../Dashboard/FootprintSlideshow/BarChart";
 import PieChart from "../../Dashboard/FootprintSlideshow/PieChart";
 
-export default (props) => {
+export default ({scrollToTop, setDisplay, popup}) => {
   useEffect(() => {
-    props.scrollToTop();
+    scrollToTop();
   }, []);
 
   return (
@@ -58,11 +58,11 @@ export default (props) => {
             <p>{fourth.text1}</p>
             <div>
               {/* Is this the signup button? I have no clue whats happening here. */}
-              {props.popup}
+              {popup}
 
               <button
                 onClick={() => {
-                  props.setDisplay(<Frontpage setDisplay={props.setDisplay} scrollToTop={props.scrollToTop} />);
+                  setDisplay(<Frontpage setDisplay={setDisplay} scrollToTop={scrollToTop} />);
                 }}
               >
                 Back

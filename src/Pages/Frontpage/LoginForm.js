@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
 import { UserContext } from "../../Main/UserContext";
 
-export default (props) => {
+export default () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

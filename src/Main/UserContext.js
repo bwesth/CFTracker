@@ -3,7 +3,7 @@ import firebase from "../components/Firebase/firebase";
 import data from "../Data/survey";
 const UserContext = React.createContext();
 
-function UserProvider(props) {
+function UserProvider({ children }) {
   const user = useState({
     name: undefined,
     email: undefined,
@@ -114,7 +114,7 @@ function UserProvider(props) {
         loggedIn,
       }}
     >
-      {props.children}
+      {children}
     </UserContext.Provider>
   );
 }

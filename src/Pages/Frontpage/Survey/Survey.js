@@ -5,18 +5,18 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../../Main/UserContext";
 import TestResults from "../Results/TestResults";
 
-export default (props) => {
+export default ({setDisplay, popup, scrollToTop, themes}) => {
   const { handleSubmit } = useForm({});
   const [data, setData] = useContext(UserContext).surveyChoices;
   const updateFootprint = useContext(UserContext).updateFootprint;
   // console.log(data)
   const submit = (data) => {
-    props.setDisplay(
+    setDisplay(
       <TestResults
         results={data}
-        setDisplay={props.setDisplay}
-        popup={props.popup}
-        scrollToTop={props.scrollToTop}
+        setDisplay={setDisplay}
+        popup={popup}
+        scrollToTop={scrollToTop}
       />
     );
   };
@@ -66,9 +66,9 @@ export default (props) => {
   };
 
   return (
-    <div ref={props.ref} className="survey">
+    <div className="survey">
       <form onSubmit={handleSubmit((d) => submit(d))}>
-        {props.themes.map(({ icon,name, question, options }, index) => (
+        {themes.map(({ icon,name, question, options }, index) => (
           <Theme
             icon={icon}
             index={index}

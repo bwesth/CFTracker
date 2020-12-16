@@ -7,7 +7,7 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-export default (props) => {
+export default () => {
   return (
     <nav className="footer">
       <img src={img} className="logo center" alt="logo" />

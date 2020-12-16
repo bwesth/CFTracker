@@ -5,13 +5,13 @@ import FootprintSlideshow from "./FootprintSlideshow/FootprintSlideshow";
 import Pledges from "./Pledges/Pledges";
 import PledgesPage from "./PledgesPage/PledgesPage";
 
-export default (props) => {
+export default ({ scrollToTop }) => {
   const [pledgesRender, setpledgesRender] = useState(false);
   const fb = useContext(UserContext).firebase;
 
   useEffect(() => {
-    props.scrollToTop()
-  }, [pledgesRender])
+    scrollToTop();
+  }, [pledgesRender]);
 
   return (
     <div className="dashboard">

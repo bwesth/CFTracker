@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { VictoryPie } from "victory";
 import { UserContext } from "../../../Main/UserContext";
 
-export default (props) => {
+export default ({ pieStats }) => {
   const footprint = useContext(UserContext).footprint[0];
 
   //Would be nice to destruct this properly so we don't have to use ridiculously long names to summon these variables later.
@@ -31,7 +31,7 @@ export default (props) => {
       </div>
 
       {/* Using a bit of a hack to separate this part of the graph. Should it be another component? Debatable. */}
-      {props.pieStats && (
+      {pieStats && (
         <div className="values">
           <h2>Spending by Category:</h2>
           <div className="valueText">

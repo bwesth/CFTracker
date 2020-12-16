@@ -4,7 +4,7 @@ import surveyData from "../../Data/survey";
 import SignUpForm from "./SignUpForm";
 import PopupWrapper from "./PopupWrapper";
 
-export default (props) => {
+export default ({scrollToTop, setDisplay}) => {
   const [surveyVisible, setSurveyVisible] = useState(false);
   const surveyRef = useRef(null);
   const surveyClick = () => {
@@ -15,7 +15,7 @@ export default (props) => {
       console.log(surveyRef)
       surveyVisible
         ? surveyRef.current.scrollIntoView({ behavior: "smooth" })
-        : props.scrollToTop();
+        : scrollToTop();
   }, [surveyVisible])
 
   const popup = (
@@ -63,10 +63,10 @@ export default (props) => {
       </div>
       {surveyVisible && (<div ref={surveyRef}>
         <Survey
-          setDisplay={props.setDisplay}
+          setDisplay={setDisplay}
           popup={popup}
           themes={surveyData.themes}
-          scrollToTop={props.scrollToTop}
+          scrollToTop={scrollToTop}
           />
           </div>
       )}
