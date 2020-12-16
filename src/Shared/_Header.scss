@@ -21,8 +21,8 @@
       font-weight: normal;
       color: $button-font-colour;
       font-style: normal;
-      font-size: 14px;
-      line-height: 30px;
+      font-size: 0.87rem;
+      line-height: 1.87rem;
     }
   
     .login{
@@ -36,7 +36,7 @@
        @include button;
         width: 120%;
         height: 65%;
-        font-size: 12px;
+        font-size: 0,75rem;
         color: $button-font-colour;
       
       }
@@ -53,5 +53,4 @@
     .App-logo, .logo {
       pointer-events: none;
     }
-
   }

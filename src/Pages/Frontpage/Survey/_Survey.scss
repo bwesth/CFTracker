@@ -36,8 +36,8 @@
         @include pageHeaderText($font-colour);
         text-align: center;
         font-weight: normal;
-        font-size: 28px;
-        line-height: 21px;
+        font-size: 1,75rem;
+        line-height: 1,3rem;
       }
     }
 
@@ -89,15 +89,14 @@
 
   h2 {
     @include pageHeaderText($font-colour);
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 
   h1{
       @include pageHeaderText($font-colour);
       text-align: center;
       font-weight: normal;
-      font-size: 28px;
-      line-height: 21px;
+      font-size: 1,1rem;
+      line-height: 1,3rem;
   }
-
 }

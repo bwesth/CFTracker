@@ -21,7 +21,7 @@ $button-shadow: drop-shadow(1px 3px 2px  $font-colour);
 p{
     color: $font-colour;
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 0,75rem;
 }
 
     @mixin button{
@@ -29,8 +29,8 @@ p{
         font-family: Roboto;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0,75rem;
+        line-height: 0,9rem;
         color: $button-font-colour;
         background-color: $action-colour; 
         border-radius:$button-radius;
@@ -38,7 +38,6 @@ p{
         justify-content: center;
         transition: all .1s ease-in;
         filter: $button-shadow;
-
          &:hover{
         background-color: $button-Hover;
       
