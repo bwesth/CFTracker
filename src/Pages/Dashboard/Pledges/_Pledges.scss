@@ -12,7 +12,7 @@
 
   p {
     transition: all .1s ease-in;
-    font-size: 150%;
+    font-size: 1.5rem;
     color:$secondary-colour;
     margin-left: 10%;
   }
@@ -22,7 +22,7 @@
     border-color: $action-colour;
 
     p {
-      font-size: 160%;
+      font-size: 1.6rem;
       color: $action-colour;
     }
 
@@ -95,7 +95,7 @@
     flex-direction: column;
 
     p {
-      @include pageText(normal, 12px, $button-font-colour);
+      @include pageText(normal, 0.75rem, $button-font-colour);
       text-align: center;
     }
 
@@ -125,14 +125,14 @@
   }
 
   p {
-    @include pageText(normal,18px, $font-colour);
+    @include pageText(normal,1.1rem, $font-colour);
     max-width: 60%;
   }
  
   .acceptPledge{
     @include button;
    width: 10%;
-   font-size: 14px;
+   font-size: 0.87rem;
  }
 
 }
