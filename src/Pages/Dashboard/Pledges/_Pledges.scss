@@ -11,6 +11,7 @@
   border-radius: 20px;
 
   p {
+    font-family: Montserrat;
     transition: all .1s ease-in;
     font-size: 1.5rem;
     color:$secondary-colour;
@@ -63,6 +64,7 @@
   width: 100%;
   z-index: 2;
   justify-content: space-between;
+  align-items: center;
 
 
   h4 {
@@ -71,12 +73,15 @@
     font-size: 1.5em;
     padding: 0;
     color: $action-colour;
+    font-family: Montserrat;
   }
 
   h2 {
     margin: 0%;
+    margin-top: 1%;
     padding: 0%;
     width: 100%;
+    text-align: center;
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -101,8 +106,13 @@
 
     h1 {
       color: #ffffff;
+      font-family: Montserrat;
       margin-bottom: 0;
     }
+  }
+  &:hover{
+    cursor: pointer;
+    border: 4px solid $button-Hover;
   }
 }
 .pledge-description {
@@ -134,7 +144,7 @@
    width: 10%;
    font-size: 0.87rem;
  }
-
+ 
 }
 
 .pladgeBanner{

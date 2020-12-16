@@ -38,12 +38,10 @@ p{
         justify-content: center;
         transition: all .1s ease-in;
         filter: $button-shadow;
-         &:hover{
-        background-color: $button-Hover;
-      
-        //-webkit-text-stroke-width: .1px;
-        //-webkit-text-stroke-color: #fff;
-        }
+            &:hover{
+            background-color: $button-Hover;
+            cursor: pointer;
+            }
         }
 
 @mixin pageHeaderText($fontcoler) {

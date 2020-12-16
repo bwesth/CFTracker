@@ -42,7 +42,7 @@ export default (props) => {
 
   const Option = ({ text, themeIndex, optionIndex, formID }) => {
     return (
-      <div className="option">
+      <div className="option">   
         <input
           name={text}
           type="radio"
@@ -59,7 +59,8 @@ export default (props) => {
           }}
           checked={optionIndex === data[themeIndex]}
         />
-        <p>{text}</p>
+        <label for={optionIndex}><p>{text}</p></label>
+        
       </div>
     );
   };
