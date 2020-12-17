@@ -7,28 +7,47 @@
     flex-Direction: column;
     width: 100%;
 
+    .slide{
+        width: 100%;
+        margin-left: 15%;
         .barChart{
+        padding-right: 15%;
         height: 30rem;
+        }
+
+        .chartInfo{
+            @include pageText(normal, 1rem, $font-colour);
+            margin-right: 15%;
+            align-self: center;
+
+            h2{
+                @include pageHeaderText($font-colour);
+                font-size: 2rem;
+            }
         }
 
         .pieSlide{
         height: 25rem;
+        width: 100%;
         }
 
+        .treeSlide{
+            width: 100%;
+            height: 30rem; 
+            justify-content: center;
+            display: flex;
+            flex-Direction: column;
+        }
+    }
     h1{
-        width: 100%;
+        width: 70%;
         margin-top: 3%;
         @include pageHeaderText($font-colour);
         border-bottom-style: dashed;
         border: $secondary-colour;
-        
     }
 
     p{
-        @include pageText(normal, 1rem, $font-colour);
-    }
-    
-    .chartInfo{
         @include pageText(normal, 1rem, $font-colour);
     }
 
@@ -42,14 +61,34 @@
 
 .children{
     height: 100%;
-    margin-right: 5%;
+    margin-right: 10%;
     width: auto;
     display: flex;
     justify-content: center;
     align-Items: center;
     flex-Direction: column;
     text-Align: center;
-    max-Width: 40rem;
+    max-Width: 60rem;
+
+    .endText{
+        transform: translateX(10%);
+    }
+
+    .resultButtons{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+        .backButton{
+        @include button;
+        width: 8%;
+        height: 3.5rem; 
+        margin-left: 2%;
+        }
+    }
 }
 
 img{

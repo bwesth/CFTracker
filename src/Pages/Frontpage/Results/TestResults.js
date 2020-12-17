@@ -52,13 +52,14 @@ export default ({ scrollToTop, setDisplay, popup }) => {
         </Wrapper>
         <Wrapper>
           <Description>
+            <div className="endText">
             {/* Here's our signup area, currently there are two buttons here, of different sizes. :P Needs fixing! */}
             <p>{fourth.text1}</p>
-            <div>
               {/* Is this the signup button? I have no clue whats happening here. */}
+              
+              <div className="resultButtons">
               {popup}
-
-              <button
+              <button className="backButton"
                 onClick={() => {
                   setDisplay(
                     <Frontpage
@@ -68,10 +69,11 @@ export default ({ scrollToTop, setDisplay, popup }) => {
                   );
                 }}
               >
-                Back
+                BACK
               </button>
-            </div>
+              </div>
             <p>{fourth.text2}</p>
+            </div>
           </Description>
         </Wrapper>
       </div>
