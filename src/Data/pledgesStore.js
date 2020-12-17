@@ -172,14 +172,14 @@ export default [
   {
     //FOOD PLEDGES//-------------------------------------------------------------------------------
     name: "Food",
-    color: "#FFE15B",
+    color: "#BC59B2",
     list: [
       {
         symbol: "🥬",
         head: "Going Vegan",
         body: "I will stick to a vegan diet 5 days of the week.",
         tonnes: 5,
-        color: "#FFE15B",
+        color: "#BC59B2",
         img: vegan,
         description: `A portion of the highest-impact vegetable products is still cheaper than most of the lowest-impact animal products. Going vegan is a great way to reduce your emissions.`,
       },
@@ -189,7 +189,7 @@ export default [
         head: "Very Vegetarian",
         body: "I will stick to a vegetarian diet 5 days of the week.",
         tonnes: 3,
-        color: "#FFE15B",
+        color: "#BC59B2",
         img: vegetarian,
         description: `A portion of the highest-impact vegetable products is still cheaper than most of the lowest-impact animal products. Going vegetarian is a great way to reduce your emissions.`,
       },
@@ -199,7 +199,7 @@ export default [
         head: "A Friend to Cows",
         body: "I will stop eating beef.",
         tonnes: 2,
-        color: "#FFE15B",
+        color: "#BC59B2",
         img: cow,
         description: `Up to 24% of the worlds emissions come from food production. Meat and dairy are some of the worst producers. Cut out beef and you'll be doing yourself, and the planet, a favor.`,
       },
@@ -209,7 +209,7 @@ export default [
         head: "Stick to Local",
         body: "I will get 50% of my food from local sources.",
         tonnes: 0.5,
-        color: "#FFE15B",
+        color: "#BC59B2",
         img: local,
         description: `A large part of the impact of certain foods is the transport required to get them to your local supplier. Buying local saves emissions on gas and other invisible expenses such as refridgeration.`,
       },

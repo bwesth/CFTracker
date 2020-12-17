@@ -12,7 +12,7 @@ export default ({ pieStats }) => {
     <div className="slide">
       <div className="pieSlide">
         <VictoryPie
-          colorScale={["#53AED5", "#02C39A", "#F46A67", "#FFE15B"]}
+          colorScale={["#53AED5", "#02C39A", "#F46A67", "#BC59B2"]}
           data={[
             { x: "Transport", y: footprint.transport.sumTotal },
             { x: "HouseHold", y: footprint.household.sumTotal },
