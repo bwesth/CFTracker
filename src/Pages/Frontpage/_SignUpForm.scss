@@ -7,7 +7,7 @@
   top: 5%;
   right: 5%;
   width: 30%;
-  height: 30%;
+  //height: 30%;
   border-radius: 20px;
   filter: $button-shadow;
   margin-right: 30%;
@@ -54,6 +54,7 @@
         flex-direction: column;
         align-items: flex-end;
         width: 35%;
+        margin-right: 10%;
 
         .Name{
           display: flex;
@@ -80,6 +81,7 @@
         padding: 2%;
         margin-top: 2%;
         margin-left: 5%;
+        margin-bottom: 2%;
       }
    }
   }

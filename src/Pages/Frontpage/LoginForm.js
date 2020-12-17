@@ -51,7 +51,6 @@ export default () => {
           </div>
         </div>
         <div className="text">
-          <p>Forgot username or password?</p>
           <p>Don’t have an account? Sign up!</p>
         </div>
         <input className="logInButton" type="submit" onClick={login} />

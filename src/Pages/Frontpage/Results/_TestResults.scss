@@ -1,15 +1,19 @@
 .results-main, .wrapper-Holder {
     position: relative;
-    top: 50px;
+    top: 2%;
     display: flex;
     justify-Content: center;
     align-Items: center;
     flex-Direction: column;
     width: 100%;
 
-    .wrapper-Holder{
-        min-height: 60%;
-    }
+        .barChart{
+        height: 30rem;
+        }
+
+        .pieSlide{
+        height: 25rem;
+        }
 
     h1{
         width: 100%;
@@ -21,6 +25,10 @@
     }
 
     p{
+        @include pageText(normal, 1rem, $font-colour);
+    }
+    
+    .chartInfo{
         @include pageText(normal, 1rem, $font-colour);
     }
 
@@ -41,12 +49,12 @@
     align-Items: center;
     flex-Direction: column;
     text-Align: center;
-    max-Width: 500px;
+    max-Width: 40rem;
 }
 
 img{
-    max-height: 400px;
-    height: 100%;
+    max-height: 50%;
+    height: 20rem;
     width: auto;
 }
 
