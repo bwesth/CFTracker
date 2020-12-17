@@ -21,7 +21,7 @@
     }
 
     p{
-        @include pageText(normal, 16px, $font-colour);
+        @include pageText(normal, 1rem, $font-colour);
     }
 
     button{

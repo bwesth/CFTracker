@@ -39,10 +39,10 @@ export default (props) => {
       </div>
     );
   };
-
+//<label for={optionIndex}><p>{text}</p></label>
   const Option = ({ text, themeIndex, optionIndex, formID }) => {
     return (
-      <div className="option">
+      <div className="option">  
         <input
           name={text}
           type="radio"
