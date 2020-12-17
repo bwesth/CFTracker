@@ -47,7 +47,7 @@ function UserProvider({ children }) {
     return {
       surveyTotal: surveyResult,
       pledgeTotal: pledgesResult,
-      sumTotal: surveyResult + pledgesResult,
+      sumTotal: surveyResult - pledgesResult,
     };
   }
 

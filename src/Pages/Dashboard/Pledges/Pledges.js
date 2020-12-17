@@ -12,6 +12,7 @@ export default ({ pledgesRender }) => {
     let index = list.indexOf(pledge);
     list.splice(index, 1);
     setPledgesList((state) => ({ ...state, [theme]: [...list] }));
+    context.updateFootprint();
   }
 
   let transportPledges = pledges.transport.map((pledge) => (

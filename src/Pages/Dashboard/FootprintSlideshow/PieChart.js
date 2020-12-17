@@ -1,24 +1,52 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { VictoryPie } from "victory";
 import { UserContext } from "../../../Main/UserContext";
 
 export default ({ pieStats }) => {
-  const footprint = useContext(UserContext).footprint[0];
+  const {
+    transport: { sumTotal: transport },
+    household: { sumTotal: household },
+    goods: { sumTotal: goods },
+    food: { sumTotal: food },
+  } = useContext(UserContext).footprint[0];
+    
+  let dataList = [];
+  let colorList = [];
+    if (transport > 0) {
+      dataList.push({
+        x: "Transport",
+        y: transport,
+      });
+      colorList.push("#53AED5");
+    }
+    if (household > 0) {
+      dataList.push({
+        x: "Household",
+        y: household,
+      });
+      colorList.push("#02C39A");
+    }
+    if (goods > 0) {
+      dataList.push({
+        x: "Goods",
+        y: goods,
+      });
+      colorList.push("#F46A67");
+    }
+    if (food > 0) {
+      dataList.push({
+        x: "Food",
+        y: food,
+      });
+      colorList.push("#BC59B2");
+    }
 
-  //Would be nice to destruct this properly so we don't have to use ridiculously long names to summon these variables later.
-  //let {{sumTotal: transportTotal}, food, household, goods} = footprint;
-  // const { transport: { sumTotal: transportTotal }, food, household, goods } = footprint;
   return (
     <div className="slide">
       <div className="pieSlide">
         <VictoryPie
-          colorScale={["#53AED5", "#02C39A", "#F46A67", "#BC59B2"]}
-          data={[
-            { x: "Transport", y: footprint.transport.sumTotal },
-            { x: "HouseHold", y: footprint.household.sumTotal },
-            { x: "Goods", y: footprint.goods.sumTotal },
-            { x: "Food", y: footprint.food.sumTotal },
-          ]}
+          colorScale={colorList}
+          data={dataList}
           style={{
             data: {
               fillOpacity: 0.9,
@@ -37,20 +65,18 @@ export default ({ pieStats }) => {
           <div className="valueText">
             <div className="box1">
               <div id="travelValue">
-                <h4>{footprint.transport.sumTotal}</h4>{" "}
-                <p>tonnes on transport</p>
+                <h4>{transport}</h4> <p>tonnes on transport</p>
               </div>
               <div id="householdValue">
-                <h4>{footprint.household.sumTotal}</h4>{" "}
-                <p>tonnes on household</p>
+                <h4>{household}</h4> <p>tonnes on household</p>
               </div>
             </div>
             <div className="box2">
               <div id="goodsValue">
-                <h4>{footprint.goods.sumTotal}</h4> <p>tonnes on goods</p>
+                <h4>{goods}</h4> <p>tonnes on goods</p>
               </div>
               <div id="foodValue">
-                <h4>{footprint.food.sumTotal}</h4> <p>tonnes on food</p>
+                <h4>{food > 0 ? food : 0}</h4> <p>tonnes on food</p>
               </div>
             </div>
           </div>

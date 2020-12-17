@@ -42,7 +42,7 @@ export default () => {
         <p>{footprint} Tonnes Per Month</p>
         <p>
           Want to prevent the climate crisis? Your footprint is{" "}
-          {Math.floor(footprint / data[3].expenditure)} times too big.
+          {Math.round(footprint / data[3].expenditure)} times too big.
         </p>
       </div>
     </div>
