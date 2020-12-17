@@ -3,27 +3,14 @@ import firebase from "../components/Firebase/firebase";
 import data from "../Data/survey";
 const UserContext = React.createContext();
 
-function UserProvider(props) {
+function UserProvider({ children }) {
   const user = useState({
     name: undefined,
     email: undefined,
     password: undefined,
   });
   const loggedIn = useState(false);
-  const [surveyChoicesData, setSurveyChoices] = useState([
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-  ]);
+  const [surveyChoicesData, setSurveyChoices] = useState(new Array(12).fill(4));
   const pledges = useState({
     transport: [],
     food: [],
@@ -39,39 +26,28 @@ function UserProvider(props) {
   After having fought with syncing survey values and checked status to surveyChoices,
   I don't wanna go down that dark hall again just yet */
 
+  const indexReference = {
+    transport: 0,
+    food: 3,
+    good: 6,
+    household: 9,
+  };
+
   function calcFootprint(theme) {
-    //console.log(theme)
     let surveyResult = 0;
-    let index = 0;
-    switch (theme) {
-      case "transport":
-        index = 0; //redundant, for reading purposes
-        break;
-      case "food":
-        index = 3;
-        break;
-      case "good":
-        index = 6;
-        break;
-      case "household":
-        index = 9;
-        break;
-    }
+    let index = indexReference[theme];
     for (let i = index; i < index + 3; i++) {
       surveyResult += data.themes[i].options[surveyChoices[0][i]].value;
     }
-    //console.log("from survey: " + surveyResult);
     let pledgesResult = 0;
     let list = [...pledges[0][theme]];
     for (let i = 0; i < list.length; i++) {
-      //console.log(i)
-      pledgesResult = pledgesResult+list[i].tonnes;
+      pledgesResult = pledgesResult + list[i].tonnes;
     }
-    //console.log("from pledges: " + pledgesResult);
     return {
-      surveyTotal: surveyResult, 
-      pledgeTotal: pledgesResult, 
-      sumTotal: surveyResult + pledgesResult
+      surveyTotal: surveyResult,
+      pledgeTotal: pledgesResult,
+      sumTotal: surveyResult + pledgesResult,
     };
   }
 
@@ -80,11 +56,23 @@ function UserProvider(props) {
       food = calcFootprint("food"),
       goods = calcFootprint("goods"),
       household = calcFootprint("household"),
-      //This is godawful code, just trying to get it working to begin with. 
+      //This is godawful code, just trying to get it working to begin with.
       total = {
-        surveyTotal: transport.surveyTotal + food.surveyTotal + goods.surveyTotal + household.surveyTotal, 
-        pledgeTotal: transport.pledgeTotal + food.pledgeTotal + goods.pledgeTotal + household.pledgeTotal,
-        sumTotal: transport.sumTotal + food.sumTotal + goods.sumTotal + household.sumTotal,
+        surveyTotal:
+          transport.surveyTotal +
+          food.surveyTotal +
+          goods.surveyTotal +
+          household.surveyTotal,
+        pledgeTotal:
+          transport.pledgeTotal +
+          food.pledgeTotal +
+          goods.pledgeTotal +
+          household.pledgeTotal,
+        sumTotal:
+          transport.sumTotal +
+          food.sumTotal +
+          goods.sumTotal +
+          household.sumTotal,
       };
 
     footprint[1]({
@@ -121,7 +109,7 @@ function UserProvider(props) {
         loggedIn,
       }}
     >
-      {props.children}
+      {children}
     </UserContext.Provider>
   );
 }

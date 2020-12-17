@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Frontpage from "../Frontpage";
 import Wrapper from "../../../Shared/Wrapper/Wrapper";
 import Description from "./Description";
@@ -12,15 +12,18 @@ import treeimage from "../../../Shared/Images/Graphs/TreesCount.png";
 import BarChart from "../../Dashboard/FootprintSlideshow/BarChart";
 import PieChart from "../../Dashboard/FootprintSlideshow/PieChart";
 
+export default ({ scrollToTop, setDisplay, popup }) => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
-export default (props) => {
   return (
     <div className="results-main">
       <h1>Let’s see how you did!</h1>
       <div className="wrapper-Holder">
         <Wrapper>
           {/* The barchart class below is a bar chart that displays the user CO2 output compared to other common citizens. */}
-          <BarChart/> 
+          <BarChart />
           {/* <FootprintBars /> */}
           <Description>
             {/* <h1>{first.headline}</h1> */}
@@ -29,8 +32,8 @@ export default (props) => {
           </Description>
         </Wrapper>
         <Wrapper>
-        {/* Pie chart breakdown of C02 here, currently not hooked up to the correct numbers. */}
-          <PieChart pieStats = {false} />
+          {/* Pie chart breakdown of C02 here, currently not hooked up to the correct numbers. */}
+          <PieChart pieStats={false} />
           <Description>
             <h1>{second.headline}</h1>
             <p>{second.text1}</p>
@@ -38,9 +41,9 @@ export default (props) => {
           </Description>
         </Wrapper>
         <Wrapper>
-        {/* Image of trees here, currently way too large! */}
+          {/* Image of trees here, currently way too large! */}
           <div>
-            <img src={treeimage} alt="A forest of illustrated trees."/>
+            <img src={treeimage} alt="A forest of illustrated trees." />
             <p>You have saved X trees</p>
           </div>
           <Description>
@@ -55,16 +58,20 @@ export default (props) => {
             <p>{fourth.text1}</p>
             <div>
               {/* Is this the signup button? I have no clue whats happening here. */}
-              {props.popup}
+              {popup}
 
               <button
                 onClick={() => {
-                  props.setDisplay(<Frontpage setDisplay={props.setDisplay} />);
+                  setDisplay(
+                    <Frontpage
+                      setDisplay={setDisplay}
+                      scrollToTop={scrollToTop}
+                    />
+                  );
                 }}
               >
                 Back
               </button>
-
             </div>
             <p>{fourth.text2}</p>
           </Description>

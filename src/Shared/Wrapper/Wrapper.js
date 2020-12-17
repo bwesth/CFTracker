@@ -8,7 +8,7 @@ import left2 from "./img/left/BANNEREDGE2.png";
 import left3 from "./img/left/BANNEREDGE3.png";
 import left4 from "./img/left/BANNEREDGE4.png";
 
-export default (props) => {
+export default ({ direction, children }) => {
   let right = [right1, right2, right3, right4];
   let left = [left1, left2, left3, left4];
 
@@ -18,7 +18,7 @@ export default (props) => {
   }
 
   const wrapper = {
-    flexDirection: props.direction || "row",
+    flexDirection: direction || "row",
     backgroundImage:
       "url(" + getRandImg(right) + "), url(" + getRandImg(left) + ")",
     backgroundPosition: "right bottom, left bottom",
@@ -28,7 +28,7 @@ export default (props) => {
 
   return (
     <div className="wrapper" style={wrapper}>
-      {props.children}
+      {children}
     </div>
   );
 };

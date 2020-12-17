@@ -5,14 +5,13 @@ import { UserContext } from "../Main/UserContext";
 import PopupWrapper from "../Pages/Frontpage/PopupWrapper";
 import LoginForm from "../Pages/Frontpage/LoginForm";
 
-export default (props) => {
+export default () => {
   const fb = useContext(UserContext).firebase;
   const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
 
   async function logout() {
     await fb.logout();
     setLoggedIn(false);
-    console.log(fb.getCurrentUsername());
   }
 
   const LoginButton = () => {

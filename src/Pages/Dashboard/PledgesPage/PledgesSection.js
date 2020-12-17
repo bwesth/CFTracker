@@ -4,19 +4,19 @@ import { UserContext } from "../../../Main/UserContext";
 
 export default ({ section }) => {
   const context = useContext(UserContext);
-  const [pledges, setPledgesList] = context.pledges
-  const list = pledges[section.name.toLowerCase()]
-  
+  const [pledges, setPledgesList] = context.pledges;
+  const list = pledges[section.name.toLowerCase()];
 
   function addPledge(pledge) {
-    console.log({...pledges, [section.name.toLowerCase()]: [...list, pledge]})
-    setPledgesList(state => ({...state, [section.name.toLowerCase()]: [...list, pledge]}));
-    
+    setPledgesList((state) => ({
+      ...state,
+      [section.name.toLowerCase()]: [...list, pledge],
+    }));
   }
 
   useEffect(() => {
-    context.updateFootprint()
-  },[pledges])
+    context.updateFootprint();
+  }, [pledges]);
 
   return (
     <div className="pledgesSection">

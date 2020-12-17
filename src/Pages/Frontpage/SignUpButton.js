@@ -1,8 +1,8 @@
 import React from "react";
 
-export default (props) => (
+export default ({ click }) => (
   <div className="signUp">
     <p>Sign Up here</p>
-    <button onClick={() => props.click()}>SIGN UP</button>
+    <button onClick={() => click()}>SIGN UP</button>
   </div>
 );
