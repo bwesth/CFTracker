@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({value, name}) => {
+export default ({ value, name }) => {
   const newValue = (value / 18000) * 100;
 
   return (

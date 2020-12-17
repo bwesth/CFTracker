@@ -4,7 +4,7 @@ import surveyData from "../../Data/survey";
 import SignUpForm from "./SignUpForm";
 import PopupWrapper from "./PopupWrapper";
 
-export default ({scrollToTop, setDisplay}) => {
+export default ({ scrollToTop, setDisplay }) => {
   const [surveyVisible, setSurveyVisible] = useState(false);
   const surveyRef = useRef(null);
   const surveyClick = () => {
@@ -12,11 +12,10 @@ export default ({scrollToTop, setDisplay}) => {
   };
 
   useEffect(() => {
-      console.log(surveyRef)
-      surveyVisible
-        ? surveyRef.current.scrollIntoView({ behavior: "smooth" })
-        : scrollToTop();
-  }, [surveyVisible])
+    surveyVisible
+      ? surveyRef.current.scrollIntoView({ behavior: "smooth" })
+      : scrollToTop();
+  }, [surveyVisible]);
 
   const popup = (
     <PopupWrapper
@@ -61,14 +60,15 @@ export default ({scrollToTop, setDisplay}) => {
           </div>
         </div>
       </div>
-      {surveyVisible && (<div ref={surveyRef}>
-        <Survey
-          setDisplay={setDisplay}
-          popup={popup}
-          themes={surveyData.themes}
-          scrollToTop={scrollToTop}
+      {surveyVisible && (
+        <div ref={surveyRef}>
+          <Survey
+            setDisplay={setDisplay}
+            popup={popup}
+            themes={surveyData.themes}
+            scrollToTop={scrollToTop}
           />
-          </div>
+        </div>
       )}
     </>
   );

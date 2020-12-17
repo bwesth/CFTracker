@@ -6,16 +6,12 @@ import { UserContext } from "../../../Main/UserContext";
 export default ({ pledgesRender }) => {
   const context = useContext(UserContext);
   const [pledges, setPledgesList] = context.pledges;
-console.log(pledges.transport)
 
   function removePledge(pledge, theme) {
-    let list = pledges[theme]
-    let index = list.indexOf(pledge)
-    list.splice(index, 1)
-    // console.log(pledges[theme].indexOf(pledge))
-    // console.log(pledge)
-    setPledgesList(state => ({...state, [theme]: [...list]}));
-
+    let list = pledges[theme];
+    let index = list.indexOf(pledge);
+    list.splice(index, 1);
+    setPledgesList((state) => ({ ...state, [theme]: [...list] }));
   }
 
   let transportPledges = pledges.transport.map((pledge) => (

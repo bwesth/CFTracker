@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
 
-
 export default () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -23,11 +22,11 @@ export default () => {
   });
 
   return (
-      <form
-        className="sign-up-form"
-        onSubmit={(e) => e.preventDefault() && false}
-      >
-        <div className="SignUpH">
+    <form
+      className="sign-up-form"
+      onSubmit={(e) => e.preventDefault() && false}
+    >
+      <div className="SignUpH">
         <h1>Sign up</h1>
       </div>
       <div className="Inputs">
@@ -41,7 +40,7 @@ export default () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               ref={register}
-          />
+            />
           </div>
           <div className="Email">
             <p>Email</p>
@@ -55,7 +54,7 @@ export default () => {
             />
           </div>
           <div className="Password">
-          <p>Password</p>
+            <p>Password</p>
             <input
               id="password"
               name="password"
@@ -68,7 +67,7 @@ export default () => {
         </div>
         <input className="signUpButton" type="submit" onClick={onRegister} />
       </div>
-      </form>
+    </form>
   );
 
   async function onRegister() {

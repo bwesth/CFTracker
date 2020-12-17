@@ -40,7 +40,10 @@ export default ({ pledge, addPledge, removePledge, theme }) => {
             </button>
           )}
           {removePledge && (
-            <button className="acceptPledge" onClick={() => removePledge(pledge, theme)}>
+            <button
+              className="acceptPledge"
+              onClick={() => removePledge(pledge, theme)}
+            >
               Remove Pledge
             </button>
           )}

@@ -12,7 +12,6 @@ export default () => {
   async function logout() {
     await fb.logout();
     setLoggedIn(false);
-    console.log(fb.getCurrentUsername());
   }
 
   const LoginButton = () => {

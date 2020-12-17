@@ -4,13 +4,12 @@ import BarChart from "./BarChart";
 
 import PieChart from "./PieChart";
 import TreeChart from "./TreeChart";
-//import LineGraph from "./LineGraph";
 
 export default () => {
   const [index, setIndex] = useState(0);
 
   //Might add the linegraph back again later but it looks like shit atm!!!
-  const slides = [ <PieChart pieStats = {true}/>, <TreeChart />, <BarChart />];
+  const slides = [<PieChart pieStats={true} />, <TreeChart />, <BarChart />];
 
   function click(val) {
     let newIndex = index + val;
@@ -20,22 +19,24 @@ export default () => {
       newIndex = 0;
     }
     setIndex(newIndex);
-    console.log(newIndex);
-    console.log(index);
   }
   // &lt;
-  // &gt; 
+  // &gt;
   return (
     <Wrapper direction="column">
       <h1>Some views of your footprint</h1>
       <div className="slides">
         <div className="previousButton">
-          <button className="leftArrow" onClick={() => click(-1)}>  </button>
+          <button className="leftArrow" onClick={() => click(-1)}>
+            {" "}
+          </button>
           <p>Previous</p>
         </div>
         {slides[index]}
         <div className="nextButton">
-          <button className="rightArrow" onClick={() => click(1)}> </button>
+          <button className="rightArrow" onClick={() => click(1)}>
+            {" "}
+          </button>
           <p className="next">Next</p>
         </div>
       </div>

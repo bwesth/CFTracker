@@ -5,11 +5,10 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../../Main/UserContext";
 import TestResults from "../Results/TestResults";
 
-export default ({setDisplay, popup, scrollToTop, themes}) => {
+export default ({ setDisplay, popup, scrollToTop, themes }) => {
   const { handleSubmit } = useForm({});
   const [data, setData] = useContext(UserContext).surveyChoices;
   const updateFootprint = useContext(UserContext).updateFootprint;
-  // console.log(data)
   const submit = (data) => {
     setDisplay(
       <TestResults
@@ -21,7 +20,7 @@ export default ({setDisplay, popup, scrollToTop, themes}) => {
     );
   };
 
-  const Theme = ({icon, name, question, options, index }) => {
+  const Theme = ({ icon, name, question, options, index }) => {
     return (
       <div className="theme">
         <div className="surveyHeader">
@@ -47,15 +46,8 @@ export default ({setDisplay, popup, scrollToTop, themes}) => {
         <input
           name={text}
           type="radio"
-          // id={props.themeIndex}
           formID={formID}
           onChange={() => {
-            console.log(
-              "Changing theme number: " +
-                themeIndex +
-                "\n to option number: " +
-                optionIndex
-            );
             setData(themeIndex, optionIndex);
           }}
           checked={optionIndex === data[themeIndex]}
@@ -68,7 +60,7 @@ export default ({setDisplay, popup, scrollToTop, themes}) => {
   return (
     <div className="survey">
       <form onSubmit={handleSubmit((d) => submit(d))}>
-        {themes.map(({ icon,name, question, options }, index) => (
+        {themes.map(({ icon, name, question, options }, index) => (
           <Theme
             icon={icon}
             index={index}

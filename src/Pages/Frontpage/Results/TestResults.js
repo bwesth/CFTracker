@@ -12,7 +12,7 @@ import treeimage from "../../../Shared/Images/Graphs/TreesCount.png";
 import BarChart from "../../Dashboard/FootprintSlideshow/BarChart";
 import PieChart from "../../Dashboard/FootprintSlideshow/PieChart";
 
-export default ({scrollToTop, setDisplay, popup}) => {
+export default ({ scrollToTop, setDisplay, popup }) => {
   useEffect(() => {
     scrollToTop();
   }, []);
@@ -62,7 +62,12 @@ export default ({scrollToTop, setDisplay, popup}) => {
 
               <button
                 onClick={() => {
-                  setDisplay(<Frontpage setDisplay={setDisplay} scrollToTop={scrollToTop} />);
+                  setDisplay(
+                    <Frontpage
+                      setDisplay={setDisplay}
+                      scrollToTop={scrollToTop}
+                    />
+                  );
                 }}
               >
                 Back

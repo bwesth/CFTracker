@@ -34,21 +34,16 @@ function UserProvider({ children }) {
   };
 
   function calcFootprint(theme) {
-    //console.log(theme)
-
     let surveyResult = 0;
     let index = indexReference[theme];
     for (let i = index; i < index + 3; i++) {
       surveyResult += data.themes[i].options[surveyChoices[0][i]].value;
     }
-    //console.log("from survey: " + surveyResult);
     let pledgesResult = 0;
     let list = [...pledges[0][theme]];
     for (let i = 0; i < list.length; i++) {
-      //console.log(i)
       pledgesResult = pledgesResult + list[i].tonnes;
     }
-    //console.log("from pledges: " + pledgesResult);
     return {
       surveyTotal: surveyResult,
       pledgeTotal: pledgesResult,

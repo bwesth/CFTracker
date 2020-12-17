@@ -16,10 +16,6 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(headerRef);
-  }, [headerRef]);
-
-  useEffect(() => {
     setDisplay(<Frontpage setDisplay={setDisplay} scrollToTop={scrollToTop} />);
   }, []);
 
