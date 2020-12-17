@@ -22,7 +22,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      
+
       img{
         background-color: #fff;
         border-radius: 100%;
@@ -41,7 +41,6 @@
     }
 
     #formID {
-      //background: $secondary-colour;
       color: font-colour;
       font-family: Montserrat;
     }
@@ -51,62 +50,25 @@
       flex-direction: row;
       align-items: center;
       position: relative;
-
-      //input{ display: none;}
-
-      label{
-        cursor: pointer;
-        margin: 1.5%;
-        background: #fff;
-        width: 100%;
-        border-radius: 20px;
-        padding-left: 7%;
-
+      cursor: pointer;
+      margin: 1.5%;
+      background: #fff;
+      width: 97%;
+      border-radius: 20px;
+      
+      input{
+        width: 5%;
+        height:2rem;
+      }
           p{
             @include pageText(normal, 1rem, $font-colour);
             align-items: center;
-            padding-right: 10%;
-            padding: 0.5%; 
-          }
-              
-          ::before{
-          content:"";
-          position: absolute;
-          transform: translateY(-25%);
-          margin-left: -5%;
-          width: 3%;
-          height: 35%;
-          border: 2px solid $secondary-colour;
-          border-radius: 50%;
-          background: rgba(2, 195, 154, 0.3);
-          opacity: 1;
+            margin-left: 2%;
           }
 
-          ::before & checked {
-          content:"";
-          position: absolute;
-          transform: translateY(-25%);
-          margin-left: -5%;
-          width: 3%;
-          height: 40%;
-          border: 2px solid $secondary-colour;
-          border-radius: 50%;
-          background: $action-colour;
-          opacity: 0;
-          transition: opacity 0,4s;
-          }
-          /*
-          input:checked ~ label::after{
-          opacity: 1;
-          }
-          input:checked ~ label::before{
-          opacity: 0;
-          }
-          */
-        }
     }
 
-     h2{
+    h2{
       @include pageHeaderText($font-colour);
       width: 80%;
       text-align: start;
@@ -120,7 +82,6 @@
   background: $Text-background;
   display: flex;
   flex-direction: column;
-
   border: 1px solid $secondary-colour;
   background: rgba(2, 195, 154, 0.3);
   box-sizing: border-box;
@@ -146,8 +107,7 @@
   }
 
   h1{
-      @include pageHeaderText($font-colour);
-      
+      @include pageHeaderText($font-colour);  
       text-align: center;
       font-size: 1,1rem;
       line-height: 1rem;

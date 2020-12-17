@@ -11,6 +11,8 @@
   h1{
     @include pageHeaderText($button-font-colour);
     filter: $button-shadow;
+    stroke-width: 5px; 
+      stroke:   black;
   }
 
   h3{
@@ -34,8 +36,7 @@
     background-repeat: no-repeat;
     background-size: 100% 200%;
     background-position: -5em -3em;
-    width: 100%;
-    //height: -webkit-calc(100% - 100px);  
+    width: 100%; 
     padding: 100px;
     margin: 0%;
 
