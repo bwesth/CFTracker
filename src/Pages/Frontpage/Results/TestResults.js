@@ -11,6 +11,7 @@ import treeimage from "../../../Shared/Images/Graphs/TreesCount.png";
 //Chart imports
 import BarChart from "../../Dashboard/FootprintSlideshow/BarChart";
 import PieChart from "../../Dashboard/FootprintSlideshow/PieChart";
+import TreeChart from "../../Dashboard/FootprintSlideshow/TreeChart";
 
 export default ({ scrollToTop, setDisplay, popup }) => {
   useEffect(() => {
@@ -42,14 +43,11 @@ export default ({ scrollToTop, setDisplay, popup }) => {
         </Wrapper>
         <Wrapper>
           {/* Image of trees here, currently way too large! */}
-          <div>
-            <img src={treeimage} alt="A forest of illustrated trees." />
-            <p>You have saved X trees</p>
-          </div>
+          <TreeChart resultVersion={true} />
           <Description>
             <h1>{third.headline}</h1>
             <p>{third.text1}</p>
-            <p>{third.text2}</p>
+            
           </Description>
         </Wrapper>
         <Wrapper>
