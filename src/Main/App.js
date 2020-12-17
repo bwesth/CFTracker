@@ -12,7 +12,7 @@ function App() {
   const headerRef = useRef(null);
 
   function scrollToTop() {
-    headerRef.current.scrollIntoView({ behavior: "smooth" });
+    headerRef.current.scrollIntoView();
   }
 
   useEffect(() => {
