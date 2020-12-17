@@ -39,7 +39,7 @@ export default (props) => {
       </div>
     );
   };
-
+//<label for={optionIndex}><p>{text}</p></label>
   const Option = ({ text, themeIndex, optionIndex, formID }) => {
     return (
       <div className="option">   
@@ -59,7 +59,7 @@ export default (props) => {
           }}
           checked={optionIndex === data[themeIndex]}
         />
-        <label for={optionIndex}><p>{text}</p></label>
+        <p>{text}</p>
         
       </div>
     );
