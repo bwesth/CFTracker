@@ -24,7 +24,7 @@ export default () => {
 
           <VictoryAxis
             dependentAxis
-            tickFormat={(x) => `$${x / 1000} tonnes`}
+            tickFormat={(x) => `${x} tonnes`}
           />
 
           <VictoryBar
