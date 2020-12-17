@@ -47,7 +47,7 @@ export default ({ pieStats }) => {
             </div>
             <div className="box2">
               <div id="goodsValue">
-                <h4>{footprint.goods.sumTotal}</h4> <p>tonnes on stuff</p>
+                <h4>{footprint.goods.sumTotal}</h4> <p>tonnes on goods</p>
               </div>
               <div id="foodValue">
                 <h4>{footprint.food.sumTotal}</h4> <p>tonnes on food</p>
