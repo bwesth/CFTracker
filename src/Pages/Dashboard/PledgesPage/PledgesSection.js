@@ -9,7 +9,6 @@ export default ({ section }) => {
   
 
   function addPledge(pledge) {
-    console.log({...pledges, [section.name.toLowerCase()]: [...list, pledge]})
     setPledgesList(state => ({...state, [section.name.toLowerCase()]: [...list, pledge]}));
     
   }
