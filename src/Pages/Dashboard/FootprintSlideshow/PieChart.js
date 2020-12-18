@@ -64,18 +64,18 @@ export default ({ pieStats }) => {
           <h2>Spending by Category:</h2>
           <div className="valueText">
             <div className="box1">
-              <div id="travelValue">
+              <div className="travelValue">
                 <h4>{transport}</h4> <p>tonnes on transport</p>
               </div>
-              <div id="householdValue">
+              <div className="householdValue">
                 <h4>{household}</h4> <p>tonnes on household</p>
               </div>
             </div>
             <div className="box2">
-              <div id="goodsValue">
+              <div className="goodsValue">
                 <h4>{goods}</h4> <p>tonnes on goods</p>
               </div>
-              <div id="foodValue">
+              <div className="foodValue">
                 <h4>{food > 0 ? food : 0}</h4> <p>tonnes on food</p>
               </div>
             </div>

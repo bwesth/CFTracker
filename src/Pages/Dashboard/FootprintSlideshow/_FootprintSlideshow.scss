@@ -103,10 +103,10 @@
           display: flex;
           flex-direction: column;
 
-        #travelValue{
+        .travelValue{
           color:#53AED5
         }
-        #householdValue{
+        .householdValue{
           color: #02C39A;
         }
       }
@@ -115,11 +115,11 @@
         display: flex;
         flex-direction: column;
 
-        #goodsValue{
+        .goodsValue{
           color: #F46A67;
         }
 
-        #foodValue{
+        .foodValue{
           color: #BC59B2;
         }
       }

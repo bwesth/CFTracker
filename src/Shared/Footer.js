@@ -27,11 +27,11 @@ export default () => {
         </a>
       </div>
       <div className="contactInfo">
-        <div id="contact">
+        <div className="contact">
           <p>+45 2994 5834 123</p>
           <p>greenfeet@greenmail.com</p>
         </div>
-        <div id="address">
+        <div className="address">
           <p>Rued Langgaards Vej 7</p>
           <p>Copenhagen, Denmark</p>
         </div>

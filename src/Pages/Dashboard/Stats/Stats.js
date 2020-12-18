@@ -8,13 +8,13 @@ export default () => {
   return (
     <Wrapper>
       <div className="stats">
-        <div id="AMOandSIM">
-          <div id="AMO">
+        <div className="AverageYearlyOutput_and_SavingsThisMonth">
+          <div className="AverageYearlyOutput">
             <h2>Average Yearly Output</h2>
             <h4>{Math.round(userFootprint.total.sumTotal)}</h4>
             <p>tonnes per year</p>
           </div>
-          <div id="SIM">
+          <div className="SavingsThisMonth">
             <h2>Savings this Month</h2>
             <h4>{Math.round(userFootprint.total.pledgeTotal / 12)}</h4>
             <p>tonnes per month</p>

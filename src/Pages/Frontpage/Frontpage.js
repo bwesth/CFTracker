@@ -31,7 +31,7 @@ export default ({ scrollToTop, setDisplay }) => {
 
   return (
     <>
-      <div id="welcoming">
+      <div className="welcoming">
         <div className="mission">
           <h1>Change the future.</h1>
           <p>
@@ -51,7 +51,7 @@ export default ({ scrollToTop, setDisplay }) => {
             Take the survey below so we can get a ballpark figure of your
             emissions.
           </p>
-          <div id="buttonBox">
+          <div className="buttonBox">
             <button className="testButton" onClick={() => surveyClick()}>
               <h3>Test your CO₂ footprint!</h3>
             </button>
