@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 
 //Doesn't seem to be a consensus in our group between hard-coding data and putting it elsewhere.
 import { first, second, third, fourth } from "./text";
-//Geez these image imports are a nightmare! Is there a better way to do this???
-import treeimage from "../../Shared/Images/Graphs/TreesCount.png";
 
 //Chart imports
 import BarChart from "../Dashboard/FootprintSlideshow/BarChart";

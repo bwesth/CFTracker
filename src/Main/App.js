@@ -38,9 +38,11 @@ const App = () => {
     </div>
   ); */
   const loggedIn = useContext(UserContext).loggedIn[0];
+  const surveyTaken = useContext(UserContext).footprint[0]
+  console.log(surveyTaken)
   const headerRef = useRef(null);
   function scrollToTop() {
-    headerRef.current.scrollIntoView({ behavior: "smooth" });
+    headerRef.current.scrollIntoView();
   }
   useEffect(() => {
     console.log(headerRef);
@@ -78,8 +80,10 @@ const App = () => {
             render={(props) => {
               return loggedIn ? (
                 <Redirect to="/dashboard" />
-              ) : (
+              ) : surveyTaken ? (
                 <TestResults scrollToTop={scrollToTop} />
+              ) : (
+                <Redirect to="/" />
               );
             }}
           />
