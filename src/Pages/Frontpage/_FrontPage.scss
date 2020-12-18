@@ -24,7 +24,7 @@
       } 
 
       p{
-        @include pageText(bold,1rem, $button-font-colour);
+        @include pageText(bold,1.2rem, $button-font-colour);
       }
     }
   
@@ -46,7 +46,7 @@
     p{
       align-self: center;
       text-align: center;
-      @include pageText(normal,1rem, $button-font-colour);
+      @include pageText(normal,1.2rem, $button-font-colour);
     }
 
     #buttonBox{

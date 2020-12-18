@@ -45,7 +45,7 @@
       height: 60%;
 
       p{
-        @include pageText(bold,0.87rem, $font-colour);
+        @include pageText(bold,1rem, $font-colour);
         color: $font-colour;
       }
 
