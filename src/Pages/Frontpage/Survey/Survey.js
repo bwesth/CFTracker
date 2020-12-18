@@ -3,21 +3,14 @@ import React, { useContext } from "react";
 // import Option from "./Option";
 import { useForm } from "react-hook-form";
 import { UserContext } from "../../../Main/UserContext";
-import TestResults from "../Results/TestResults";
+import TestResults from "../../Results/TestResults";
+import { Link } from "react-router-dom";
 
-export default ({ setDisplay, popup, scrollToTop, themes }) => {
+export default ({ themes }) => {
   const { handleSubmit } = useForm({});
   const [data, setData] = useContext(UserContext).surveyChoices;
   const updateFootprint = useContext(UserContext).updateFootprint;
-  const submit = (data) => {
-    setDisplay(
-      <TestResults
-        setDisplay={setDisplay}
-        popup={popup}
-        scrollToTop={scrollToTop}
-      />
-    );
-  };
+
 
   const Theme = ({ icon, name, question, options, index }) => {
     return (
@@ -38,10 +31,10 @@ export default ({ setDisplay, popup, scrollToTop, themes }) => {
       </div>
     );
   };
-//<label for={optionIndex}><p>{text}</p></label>
+  //<label for={optionIndex}><p>{text}</p></label>
   const Option = ({ text, themeIndex, optionIndex, formID }) => {
     return (
-      <div className="option">  
+      <div className="option">
         <input
           name={text}
           type="radio"
@@ -58,7 +51,7 @@ export default ({ setDisplay, popup, scrollToTop, themes }) => {
 
   return (
     <div className="survey">
-      <form onSubmit={handleSubmit((d) => submit(d))}>
+      <form>
         {themes.map(({ icon, name, question, options }, index) => (
           <Theme
             icon={icon}
@@ -71,7 +64,10 @@ export default ({ setDisplay, popup, scrollToTop, themes }) => {
         <div className="done">
           <h1>All done!</h1>
           <h2>Click send to see your carbon footprint</h2>
-          <input type="submit" />
+          {/* <input type="submit"></input> */}
+          <Link to="/results" className="backButton">
+            Submit
+          </Link>
         </div>
       </form>
     </div>

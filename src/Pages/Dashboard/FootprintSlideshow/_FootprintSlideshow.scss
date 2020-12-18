@@ -24,6 +24,7 @@
         border-right: 85px solid $action-colour;
         border-bottom: 40px solid #fff;
         transition: all .1s ease-in;
+        outline:none;
 
         &:hover{
           border-right: 85px solid $button-Hover;
@@ -49,6 +50,7 @@
         border-left: 85px solid $action-colour;
         border-bottom: 40px solid #fff;
         transition: all .1s ease-in;
+        outline:none;
 
         &:hover{
           border-left: 85px solid $button-Hover;

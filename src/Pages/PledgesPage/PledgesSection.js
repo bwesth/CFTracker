@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import Pledge from "../Pledges/Pledge";
-import { UserContext } from "../../../Main/UserContext";
+import Pledge from "../Dashboard/Pledges/Pledge";
+import { UserContext } from "../../Main/UserContext";
 
 export default ({ section }) => {
   const context = useContext(UserContext);

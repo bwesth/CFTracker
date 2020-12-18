@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../Main/UserContext";
 import FootprintSlideshow from "./FootprintSlideshow/FootprintSlideshow";
 import Pledges from "./Pledges/Pledges";
-import PledgesPage from "./PledgesPage/PledgesPage";
+import PledgesPage from "../PledgesPage/PledgesPage";
 
 export default ({ scrollToTop }) => {
   const [pledgesRender, setpledgesRender] = useState(false);

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PledgesSection from "./PledgesSection";
-import pledgesStore from "../../../Data/pledgesStore";
+import pledgesStore from "../../Data/pledgesStore";
+import { Link } from "react-router-dom";
 
-export default ({ setpledgesRender }) => {
+export default ( { scrollToTop } ) => {
+
+  useEffect(() => {
+    scrollToTop()
+  },[])
+
   return (
     <div className="pledgesPages">
       <div className="pledgeBanner">
@@ -12,13 +18,13 @@ export default ({ setpledgesRender }) => {
       {pledgesStore.map((section) => (
         <PledgesSection section={section} />
       ))}
-
-      <button
+      <Link to="/"> BACK </Link>
+      {/* <button
         id="backButton"
         onClick={() => setpledgesRender((state) => !state)}
       >
         BACK
-      </button>
+      </button> */}
     </div>
   );
 };

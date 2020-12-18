@@ -4,7 +4,7 @@ import surveyData from "../../Data/survey";
 import SignUpForm from "./SignUpForm";
 import PopupWrapper from "./PopupWrapper";
 
-export default ({ scrollToTop, setDisplay }) => {
+export default ({ scrollToTop }) => {
   const [surveyVisible, setSurveyVisible] = useState(false);
   const surveyRef = useRef(null);
   const surveyClick = () => {
@@ -16,18 +16,6 @@ export default ({ scrollToTop, setDisplay }) => {
       ? surveyRef.current.scrollIntoView({ behavior: "smooth" })
       : scrollToTop();
   }, [surveyVisible]);
-
-  const popup = (
-    <PopupWrapper
-      trigger={
-        <button className="testButton">
-          <h3>SIGN UP</h3>
-        </button>
-      }
-    >
-      <SignUpForm />
-    </PopupWrapper>
-  );
 
   return (
     <>
@@ -56,15 +44,21 @@ export default ({ scrollToTop, setDisplay }) => {
               <h3>Test your CO₂ footprint!</h3>
             </button>
             <p>Or</p>
-            {popup}
+            <PopupWrapper
+      trigger={
+        <button className="testButton">
+          <h3>SIGN UP</h3>
+        </button>
+      }
+    >
+      <SignUpForm />
+    </PopupWrapper>
           </div>
         </div>
       </div>
       {surveyVisible && (
         <div ref={surveyRef}>
           <Survey
-            setDisplay={setDisplay}
-            popup={popup}
             themes={surveyData.themes}
             scrollToTop={scrollToTop}
           />

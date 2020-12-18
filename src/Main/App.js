@@ -1,11 +1,15 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
-import "./App.scss";
-import Frontpage from "../Pages/Frontpage/Frontpage";
-import Dashboard from "../Pages/Dashboard/Dashboard";
+import React, { useEffect, useContext, useRef } from "react";
 import { UserContext } from "./UserContext";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+
+import "./App.scss";
+
 import Header from "../Shared/Header";
 import Footer from "../Shared/Footer";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import Frontpage from "../Pages/Frontpage/Frontpage";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import TestResults from "../Pages/Results/TestResults";
+import PledgesPage from "../Pages/PledgesPage/PledgesPage";
 
 const App = () => {
   /* const loggedIn = useContext(UserContext).loggedIn[0];
@@ -60,11 +64,30 @@ const App = () => {
             }}
           />
           <Route
-            exact
             path="/dashboard"
             render={(props) => {
               return loggedIn ? (
                 <Dashboard {...props} scrollToTop={scrollToTop} />
+              ) : (
+                <Redirect to="/" />
+              );
+            }}
+          />
+          <Route
+            path="/results"
+            render={(props) => {
+              return loggedIn ? (
+                <Redirect to="/dashboard" />
+              ) : (
+                <TestResults scrollToTop={scrollToTop} />
+              );
+            }}
+          />
+          <Route
+            path="/pledges"
+            render={(props) => {
+              return loggedIn ? (
+                <PledgesPage scrollToTop={scrollToTop} />
               ) : (
                 <Redirect to="/" />
               );

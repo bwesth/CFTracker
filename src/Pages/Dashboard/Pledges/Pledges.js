@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Wrapper from "../../../Shared/Wrapper/Wrapper";
 import Pledge from "./Pledge";
 import { UserContext } from "../../../Main/UserContext";
+import { Link } from "react-router-dom";
 
 export default ({ pledgesRender }) => {
   const context = useContext(UserContext);
@@ -66,11 +67,9 @@ export default ({ pledgesRender }) => {
           )}
         </>
       )}
-      <div
-        className="pledge-button"
-        onClick={() => pledgesRender((state) => !state)}
-      >
-        <p> + Add More Pledges </p>
+      <div className="pledge-button">
+        {/* <p> + Add More Pledges </p> */}
+        <Link to="/pledges"> + Add More Pledges </Link>
       </div>
     </Wrapper>
   );
