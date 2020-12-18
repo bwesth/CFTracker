@@ -5,9 +5,10 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import { UserContext } from "./UserContext";
 import Header from "../Shared/Header";
 import Footer from "../Shared/Footer";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
-function App() {
-  const loggedIn = useContext(UserContext).loggedIn[0];
+const App = () => {
+  /* const loggedIn = useContext(UserContext).loggedIn[0];
   const [display, setDisplay] = useState();
   const headerRef = useRef(null);
 
@@ -17,13 +18,13 @@ function App() {
 
   useEffect(() => {
     console.log(headerRef);
-  }, [headerRef]);
+  }, [headerRef]); */
 
-  useEffect(() => {
+  /*   useEffect(() => {
     setDisplay(<Frontpage setDisplay={setDisplay} scrollToTop={scrollToTop} />);
-  }, []);
+  }, []); */
 
-  return (
+  /*  return (
     <div className="App">
       <div ref={headerRef}>
         <Header />
@@ -31,7 +32,49 @@ function App() {
       {loggedIn ? <Dashboard scrollToTop={scrollToTop} /> : display}
       <Footer />
     </div>
+  ); */
+  const loggedIn = useContext(UserContext).loggedIn[0];
+  const headerRef = useRef(null);
+  function scrollToTop() {
+    headerRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+  useEffect(() => {
+    console.log(headerRef);
+  }, [headerRef]);
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <div ref={headerRef}>
+          <Header />
+        </div>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={(props) => {
+              return loggedIn ? (
+                <Redirect to="/dashboard" />
+              ) : (
+                <Frontpage {...props} scrollToTop={scrollToTop} />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/dashboard"
+            render={(props) => {
+              return loggedIn ? (
+                <Dashboard {...props} scrollToTop={scrollToTop} />
+              ) : (
+                <Redirect to="/" />
+              );
+            }}
+          />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
-}
+};
 
 export default App;
