@@ -4,8 +4,8 @@ import pledgesStore from "../../../Data/pledgesStore";
 
 export default ({ setpledgesRender }) => {
   return (
-    <div className="pladgesPages">
-      <div className="pladgeBanner">
+    <div className="pledgesPages">
+      <div className="pledgeBanner">
         <h1>Pledges</h1>
       </div>
 
