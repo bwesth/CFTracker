@@ -20,12 +20,6 @@ function UserProvider({ children }) {
 
   const footprint = useState();
 
-  /* This is a massively shitty way of doing it, but it was the best way 
-  I could think of that was also sort of readable, without having to 
-  redo the survey format due to changes in Data/survey.js.
-  After having fought with syncing survey values and checked status to surveyChoices,
-  I don't wanna go down that dark hall again just yet */
-
   const indexReference = {
     transport: 0,
     food: 3,

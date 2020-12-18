@@ -12,7 +12,6 @@ export default ({ setDisplay, popup, scrollToTop, themes }) => {
   const submit = (data) => {
     setDisplay(
       <TestResults
-        results={data}
         setDisplay={setDisplay}
         popup={popup}
         scrollToTop={scrollToTop}
