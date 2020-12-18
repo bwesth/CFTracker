@@ -25,12 +25,6 @@ export default ({ scrollToTop, setDisplay, popup }) => {
         <Wrapper>
           {/* The barchart class below is a bar chart that displays the user CO2 output compared to other common citizens. */}
           <BarChart />
-          {/* <FootprintBars /> */}
-          <Description>
-            {/* <h1>{first.headline}</h1> */}
-            {/* <p>{first.text1}</p> */}
-            {/* <p>{first.text2}</p> */}
-          </Description>
         </Wrapper>
         <Wrapper>
           {/* Pie chart breakdown of C02 here, currently not hooked up to the correct numbers. */}
@@ -42,7 +36,6 @@ export default ({ scrollToTop, setDisplay, popup }) => {
           </Description>
         </Wrapper>
         <Wrapper>
-          {/* Image of trees here, currently way too large! */}
           <TreeChart resultVersion={true} />
           <Description>
             <h1>{third.headline}</h1>

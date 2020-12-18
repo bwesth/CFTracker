@@ -39,7 +39,7 @@ export default () => {
       {/* Have a lot of work to do here to align everything etc. */}
       <div className="chartInfo">
         <h2>Your Carbon Footprint</h2>
-        <p>{footprint} Tonnes Per Month</p>
+        <p>{Math.round(footprint)} Tonnes Per Month</p>
         <p>
           Want to prevent the climate crisis? Your footprint is{" "}
           {Math.round(footprint / data[3].expenditure)} times too big.
