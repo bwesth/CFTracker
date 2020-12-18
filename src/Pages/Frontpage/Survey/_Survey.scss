@@ -61,7 +61,7 @@
         height:2rem;
       }
           p{
-            @include pageText(normal, 1rem, $font-colour);
+            @include pageText(normal, 1.1rem, $font-colour);
             align-items: center;
             margin-left: 2%;
           }
