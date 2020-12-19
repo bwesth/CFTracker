@@ -1,37 +1,36 @@
 .pledge-button {
-  width: 60%;
-  // width: 80%;
-  height: 20%;
-  border-style: dashed;
-  border-width: 5px;
-  border-color: $secondary-colour;
-  display: flex;
-  align-items: center;
-  margin-top: 5%;
-  margin-bottom: 3%;
-  border-radius: 20px;
-
-  a {
-    height: 100%;
-    width: 100%;
-    font-family: Montserrat;
-    transition: all 0.1s ease-in;
-    font-size: 1.5rem;
-    color: $secondary-colour;
-    margin: 3% 10%;
-    text-decoration: none;
-  }
-
-  &:hover {
-    cursor: pointer;
-    border-color: $action-colour;
-
+    width: 60%;
+    height: 10%;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: $secondary-colour;
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border-radius: 20px;
+  
     a {
-      font-size: 1.6rem;
-      color: $action-colour;
+      height: 100%;
+      width: 100%;
+      font-family: Montserrat;
+      transition: all 0.1s ease-in;
+      font-size: 1.5rem;
+      color: $secondary-colour;
+      margin: 3% 10%;
+      text-decoration: none;
+    }
+  
+    &:hover {
+      cursor: pointer;
+      border-color: $action-colour;
+  
+      a {
+        font-size: 1.6rem;
+        color: $action-colour;
+      }
     }
   }
-}
 
 .pledges {
   margin-top: 1%;

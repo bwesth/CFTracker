@@ -51,6 +51,7 @@
         border-bottom: 40px solid #fff;
         transition: all .1s ease-in;
         outline:none;
+        
 
         &:hover{
           border-left: 85px solid $button-Hover;
@@ -143,7 +144,8 @@
   }
 
    .barChart{
-    width: 40%;
+    width: 100%;
+    
    }
 
   

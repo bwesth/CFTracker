@@ -16,7 +16,7 @@ $button-Hover: #e4722c;
 $button-width:  132px; 
 $button-height:  32px;
 $button-radius:  8px; 
-$button-shadow: drop-shadow(1px 3px 2px  $font-colour); 
+$button-shadow: drop-shadow(2px  3px 1.5px  $font-colour); 
 
 p{
     color: $font-colour;
@@ -38,6 +38,7 @@ p{
         justify-content: center;
         transition: all .1s ease-in;
         filter: $button-shadow;
+        border-style: none;
             &:hover{
             background-color: $button-Hover;
             cursor: pointer;

@@ -17,7 +17,9 @@
 
         .chartInfo{
             @include pageText(normal, 1rem, $font-colour);
-            margin-right: 15%;
+            width: 100%;
+            margin-left: -15%;
+            margin-right: 20%;
             align-self: center;
 
             h2{
@@ -81,12 +83,14 @@
     flex-direction: row;
     justify-content: center;
     
-
         .backButton{
         @include button;
         width: 8%;
-        height: 3.5rem; 
+        height: 10%;
+        margin-top: .1%;
         margin-left: 2%;
+        padding-bottom: 1.7%;
+        padding-top: 1.7%;
         text-decoration: none;
         }
     }
