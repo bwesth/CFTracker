@@ -44,7 +44,7 @@ export default (props) => {
 
   useEffect(() => {
     updateFootprint();
-  },[userSurvey])
+  }, [userSurvey]);
 
   return (
     <form className="login-form" onSubmit={(e) => e.preventDefault() && false}>
