@@ -72,7 +72,7 @@
     .pieSlide{
       display: flex;
       flex-direction: row;
-      width: 50%;
+      width: 55%;
       padding-bottom: 2%;
     }
       .values{
@@ -91,11 +91,11 @@
           font-weight: bold;
           font-size: 1.6rem;
         }
-
         svg{
           max-width: 200px;
           max-height: 200px;
         }
+
         p{
           font-family: Montserrat;
           font-size: 1rem;
@@ -145,7 +145,6 @@
 
    .barChart{
     width: 100%;
-    
    }
 
   
