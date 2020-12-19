@@ -19,8 +19,6 @@ export default ({ scrollToTop }) => {
 
   useEffect(() => {
     updateUserData();
-    console.log(pledges)
-    console.log(surveyChoices)
   }, [pledges]);
 
   async function updateUserData() {

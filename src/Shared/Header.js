@@ -9,10 +9,9 @@ export default () => {
   const fb = useContext(UserContext).firebase;
   const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
   const [userPledges, setPledges] = useContext(UserContext).pledges;
-  const [userSurvey, setSurveyChoices] = useContext(UserContext).surveyChoices;
+  const setSurveyChoices = useContext(UserContext).setSurveyChoices;
 
   async function logout() {
-    await fb.logout();
     setPledges({
       transport: [],
       food: [],
@@ -20,6 +19,7 @@ export default () => {
       household: [],
     });
     setSurveyChoices(new Array(12).fill(4));
+    await fb.logout();
     setLoggedIn(false);
   }
 

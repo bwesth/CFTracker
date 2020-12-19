@@ -12,41 +12,13 @@ import TestResults from "../Pages/Results/TestResults";
 import PledgesPage from "../Pages/PledgesPage/PledgesPage";
 
 const App = () => {
-  /* const loggedIn = useContext(UserContext).loggedIn[0];
-  const [display, setDisplay] = useState();
-  const headerRef = useRef(null);
-
-  function scrollToTop() {
-    headerRef.current.scrollIntoView();
-  }
-
-  useEffect(() => {
-    console.log(headerRef);
-  }, [headerRef]); */
-
-  /*   useEffect(() => {
-    setDisplay(<Frontpage setDisplay={setDisplay} scrollToTop={scrollToTop} />);
-  }, []); */
-
-  /*  return (
-    <div className="App">
-      <div ref={headerRef}>
-        <Header />
-      </div>
-      {loggedIn ? <Dashboard scrollToTop={scrollToTop} /> : display}
-      <Footer />
-    </div>
-  ); */
   const loggedIn = useContext(UserContext).loggedIn[0];
-  const surveyTaken = useContext(UserContext).footprint[0]
-  // console.log(surveyTaken)
+  const surveyTaken = useContext(UserContext).footprint[0];
   const headerRef = useRef(null);
   function scrollToTop() {
     headerRef.current.scrollIntoView();
   }
-  useEffect(() => {
-    // console.log(headerRef);
-  }, [headerRef]);
+
   return (
     <div className="App">
       <BrowserRouter>

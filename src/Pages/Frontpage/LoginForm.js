@@ -26,17 +26,11 @@ export default (props) => {
 
   async function login() {
     try {
-      console.log("Datafetch starting");
-      console.log(userPledges);
-      console.log(userSurvey);
       await fb.login(email, password);
       const userData = await fb.getUserData();
       setPledges(userData.pledges);
       setSurveyChoices(userData.surveyChoices);
       setLoggedIn(true);
-      console.log(userPledges);
-      console.log(userSurvey);
-      console.log("Datafetch finished");
     } catch (error) {
       alert(error.message);
     }
