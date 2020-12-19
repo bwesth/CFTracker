@@ -8,8 +8,10 @@ import PledgesPage from "../PledgesPage/PledgesPage";
 export default ({ scrollToTop }) => {
   const [pledgesRender, setpledgesRender] = useState(false);
   const fb = useContext(UserContext).firebase;
+  const updateFootprint = useContext(UserContext).updateFootprint;
 
   useEffect(() => {
+    updateFootprint();
     scrollToTop();
   }, [pledgesRender]);
 

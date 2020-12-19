@@ -45,7 +45,7 @@ const App = () => {
     headerRef.current.scrollIntoView();
   }
   useEffect(() => {
-    console.log(headerRef);
+    // console.log(headerRef);
   }, [headerRef]);
   return (
     <div className="App">

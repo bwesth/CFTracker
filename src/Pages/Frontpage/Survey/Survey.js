@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 // import Theme from "./Theme";
 // import Option from "./Option";
 import { useForm } from "react-hook-form";
@@ -7,10 +7,13 @@ import TestResults from "../../Results/TestResults";
 import { Link } from "react-router-dom";
 
 export default ({ themes }) => {
-  const { handleSubmit } = useForm({});
+  
   const [data, setData] = useContext(UserContext).surveyChoices;
   const updateFootprint = useContext(UserContext).updateFootprint;
 
+  // useEffect(() => {
+  //   updateFootprint();
+  // }, [data]);
 
   const Theme = ({ icon, name, question, options, index }) => {
     return (
