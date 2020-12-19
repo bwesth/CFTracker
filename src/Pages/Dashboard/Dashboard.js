@@ -9,6 +9,7 @@ export default ({ scrollToTop }) => {
   const [pledgesRender, setpledgesRender] = useState(false);
   const fb = useContext(UserContext).firebase;
   const [pledges, setPledges] = useContext(UserContext).pledges;
+  const updateFootprint = useContext(UserContext).updateFootprint;
   const [surveyChoices, setSurveyChoices] = useContext(UserContext).surveyChoices;
 
   useEffect(() => {
