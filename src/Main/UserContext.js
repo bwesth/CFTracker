@@ -103,6 +103,7 @@ function UserProvider({ children }) {
         updateFootprint,
         firebase,
         loggedIn,
+        setSurveyChoices
       }}
     >
       {children}
