@@ -26,7 +26,7 @@ export default ({ scrollToTop }) => {
             There is now no doubt that climate change will have a profound
             effect on our future.
           </p>
-          <p>Help us to save the planet, one person at a time</p>
+          <p>Help us to save the planet, one person at a time.</p>
         </div>
         <div className="middelBox">
           <h1>Become The Solution</h1>
