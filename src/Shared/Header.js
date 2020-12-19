@@ -8,9 +8,18 @@ import LoginForm from "../Pages/Frontpage/LoginForm";
 export default () => {
   const fb = useContext(UserContext).firebase;
   const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
+  const [userPledges, setPledges] = useContext(UserContext).pledges;
+  const [userSurvey, setSurveyChoices] = useContext(UserContext).surveyChoices;
 
   async function logout() {
     await fb.logout();
+    setPledges({
+      transport: [],
+      food: [],
+      goods: [],
+      household: [],
+    });
+    setSurveyChoices(new Array(12).fill(4));
     setLoggedIn(false);
   }
 

@@ -10,22 +10,40 @@ export default () => {
   const [password, setPassword] = useState("");
   const fb = useContext(UserContext).firebase;
   const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
-
+  const [pledges, setPledges] = useContext(UserContext).pledges;
+  const [surveyChoices, setSurveyChoices] = useContext(UserContext).surveyChoices;
+  
+  // const footprint = useContext(UserContext).footprint[0];
+  
   const schema = yup.object().shape({
     name: yup.string().required(),
     email: yup.string().required(),
     password: yup.string().required(),
   });
-
+  
   const { register, handleSubmit } = useForm({
     resolver: yupResolver(schema),
   });
+  
+  async function onRegister() {
+    try {
+      console.log("Register starting")
+      await fb.register(name, email, password);
+      await fb.login(email, password);
+      // await fb.addFootprint(footprint);
+      await fb.setUserData({pledges: pledges, surveyChoices: surveyChoices})
+      console.log("Register finished")
+      setLoggedIn(true);
+    } catch (error) {
+      alert(error.message);
+    }
+  }
 
   return (
     <form
       className="sign-up-form"
       onSubmit={(e) => e.preventDefault() && false}
-    >
+      >
       <div className="SignUpH">
         <h1>Sign up</h1>
       </div>
@@ -70,13 +88,4 @@ export default () => {
     </form>
   );
 
-  async function onRegister() {
-    try {
-      await fb.register(name, email, password);
-      await fb.login(email, password);
-      setLoggedIn(true);
-    } catch (error) {
-      alert(error.message);
-    }
-  }
 };

@@ -4,11 +4,13 @@ import data from "../Data/survey";
 const UserContext = React.createContext();
 
 function UserProvider({ children }) {
+  //I dont think we are using this user anywhere
   const user = useState({
     name: undefined,
     email: undefined,
     password: undefined,
   });
+  
   const loggedIn = useState(false);
   const [surveyChoicesData, setSurveyChoices] = useState(new Array(12).fill(4));
   const pledges = useState({
@@ -101,6 +103,7 @@ function UserProvider({ children }) {
         updateFootprint,
         firebase,
         loggedIn,
+        setSurveyChoices
       }}
     >
       {children}

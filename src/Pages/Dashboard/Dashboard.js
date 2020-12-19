@@ -8,12 +8,23 @@ import PledgesPage from "../PledgesPage/PledgesPage";
 export default ({ scrollToTop }) => {
   const [pledgesRender, setpledgesRender] = useState(false);
   const fb = useContext(UserContext).firebase;
-  const updateFootprint = useContext(UserContext).updateFootprint;
+  const [pledges, setPledges] = useContext(UserContext).pledges;
+  const [surveyChoices, setSurveyChoices] = useContext(UserContext).surveyChoices;
 
   useEffect(() => {
     updateFootprint();
     scrollToTop();
   }, [pledgesRender]);
+
+  useEffect(() => {
+    updateUserData();
+    console.log(pledges)
+    console.log(surveyChoices)
+  }, [pledges]);
+
+  async function updateUserData() {
+    await fb.setUserData({pledges: pledges, surveyChoices: surveyChoices});
+  }
 
   return (
     <div className="dashboard">

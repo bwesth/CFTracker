@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../../Main/UserContext";
 import Wrapper from "../../../Shared/Wrapper/Wrapper";
 
 export default () => {
   const userFootprint = useContext(UserContext).footprint[0];
+  const fb = useContext(UserContext).firebase;
 
   return (
     <Wrapper>
