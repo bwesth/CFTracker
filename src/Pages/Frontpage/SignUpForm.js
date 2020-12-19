@@ -10,8 +10,8 @@ export default () => {
   const [password, setPassword] = useState("");
   const fb = useContext(UserContext).firebase;
   const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
-  const [userPledges, setPledges] = useContext(UserContext).pledges;
-  const [userSurvey, setSurveyChoices] = useContext(UserContext).surveyChoices;
+  const [pledges, setPledges] = useContext(UserContext).pledges;
+  const [surveyChoices, setSurveyChoices] = useContext(UserContext).surveyChoices;
   
   // const footprint = useContext(UserContext).footprint[0];
   
@@ -31,7 +31,7 @@ export default () => {
       await fb.register(name, email, password);
       await fb.login(email, password);
       // await fb.addFootprint(footprint);
-      await fb.setUserData([userPledges, userSurvey])
+      await fb.setUserData({pledges: pledges, surveyChoices: surveyChoices})
       console.log("Register finished")
       setLoggedIn(true);
     } catch (error) {

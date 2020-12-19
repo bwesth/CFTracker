@@ -8,8 +8,8 @@ import PledgesPage from "../PledgesPage/PledgesPage";
 export default ({ scrollToTop }) => {
   const [pledgesRender, setpledgesRender] = useState(false);
   const fb = useContext(UserContext).firebase;
-  const [userPledges, setPledges] = useContext(UserContext).pledges;
-  const [userSurvey, setSurveyChoices] = useContext(UserContext).surveyChoices;
+  const [pledges, setPledges] = useContext(UserContext).pledges;
+  const [surveyChoices, setSurveyChoices] = useContext(UserContext).surveyChoices;
 
   useEffect(() => {
     scrollToTop();
@@ -17,10 +17,12 @@ export default ({ scrollToTop }) => {
 
   useEffect(() => {
     updateUserData();
-  }, [userPledges]);
+    console.log(pledges)
+    console.log(surveyChoices)
+  }, [pledges]);
 
   async function updateUserData() {
-    await fb.setUserData([userPledges, userSurvey]);
+    await fb.setUserData({pledges: pledges, surveyChoices: surveyChoices});
   }
 
   return (

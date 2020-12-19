@@ -17,10 +17,29 @@ export default (props) => {
     name: yup.string().required(),
     password: yup.string().required(),
   });
-
+  
   const { register } = useForm({
     resolver: yupResolver(schema),
   });
+  
+  
+    async function login() {
+      try {
+        console.log("Datafetch starting");
+        console.log(userPledges);
+        console.log(userSurvey);
+        await fb.login(email, password);
+        const {pledges, surveyChoices} = await fb.getUserData();
+        setPledges(pledges);
+        setSurveyChoices(surveyChoices);
+        setLoggedIn(true);
+        console.log(userPledges);
+        console.log(userSurvey);
+        console.log("Datafetch finished");
+      } catch (error) {
+        alert(error.message);
+      }
+    }
 
   return (
     <form className="login-form" onSubmit={(e) => e.preventDefault() && false}>
@@ -59,22 +78,4 @@ export default (props) => {
       </div>
     </form>
   );
-
-  async function login() {
-    try {
-      console.log("Datafetch starting");
-      console.log(userPledges);
-      console.log(userSurvey);
-      await fb.login(email, password);
-      const [pledges, surveyChoices] = await fb.getUserData();
-      setPledges(pledges);
-      setSurveyChoices(surveyChoices);
-      setLoggedIn(true);
-      console.log(userPledges);
-      console.log(userSurvey);
-      console.log("Datafetch finished");
-    } catch (error) {
-      alert(error.message);
-    }
-  }
 };
