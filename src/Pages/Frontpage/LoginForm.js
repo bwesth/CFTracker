@@ -32,7 +32,7 @@ export default (props) => {
       setSurveyChoices(userData.surveyChoices);
       setLoggedIn(true);
     } catch (error) {
-      alert(error.message);
+      alert("login():"+error.message);
     }
   }
 
