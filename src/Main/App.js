@@ -39,13 +39,13 @@ const App = () => {
   ); */
   const loggedIn = useContext(UserContext).loggedIn[0];
   const surveyTaken = useContext(UserContext).footprint[0]
-  console.log(surveyTaken)
+  // console.log(surveyTaken)
   const headerRef = useRef(null);
   function scrollToTop() {
     headerRef.current.scrollIntoView();
   }
   useEffect(() => {
-    console.log(headerRef);
+    // console.log(headerRef);
   }, [headerRef]);
   return (
     <div className="App">

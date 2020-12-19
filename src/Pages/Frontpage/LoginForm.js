@@ -8,6 +8,8 @@ export default (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [userPledges, setPledges] = useContext(UserContext).pledges;
+  const [userSurvey, setSurveyChoices] = useContext(UserContext).surveyChoices;
   const setLoggedIn = useContext(UserContext).loggedIn[1];
   const fb = useContext(UserContext).firebase;
 
@@ -60,8 +62,17 @@ export default (props) => {
 
   async function login() {
     try {
+      console.log("Datafetch starting");
+      console.log(userPledges);
+      console.log(userSurvey);
       await fb.login(email, password);
+      const [pledges, surveyChoices] = await fb.getUserData();
+      setPledges(pledges);
+      setSurveyChoices(surveyChoices);
       setLoggedIn(true);
+      console.log(userPledges);
+      console.log(userSurvey);
+      console.log("Datafetch finished");
     } catch (error) {
       alert(error.message);
     }

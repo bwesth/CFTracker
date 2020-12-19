@@ -9,10 +9,13 @@ export default () => {
   
   async function getFootprint() {
     try {
-      const result = await fb.getCurrentUserFootprint();
-      setFootprint(result);
-      console.log(result);
-      console.log(footprint);
+      // console.log("two")
+      // const result = await fb.getCurrentUserFootprint();
+      // console.log(result)
+      // console.log("three")
+      // setFootprint(result);
+      // console.log(result);
+      // console.log(footprint);
     } catch (error) {
       alert(error.message);
     }
