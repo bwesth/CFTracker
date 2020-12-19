@@ -10,6 +10,7 @@ export default () => {
   const [password, setPassword] = useState("");
   const fb = useContext(UserContext).firebase;
   const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
+  const footprint = useContext(UserContext).footprint[0];
 
   const schema = yup.object().shape({
     name: yup.string().required(),
@@ -74,6 +75,7 @@ export default () => {
     try {
       await fb.register(name, email, password);
       await fb.login(email, password);
+      await fb.addFootprint(footprint);
       setLoggedIn(true);
     } catch (error) {
       alert(error.message);

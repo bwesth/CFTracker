@@ -27,6 +27,15 @@ class Firebase {
 		return this.auth.signOut()
 	}
 
+	addFootprint(footprint) {
+		if(!this.auth.currentUser) {
+			return alert('Not authorized')
+		}
+		return this.db.doc(`users_cftracker/${this.auth.currentUser.uid}`).set({
+			footprint
+		})
+	}
+
 	async register(name, email, password) {
 		await this.auth.createUserWithEmailAndPassword(email, password)
 		return this.auth.currentUser.updateProfile({
@@ -42,6 +51,11 @@ class Firebase {
 
 	getCurrentUsername() {
 		return this.auth.currentUser && this.auth.currentUser.displayName
+	}
+
+	async getCurrentUserFootprint() {
+		const footprint = await this.db.doc(`users_cftracker/${this.auth.currentUser.uid}`).get()
+		return footprint.get('footprint')
 	}
 
 }

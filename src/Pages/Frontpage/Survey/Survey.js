@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 export default ({ themes }) => {
   const { handleSubmit } = useForm({});
   const [data, setData] = useContext(UserContext).surveyChoices;
+  //is this also never used?
   const updateFootprint = useContext(UserContext).updateFootprint;
 
 
