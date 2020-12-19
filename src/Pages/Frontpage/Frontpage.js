@@ -21,7 +21,7 @@ export default ({ scrollToTop }) => {
     <>
       <div className="welcoming">
         <div className="mission">
-          <h1>Change the future.</h1>
+          <h1>Change The Future</h1>
           <p>
             There is now no doubt that climate change will have a profound
             effect on our future.
