@@ -25,7 +25,7 @@ function UserProvider({ children }) {
   const indexReference = {
     transport: 0,
     food: 3,
-    good: 6,
+    goods: 6,
     household: 9,
   };
 
@@ -103,6 +103,7 @@ function UserProvider({ children }) {
         updateFootprint,
         firebase,
         loggedIn,
+        setSurveyChoices
       }}
     >
       {children}

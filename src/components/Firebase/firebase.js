@@ -32,7 +32,7 @@ class Firebase {
       return alert("Not authorized");
     }
     return this.db.doc(`users_cftracker/${this.auth.currentUser.uid}`).set({
-      footprint,
+      footprint
     });
   }
 
@@ -60,13 +60,15 @@ class Firebase {
     return footprint.get("footprint");
   }
 
-  setUserData([pledges, surveyChoices]) {
+  setUserData({pledges, surveyChoices}) {
     if (!this.auth.currentUser) {
       return alert("Not authorized");
     }
+    console.log(pledges)
+    console.log(surveyChoices)
     return this.db.doc(`users_cftracker/${this.auth.currentUser.uid}`).set({
-      pledges: pledges,
-      surveyChoices: surveyChoices,
+      pledges,
+      surveyChoices,
     });
   }
 
@@ -74,7 +76,12 @@ class Firebase {
     const data = await this.db
       .doc(`users_cftracker/${this.auth.currentUser.uid}`)
       .get();
-    return [data.get("pledges"), data.get("surveyChoices")];
+      const pledges = data.get("pledges")
+      const surveyChoices = data.get("surveyChoices")
+      console.log(pledges)
+      console.log(surveyChoices)
+  
+    return {pledges: pledges, surveyChoices: surveyChoices};
   }
 }
 

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
@@ -8,8 +8,10 @@ export default (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const updateFootprint = useContext(UserContext).updateFootprint;
   const [userPledges, setPledges] = useContext(UserContext).pledges;
-  const [userSurvey, setSurveyChoices] = useContext(UserContext).surveyChoices;
+  const userSurvey = useContext(UserContext).surveyChoices[0];
+  const setSurveyChoices = useContext(UserContext).setSurveyChoices;
   const setLoggedIn = useContext(UserContext).loggedIn[1];
   const fb = useContext(UserContext).firebase;
 
@@ -21,6 +23,28 @@ export default (props) => {
   const { register } = useForm({
     resolver: yupResolver(schema),
   });
+
+  async function login() {
+    try {
+      console.log("Datafetch starting");
+      console.log(userPledges);
+      console.log(userSurvey);
+      await fb.login(email, password);
+      const userData = await fb.getUserData();
+      setPledges(userData.pledges);
+      setSurveyChoices(userData.surveyChoices);
+      setLoggedIn(true);
+      console.log(userPledges);
+      console.log(userSurvey);
+      console.log("Datafetch finished");
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
+  useEffect(() => {
+    updateFootprint();
+  }, [userSurvey]);
 
   return (
     <form className="login-form" onSubmit={(e) => e.preventDefault() && false}>
@@ -59,22 +83,4 @@ export default (props) => {
       </div>
     </form>
   );
-
-  async function login() {
-    try {
-      console.log("Datafetch starting");
-      console.log(userPledges);
-      console.log(userSurvey);
-      await fb.login(email, password);
-      const [pledges, surveyChoices] = await fb.getUserData();
-      setPledges(pledges);
-      setSurveyChoices(surveyChoices);
-      setLoggedIn(true);
-      console.log(userPledges);
-      console.log(userSurvey);
-      console.log("Datafetch finished");
-    } catch (error) {
-      alert(error.message);
-    }
-  }
 };

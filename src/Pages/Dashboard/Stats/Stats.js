@@ -5,32 +5,6 @@ import Wrapper from "../../../Shared/Wrapper/Wrapper";
 export default () => {
   const userFootprint = useContext(UserContext).footprint[0];
   const fb = useContext(UserContext).firebase;
-  const [footprint, setFootprint] = useState({});
-  
-  async function getFootprint() {
-    try {
-      // console.log("two")
-      // const result = await fb.getCurrentUserFootprint();
-      // console.log(result)
-      // console.log("three")
-      // setFootprint(result);
-      // console.log(result);
-      // console.log(footprint);
-    } catch (error) {
-      alert(error.message);
-    }
-  }
-
- /*  const getFootprint = async() => {
-    const response = fb.getCurrentUserFootprint()
-    setFootprint(response);
-    console.log(response);
-} */
-
-  useEffect(() => {
-    getFootprint();
-  }, []);
-
 
   return (
     <Wrapper>
