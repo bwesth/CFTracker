@@ -19,14 +19,14 @@
             @include pageText(normal, 1rem, $font-colour);
             width: 100%;
             margin-left: -15%;
-            margin-right: 20%;
+            margin-right: 10%;
             align-self: center;
 
             h2{
                 @include pageHeaderText($font-colour);
                 font-size: 2rem;
-                margin-left: -11%;
-                 margin-right: 20%;
+                margin-left: 5%;
+                margin-right: 20%;
             }
         }
 
@@ -43,6 +43,7 @@
             flex-Direction: column;
         }
     }
+    
     h1{
         width: 100%;
         margin-top: 3%;
