@@ -65,7 +65,6 @@ class Firebase {
         return
         //  alert("setUserData(): Not authorized");
       }
-      console.log(pledges)
       return this.db.doc(`users_cftracker/${this.auth.currentUser.uid}`).set({
         pledges,
         surveyChoices,
@@ -78,7 +77,6 @@ class Firebase {
       .get();
     const pledges = data.get("pledges");
     const surveyChoices = data.get("surveyChoices");
-    console.log(pledges)
     return { pledges: pledges, surveyChoices: surveyChoices };
   }
 }

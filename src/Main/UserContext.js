@@ -38,8 +38,6 @@ function UserProvider({ children }) {
       surveyResult += data.themes[i].options[surveyChoices[0][i]].value;
     }
     let pledgesResult = 0;
-    // console.log(pledgesStore[themeIndex].list[0])
-    console.log(pledges[0][theme]);
     let list = [...pledges[0][theme]];
     for (let i = 0; i < list.length; i++) {
       pledgesResult = pledgesResult + pledgesStore[themeIndex].list[i].tonnes;

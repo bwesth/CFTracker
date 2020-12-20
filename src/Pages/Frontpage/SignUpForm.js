@@ -29,12 +29,10 @@ export default () => {
 
   async function onRegister() {
     try {
-      console.log("Register starting");
       await fb.register(name, email, password);
       await fb.login(email, password);
       // await fb.addFootprint(footprint);
       await fb.setUserData({ pledges: pledges, surveyChoices: surveyChoices });
-      console.log("Register finished");
       setLoggedIn(true);
     } catch (error) {
       alert("onRegister(): " + error.message);
