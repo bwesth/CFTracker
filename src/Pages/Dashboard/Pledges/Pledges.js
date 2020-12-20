@@ -3,31 +3,35 @@ import Wrapper from "../../../Shared/Wrapper/Wrapper";
 import Pledge from "./Pledge";
 import { UserContext } from "../../../Main/UserContext";
 import { Link } from "react-router-dom";
+import pledgesStore from "../../../Data/pledgesStore";
 
 export default ({ pledgesRender }) => {
   const context = useContext(UserContext);
   const [pledges, setPledgesList] = context.pledges;
 
-  function removePledge(pledge, theme) {
+  function removePledge(pledgeIndex, theme) {
     let list = pledges[theme];
-    let index = list.indexOf(pledge);
+    let index = list.indexOf(pledgeIndex);
     list.splice(index, 1);
     setPledgesList((state) => ({ ...state, [theme]: [...list] }));
     context.updateFootprint();
   }
 
-  let transportPledges = pledges.transport.map((pledge) => (
-    <Pledge pledge={pledge} removePledge={removePledge} theme="transport" />
-  ));
-  let foodPledges = pledges.food.map((pledge) => (
-    <Pledge pledge={pledge} removePledge={removePledge} theme="food" />
-  ));
-  let goodsPledges = pledges.goods.map((pledge) => (
-    <Pledge pledge={pledge} removePledge={removePledge} theme="goods" />
-  ));
-  let householdPledges = pledges.household.map((pledge) => (
-    <Pledge pledge={pledge} removePledge={removePledge} theme="household" />
-  ));
+  function parsePledges (theme, themeIndex) {
+    return pledges[theme].map((index) => {
+      const pledge = pledgesStore[themeIndex].list[index]
+      return <Pledge
+        pledge={pledge}
+        index={index}
+        removePledge={removePledge}
+        theme="transport"
+      />;
+    })
+  }
+  let transportPledges = parsePledges("transport", 0)
+  let householdPledges = parsePledges("household", 1)
+  let goodsPledges = parsePledges("goods", 2)
+  let foodPledges = parsePledges("food", 3)
 
   return (
     <Wrapper direction="column">

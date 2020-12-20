@@ -7,10 +7,10 @@ export default ({ section }) => {
   const [pledges, setPledgesList] = context.pledges;
   const list = pledges[section.name.toLowerCase()];
 
-  function addPledge(pledge) {
+  function addPledge(pledgeIndex) {
     setPledgesList((state) => ({
       ...state,
-      [section.name.toLowerCase()]: [...list, pledge],
+      [section.name.toLowerCase()]: [...list, pledgeIndex],
     }));
   }
 
@@ -22,9 +22,9 @@ export default ({ section }) => {
     <div className="pledgesSection">
       <h1>{section.name}</h1>
       {section.list.map(
-        (pledge) =>
-          !list.includes(pledge) && (
-            <Pledge pledge={pledge} addPledge={addPledge} />
+        (pledge, index) =>
+          !list.includes(index) && (
+            <Pledge pledge={pledge} index={index} addPledge={addPledge} />
           )
       )}
     </div>

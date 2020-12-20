@@ -1,21 +1,35 @@
-.stats{
-    width: 80%;
+.stats {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h4 {
+    @include pageHeaderText($secondary-colour);
+    font-size: 1, 87rem;
+  }
+  h2 {
+    font-family: Montserrat;
+  }
+
+  .AverageYearlyOutput_and_SavingsThisMonth {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .AverageYearlyOutput,
+  .SavingsThisMonth {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 1%;
+    width: 100%;
 
-    h4{
-        @include pageHeaderText($secondary-colour);
-        font-size: 1,87rem;
-        
+    h4 {
+        margin: 0;
     }
-    h2 {
-        font-family: Montserrat;
-    }
-
-    .AverageYearlyOutput_and_SavingsThisMonth{
-        display: flex;
-        flex-direction: row;
-    }
+  }
 }

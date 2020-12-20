@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import firebase from "../components/Firebase/firebase";
 import data from "../Data/survey";
+import pledgesStore from "../Data/pledgesStore";
+
 const UserContext = React.createContext();
 
 function UserProvider({ children }) {
@@ -10,7 +12,7 @@ function UserProvider({ children }) {
     email: undefined,
     password: undefined,
   });
-  
+
   const loggedIn = useState(false);
   const [surveyChoicesData, setSurveyChoices] = useState(new Array(12).fill(4));
   const pledges = useState({
@@ -29,16 +31,18 @@ function UserProvider({ children }) {
     household: 9,
   };
 
-  function calcFootprint(theme) {
+  function calcFootprint(theme, themeIndex) {
     let surveyResult = 0;
     let index = indexReference[theme];
     for (let i = index; i < index + 3; i++) {
       surveyResult += data.themes[i].options[surveyChoices[0][i]].value;
     }
     let pledgesResult = 0;
+    // console.log(pledgesStore[themeIndex].list[0])
+    console.log(pledges[0][theme]);
     let list = [...pledges[0][theme]];
     for (let i = 0; i < list.length; i++) {
-      pledgesResult = pledgesResult + list[i].tonnes;
+      pledgesResult = pledgesResult + pledgesStore[themeIndex].list[i].tonnes;
     }
     return {
       surveyTotal: surveyResult,
@@ -48,10 +52,10 @@ function UserProvider({ children }) {
   }
 
   function updateFootprint() {
-    const transport = calcFootprint("transport"),
-      food = calcFootprint("food"),
-      goods = calcFootprint("goods"),
-      household = calcFootprint("household"),
+    const transport = calcFootprint("transport", 0),
+      household = calcFootprint("household", 1),
+      goods = calcFootprint("goods", 2),
+      food = calcFootprint("food", 3),
       //This is godawful code, just trying to get it working to begin with.
       total = {
         surveyTotal:
@@ -103,7 +107,7 @@ function UserProvider({ children }) {
         updateFootprint,
         firebase,
         loggedIn,
-        setSurveyChoices
+        setSurveyChoices,
       }}
     >
       {children}
