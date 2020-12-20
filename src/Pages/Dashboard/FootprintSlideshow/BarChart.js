@@ -22,10 +22,7 @@ export default () => {
             tickFormat={["You", "EU Citizen", "US Citizen", "World Goal"]}
           />
 
-          <VictoryAxis
-            dependentAxis
-            tickFormat={(x) => `${x} tonnes`}
-          />
+          <VictoryAxis dependentAxis tickFormat={(x) => `${x} tonnes`} />
 
           <VictoryBar
             style={{ data: { fill: ({ datum }) => datum.fill } }}

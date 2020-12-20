@@ -16,7 +16,8 @@ export default ({ resultVersion }) => {
           <p>
             In order to offset your footprint,
             <br /> you would to plant <br />
-            <span className="tree-amount">{totalTreesCost}</span> trees each year.
+            <span className="tree-amount">{totalTreesCost}</span> trees each
+            year.
           </p>
         ) : (
           <div className="chartInfo">

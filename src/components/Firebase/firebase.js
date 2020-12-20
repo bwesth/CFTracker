@@ -61,14 +61,14 @@ class Firebase {
   }
 
   setUserData({ pledges, surveyChoices }) {
-      if (!this.auth.currentUser) {
-        return
-        //  alert("setUserData(): Not authorized");
-      }
-      return this.db.doc(`users_cftracker/${this.auth.currentUser.uid}`).set({
-        pledges,
-        surveyChoices,
-      });
+    if (!this.auth.currentUser) {
+      return;
+      //  alert("setUserData(): Not authorized");
+    }
+    return this.db.doc(`users_cftracker/${this.auth.currentUser.uid}`).set({
+      pledges,
+      surveyChoices,
+    });
   }
 
   async getUserData() {

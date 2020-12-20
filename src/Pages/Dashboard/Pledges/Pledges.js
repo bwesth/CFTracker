@@ -17,21 +17,25 @@ export default ({ pledgesRender }) => {
     context.updateFootprint();
   }
 
-  function parsePledges (theme, themeIndex) {
+  function parsePledges(theme, themeIndex) {
+    console.log(theme);
+    console.log(pledges);
     return pledges[theme].map((index) => {
-      const pledge = pledgesStore[themeIndex].list[index]
-      return <Pledge
-        pledge={pledge}
-        index={index}
-        removePledge={removePledge}
-        theme="transport"
-      />;
-    })
+      const pledge = pledgesStore[themeIndex].list[index];
+      return (
+        <Pledge
+          pledge={pledge}
+          index={index}
+          removePledge={removePledge}
+          theme={theme}
+        />
+      );
+    });
   }
-  let transportPledges = parsePledges("transport", 0)
-  let householdPledges = parsePledges("household", 1)
-  let goodsPledges = parsePledges("goods", 2)
-  let foodPledges = parsePledges("food", 3)
+  let transportPledges = parsePledges("transport", 0);
+  let householdPledges = parsePledges("household", 1);
+  let goodsPledges = parsePledges("goods", 2);
+  let foodPledges = parsePledges("food", 3);
 
   return (
     <Wrapper direction="column">
@@ -51,10 +55,10 @@ export default ({ pledgesRender }) => {
               <div className="pledges">{transportPledges}</div>
             </>
           )}
-          {foodPledges.length > 0 && (
+          {householdPledges.length > 0 && (
             <>
-              <h1>Food</h1>
-              <div className="pledges">{foodPledges}</div>
+              <h1>Household</h1>
+              <div className="pledges">{householdPledges}</div>
             </>
           )}
           {goodsPledges.length > 0 && (
@@ -63,10 +67,10 @@ export default ({ pledgesRender }) => {
               <div className="pledges">{goodsPledges}</div>
             </>
           )}
-          {householdPledges.length > 0 && (
+          {foodPledges.length > 0 && (
             <>
-              <h1>Household</h1>
-              <div className="pledges">{householdPledges}</div>
+              <h1>Food</h1>
+              <div className="pledges">{foodPledges}</div>
             </>
           )}
         </>

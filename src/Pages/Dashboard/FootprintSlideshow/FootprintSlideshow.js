@@ -6,7 +6,6 @@ import PieChart from "./PieChart";
 import TreeChart from "./TreeChart";
 
 export default () => {
-  
   const [index, setIndex] = useState(0);
 
   //Might add the linegraph back again later but it looks like shit atm!!!

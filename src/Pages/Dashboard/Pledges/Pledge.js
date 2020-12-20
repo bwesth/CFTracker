@@ -43,8 +43,8 @@ export default ({ pledge, addPledge, removePledge, theme, index }) => {
             <button
               className="acceptPledge"
               onClick={() => {
-                setDescriptionVisible(state => !state)
-                removePledge(index, theme)
+                setDescriptionVisible((state) => !state);
+                removePledge(index, theme);
               }}
             >
               Remove Pledge

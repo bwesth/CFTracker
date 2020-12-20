@@ -10,7 +10,9 @@ export default ({ scrollToTop }) => {
   const fb = useContext(UserContext).firebase;
   const [pledges, setPledges] = useContext(UserContext).pledges;
   const updateFootprint = useContext(UserContext).updateFootprint;
-  const [surveyChoices, setSurveyChoices] = useContext(UserContext).surveyChoices;
+  const [surveyChoices, setSurveyChoices] = useContext(
+    UserContext
+  ).surveyChoices;
 
   useEffect(() => {
     updateFootprint();
@@ -22,7 +24,7 @@ export default ({ scrollToTop }) => {
   }, [pledges]);
 
   async function updateUserData() {
-    await fb.setUserData({pledges: pledges, surveyChoices: surveyChoices});
+    await fb.setUserData({ pledges: pledges, surveyChoices: surveyChoices });
   }
 
   return (

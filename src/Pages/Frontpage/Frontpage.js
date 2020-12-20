@@ -45,23 +45,20 @@ export default ({ scrollToTop }) => {
             </button>
             <p>Or</p>
             <PopupWrapper
-      trigger={
-        <button className="testButton">
-          <h3>SIGN UP</h3>
-        </button>
-      }
-    >
-      <SignUpForm />
-    </PopupWrapper>
+              trigger={
+                <button className="testButton">
+                  <h3>SIGN UP</h3>
+                </button>
+              }
+            >
+              <SignUpForm />
+            </PopupWrapper>
           </div>
         </div>
       </div>
       {surveyVisible && (
         <div ref={surveyRef}>
-          <Survey
-            themes={surveyData.themes}
-            scrollToTop={scrollToTop}
-          />
+          <Survey themes={surveyData.themes} scrollToTop={scrollToTop} />
         </div>
       )}
     </>
