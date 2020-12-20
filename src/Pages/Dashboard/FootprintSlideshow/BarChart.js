@@ -36,7 +36,6 @@ export default () => {
         </VictoryChart>
       </div>
 
-      {/* Have a lot of work to do here to align everything etc. */}
       <div className="chartInfo">
         <h2>Your Carbon Footprint</h2>
         <p>{Math.round(footprint)} Tonnes Per Month</p>

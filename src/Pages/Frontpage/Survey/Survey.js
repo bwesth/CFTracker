@@ -1,20 +1,12 @@
 import React, { useContext, useEffect } from "react";
 // import Theme from "./Theme";
 // import Option from "./Option";
-import { useForm } from "react-hook-form";
 import { UserContext } from "../../../Main/UserContext";
-import TestResults from "../../Results/TestResults";
 import { Link } from "react-router-dom";
 
 export default ({ themes }) => {
   
   const [data, setData] = useContext(UserContext).surveyChoices;
-  //is this also never used?
-  const updateFootprint = useContext(UserContext).updateFootprint;
-
-  // useEffect(() => {
-  //   updateFootprint();
-  // }, [data]);
 
   const Theme = ({ icon, name, question, options, index }) => {
     return (
@@ -35,7 +27,6 @@ export default ({ themes }) => {
       </div>
     );
   };
-  //<label for={optionIndex}><p>{text}</p></label>
   const Option = ({ text, themeIndex, optionIndex, formID }) => {
     return (
       <div className="option">
@@ -68,7 +59,6 @@ export default ({ themes }) => {
         <div className="done">
           <h1>All done!</h1>
           <h2>Click send to see your carbon footprint</h2>
-          {/* <input type="submit"></input> */}
           <Link to="/results" className="backButton">
             Submit
           </Link>
