@@ -1,0 +1,70 @@
+
+.welcoming { 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: url(./../../Shared/Images/Banner_Illustrations/Banner_002.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  background-position: -0em -2em;
+  width: 100%;
+  height: -webkit-calc(100% - 100px);  
+  top: 50px;
+
+  .mission { 
+    width: 100%;
+    height: 20%;
+    align-self: center;
+    margin-top: 7%;
+    text-align: center;
+    text-shadow: $font-shadow;
+  
+    h1{
+      @include pageHeaderText($button-font-colour);
+      font-size: 2.5rem;
+      margin-bottom: 4%;
+      } 
+
+      p{
+        @include pageText(bold,1.2rem, $button-font-colour);
+      }
+    }
+  
+  .middelBox{
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 8%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    background: $secondary-colour;
+    border-radius: $button-radius;
+    filter: $button-shadow;
+
+    h1{
+      @include pageHeaderText($button-font-colour);
+    }
+
+    p{
+      align-self: center;
+      text-align: center;
+      @include pageText(normal,1.2rem, $button-font-colour);
+    }
+
+    .buttonBox{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      .testButton{
+        @include button;
+        margin: 5%;
+        width: 20%; 
+      }
+    }
+  } 
+}

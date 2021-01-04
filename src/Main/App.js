@@ -1,32 +1,79 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
+import React, { useEffect, useContext, useRef } from "react";
+import { UserContext } from "./UserContext";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+
+import "./App.scss";
+
+import Header from "../Shared/Header";
+import Footer from "../Shared/Footer";
 import Frontpage from "../Pages/Frontpage/Frontpage";
 import Dashboard from "../Pages/Dashboard/Dashboard";
-import { UserProvider } from "./UserContext";
+import TestResults from "../Pages/Results/TestResults";
+import PledgesPage from "../Pages/PledgesPage/PledgesPage";
 
-// Dependencies
-// npm install reactjs-popup
-// https://www.npmjs.com/package/reactjs-popup
+const App = () => {
+  const loggedIn = useContext(UserContext).loggedIn[0];
+  const surveyTaken = useContext(UserContext).footprint[0];
+  const headerRef = useRef(null);
+  function scrollToTop() {
+    headerRef.current.scrollIntoView();
+  }
 
-// npm install yup
-// https://www.npmjs.com/package/yup
-
-// npm install react-hook-form
-// npm install @hookform/resolvers
-// https://react-hook-form.com/api/
-
-// npm install js-yaml
-// npm install fs
-function App() {
-  // const [loggedIn, setLoggedIn] = useState("");
-  const [display, setDisplay] = useState();
-
-  useEffect(() => {
-    setDisplay(<Frontpage setDisplay={setDisplay} />);
-    // setDisplay(<Dashboard />);
-  }, []);
-
-  return <UserProvider className="App">{display}</UserProvider>;
-}
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <div ref={headerRef}>
+          <Header />
+        </div>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={(props) => {
+              return loggedIn ? (
+                <Redirect to="/dashboard" />
+              ) : (
+                <Frontpage {...props} scrollToTop={scrollToTop} />
+              );
+            }}
+          />
+          <Route
+            path="/dashboard"
+            render={(props) => {
+              return loggedIn ? (
+                <Dashboard {...props} scrollToTop={scrollToTop} />
+              ) : (
+                <Redirect to="/" />
+              );
+            }}
+          />
+          <Route
+            path="/results"
+            render={(props) => {
+              return loggedIn ? (
+                <Redirect to="/dashboard" />
+              ) : surveyTaken ? (
+                <TestResults scrollToTop={scrollToTop} />
+              ) : (
+                <Redirect to="/" />
+              );
+            }}
+          />
+          <Route
+            path="/pledges"
+            render={(props) => {
+              return loggedIn ? (
+                <PledgesPage scrollToTop={scrollToTop} />
+              ) : (
+                <Redirect to="/" />
+              );
+            }}
+          />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
+    </div>
+  );
+};
 
 export default App;

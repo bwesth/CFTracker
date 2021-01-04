@@ -3,10 +3,11 @@ import Popup from "reactjs-popup";
 
 // Refactor into TestResults (also rename TestResults)
 
-export default (props) => {
+export default ({ trigger, children }) => {
+  const overlayStyle = { background: "rgba(0,0,0,0.5)" };
   return (
-    <Popup trigger={props.trigger} position="center center">
-      {props.children}
+    <Popup trigger={trigger} position="center center" {...{ overlayStyle }}>
+      {children}
     </Popup>
   );
 };

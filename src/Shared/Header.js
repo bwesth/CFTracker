@@ -1,31 +1,56 @@
-import React from "react";
-import img from "../Main/carbon-footprint-730x410.jpg";
-// import LoginButton from "./LoginButton";
+import React, { useContext } from "react";
+import img from "../Main/GreenFootLogo.png";
+import { UserContext } from "../Main/UserContext";
+
+import PopupWrapper from "../Pages/Frontpage/PopupWrapper";
 import LoginForm from "../Pages/Frontpage/LoginForm";
-import Popup from "reactjs-popup";
 
-const LoginButton = (props) => {
-  return (
-    <div className="login">
-      {/* <button onClick={() => props.login(true)}>LOGIN</button> */}
-      <button>LOGIN</button>
-      <p>Already signed up?</p>
-    </div>
+export default () => {
+  const fb = useContext(UserContext).firebase;
+  const [loggedIn, setLoggedIn] = useContext(UserContext).loggedIn;
+  const [userPledges, setPledges] = useContext(UserContext).pledges;
+  const setSurveyChoices = useContext(UserContext).setSurveyChoices;
+
+  async function logout() {
+    setPledges({
+      transport: [],
+      food: [],
+      goods: [],
+      household: [],
+    });
+    setSurveyChoices(new Array(12).fill(4));
+    await fb.logout();
+    setLoggedIn(false);
+  }
+
+  const LoginButton = () => {
+    return (
+      <div className="login">
+        <button>LOGIN</button>
+      </div>
+    );
+  };
+
+  const popup = (
+    <PopupWrapper trigger={LoginButton}>
+      <LoginForm />
+    </PopupWrapper>
   );
-};
 
-export default (props) => {
+  const LogoutButton = () => {
+    return (
+      <div className="login">
+        <button onClick={() => logout()}>LOGOUT</button>
+      </div>
+    );
+  };
+
   return (
-    <nav className="headliner">
+    <nav className="header">
       <img src={img} className="logo center" alt="logo" />
-      <h1>Project name</h1>
-      <Popup
-        trigger={LoginButton}
-        // trigger={<button className="login ">LOG IN</button>}
-        position="top center"
-      >
-        <LoginForm login={props.login} />
-      </Popup>
+      <h1>GREEN FEET</h1>
+
+      {loggedIn ? LogoutButton() : popup}
     </nav>
   );
 };

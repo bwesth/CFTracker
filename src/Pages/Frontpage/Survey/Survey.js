@@ -1,26 +1,68 @@
-import React from "react";
-import Theme from "./Theme";
-import { useForm } from "react-hook-form";
-import TestResults from "../TestResults";
+import React, { useContext, useEffect } from "react";
+// import Theme from "./Theme";
+// import Option from "./Option";
+import { UserContext } from "../../../Main/UserContext";
+import { Link } from "react-router-dom";
 
-export default (props) => {
+export default ({ themes }) => {
+  
+  const [data, setData] = useContext(UserContext).surveyChoices;
 
-  const { handleSubmit } = useForm({});
-
-  const submit = (data) => {
-    props.setDisplay(
-      <TestResults results={data} setDisplay={props.setDisplay} popup={props.popup}/>
+  const Theme = ({ icon, name, question, options, index }) => {
+    return (
+      <div className="theme">
+        <div className="surveyHeader">
+          <img src={icon} alt="theme icon" />
+          <h1>{name}</h1>
+        </div>
+        <h2>{question}</h2>
+        {options.map(({ text }, optionsIndex) => (
+          <Option
+            text={text}
+            formID={name}
+            themeIndex={index}
+            optionIndex={optionsIndex}
+          />
+        ))}
+      </div>
+    );
+  };
+  const Option = ({ text, themeIndex, optionIndex, formID }) => {
+    return (
+      <div className="option">
+        <input
+          name={text}
+          type="radio"
+          formID={formID}
+          onChange={() => {
+            setData(themeIndex, optionIndex);
+          }}
+          checked={optionIndex === data[themeIndex]}
+        />
+        <p>{text}</p>
+      </div>
     );
   };
 
   return (
     <div className="survey">
-      <form onSubmit={handleSubmit((d) => submit(d))}>
-        {props.themes.map((item) => (
-          <Theme name={item.name}  question={item.question} options={item.options} />
+      <form>
+        {themes.map(({ icon, name, question, options }, index) => (
+          <Theme
+            icon={icon}
+            index={index}
+            name={name}
+            question={question}
+            options={options}
+          />
         ))}
-        <p>All done! Click send to see your carbon footprint</p>
-        <input type="submit" />
+        <div className="done">
+          <h1>All done!</h1>
+          <h2>Click send to see your carbon footprint</h2>
+          <Link to="/results" className="backButton">
+            Submit
+          </Link>
+        </div>
       </form>
     </div>
   );

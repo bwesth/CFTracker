@@ -1,0 +1,22 @@
+@import "../Pages/Dashboard/Dashboard";
+@import "../Pages/Frontpage/Survey/Survey";
+@import "../Pages/Frontpage/LoginForm";
+@import "../Pages/Results/TestResults";
+@import "../Pages/Frontpage/FrontPage";
+@import "../Shared/Header";
+@import "../Shared/Footer";
+@import "../Shared/Variables";
+@import "../Pages/Dashboard/FootprintSlideshow/FootprintSlideshow";
+@import "../Pages/Dashboard/Pledges/Pledges";
+@import "../Pages/Frontpage/SignUpForm";
+@import "../Pages/Dashboard/Stats/Stats";
+@import "../Pages/PledgesPage/PledgesPage.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.App {
+  font-family: 'Montserrat, Roboto';
+  height: 100%;
+}

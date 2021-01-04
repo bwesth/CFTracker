@@ -1,0 +1,117 @@
+.survey {
+  display: flex;
+  height: auto;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.5%;
+  margin-top: 1%;
+
+  .theme {
+    border: 1px solid $secondary-colour;
+    background: $Text-background;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 1%;
+    padding: 1% 3%;
+  
+    .surveyHeader{
+      margin-top: 5%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img{
+        background-color: #fff;
+        border-radius: 100%;
+        justify-content: flex-start;
+        width: 70px;
+        height: auto;
+      }
+
+      h1 {
+        padding-left: 2%;
+        @include pageHeaderText($font-colour);
+        text-align: start;
+        font-size: 1,75rem;
+        line-height: 1,3rem;
+      }
+    }
+
+    #formID {
+      color: font-colour;
+      font-family: Montserrat;
+    }
+
+    .option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      margin: 1.5%;
+      background: #fff;
+      width: 97%;
+      border-radius: 20px;
+      
+      input{
+        width: 5%;
+        height:2rem;
+      }
+          p{
+            @include pageText(normal, 1.1rem, $font-colour);
+            align-items: center;
+            margin-left: 2%;
+          }
+
+    }
+
+    h2{
+      @include pageHeaderText($font-colour);
+      width: 80%;
+      text-align: start;
+      font-weight: normal;
+      margin-left: 10%;
+    }
+  }
+}
+
+.done {
+  background: $Text-background;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $secondary-colour;
+  background: rgba(2, 195, 154, 0.3);
+  box-sizing: border-box;
+  border-radius: 15px;
+  justify-content: center;
+  margin-bottom: 1%;
+
+  a {
+    @include button;
+    position: relative;
+    margin-bottom: 1%;
+    align-self: center;
+    margin-top: 2%;
+    width: 20%;
+    height: 3rem;
+    text-decoration: none;
+  }
+
+  h2 {
+    @include pageHeaderText($font-colour);
+    font-size: 1.1rem;
+    font-weight: normal;
+    line-height: 1rem;
+  }
+
+  h1{
+      @include pageHeaderText($font-colour);  
+      text-align: center;
+      font-size: 1,1rem;
+      line-height: 1rem;
+  }
+}
+

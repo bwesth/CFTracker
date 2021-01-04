@@ -1,0 +1,72 @@
+@import "../../Shared/Variables";
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 50px;
+  width: 100%;
+  overflow: auto;
+
+  h1{
+    @include pageHeaderText($button-font-colour);
+    filter: $button-shadow;
+    stroke-width: 5px; 
+      stroke:   black;
+  }
+
+  h3{
+      @include pageHeaderText($font-colour);
+      width: 100%;
+      font-size: 1.25rem;
+      border: $secondary-colour;
+      padding-bottom: 20px;
+      padding-top: 10px;
+      border-bottom-style: dashed;
+      border-width: 3px;
+  }
+
+  p{
+    @include pageText(bold,0.87rem, $font-colour);
+    color: $font-colour;
+  }
+
+  .banner{
+    background-image: url(./../../Shared/Images/Banner_Illustrations/Banner_008.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
+    box-sizing: border-box;
+    width: 100%; 
+    padding: 100px;
+    margin: 0%;
+
+    h2{
+      @include pageHeaderText($button-font-colour);
+      filter: $button-shadow;
+    }
+  }
+
+.username {
+  font-weight: bold;
+  font-size: large;
+  padding: 1%;
+}
+}
+
+.wrapper{
+  display: flex;
+  border-bottom: $secondary-colour;
+  border-bottom-style: dashed;
+  border-width: 3px;
+  align-Items: center;
+  justify-Content: center;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  min-height: 400px;
+
+  h1{
+    @include pageHeaderText($font-colour);
+    filter: none;
+    }
+}

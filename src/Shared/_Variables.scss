@@ -1,0 +1,62 @@
+/*
+This scss document is for all the componments variables that used between our pages.  
+*/
+
+//Our webside colours 
+$main-colour: #ffffff;
+$secondary-colour: #02C39A;
+$secondary-colour-shade: #2a3744;
+$action-colour: #FF934F;
+$action-colour-shade: #565d37;
+$button-font-colour: #ffffff;
+$font-colour: #484848;;
+$font-shadow: 5px 5px 8px $font-colour;
+$Text-background: rgba(2, 195, 154, 0.3);
+$button-Hover: #e4722c;
+$button-width:  132px; 
+$button-height:  32px;
+$button-radius:  8px; 
+$button-shadow: drop-shadow(2px  3px 1.5px  $font-colour); 
+
+p{
+    color: $font-colour;
+    font-family: Montserrat;
+    font-size: 0,75rem;
+}
+
+    @mixin button{
+        display: flex;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0,75rem;
+        line-height: 0,9rem;
+        color: $button-font-colour;
+        background-color: $action-colour; 
+        border-radius:$button-radius;
+        align-items: center;
+        justify-content: center;
+        transition: all .1s ease-in;
+        filter: $button-shadow;
+        border-style: none;
+            &:hover{
+            background-color: $button-Hover;
+            cursor: pointer;
+            }
+        }
+
+@mixin pageHeaderText($fontcoler) {
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: $fontcoler;
+}
+
+@mixin pageText($weight, $size, $colour){
+    color: $colour;
+    font-family: Montserrat;
+    font-size: $size;
+    font-weight: $weight;
+}
