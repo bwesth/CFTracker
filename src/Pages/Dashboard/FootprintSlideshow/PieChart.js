@@ -57,8 +57,6 @@ export default ({ pieStats }) => {
           }}
         />
       </div>
-
-      {/* Using a bit of a hack to separate this part of the graph. Should it be another component? Debatable. */}
       {pieStats && (
         <div className="values">
           <h2>Spending by Category:</h2>

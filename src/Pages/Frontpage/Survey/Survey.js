@@ -1,6 +1,4 @@
 import React, { useContext, useEffect } from "react";
-// import Theme from "./Theme";
-// import Option from "./Option";
 import { UserContext } from "../../../Main/UserContext";
 import { Link } from "react-router-dom";
 

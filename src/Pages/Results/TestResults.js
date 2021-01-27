@@ -63,19 +63,6 @@ export default ({ scrollToTop }) => {
                 <Link to="/" className="backButton">
                   BACK
                 </Link>
-                {/* <button
-                  className="backButton"
-                  onClick={() => {
-                    setDisplay(
-                      <Frontpage
-                        setDisplay={setDisplay}
-                        scrollToTop={scrollToTop}
-                      />
-                    );
-                  }}
-                >
-                  BACK
-                </button> */}
               </div>
               <p>{fourth.text2}</p>
             </div>

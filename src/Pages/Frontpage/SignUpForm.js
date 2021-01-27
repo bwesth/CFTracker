@@ -31,7 +31,6 @@ export default () => {
     try {
       await fb.register(name, email, password);
       await fb.login(email, password);
-      // await fb.addFootprint(footprint);
       await fb.setUserData({ pledges: pledges, surveyChoices: surveyChoices });
       setLoggedIn(true);
     } catch (error) {

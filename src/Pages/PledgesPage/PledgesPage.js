@@ -31,12 +31,6 @@ export default ({ scrollToTop }) => {
         <PledgesSection section={section} />
       ))}
       <Link to="/"> BACK </Link>
-      {/* <button
-        id="backButton"
-        onClick={() => setpledgesRender((state) => !state)}
-      >
-        BACK
-      </button> */}
     </div>
   );
 };

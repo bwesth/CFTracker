@@ -76,7 +76,6 @@ export default ({ pledgesRender }) => {
         </>
       )}
       <div className="pledge-button">
-        {/* <p> + Add More Pledges </p> */}
         <Link to="/pledges"> + Add More Pledges </Link>
       </div>
     </Wrapper>
